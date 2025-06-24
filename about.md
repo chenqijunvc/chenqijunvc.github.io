@@ -4,8 +4,6 @@ title: About Vince Qijun Chen - CFA, AI & Quantitative Finance Expert
 permalink: /about/
 ---
 
-## About Vince Qijun Chen
-
 Hello, I'm **Vince (Qijun) Chen, CFA**, a leading **quantitative finance expert** and **portfolio manager** specializing in the transformative application of **Artificial Intelligence (AI)** and **data science** to capital markets. With nearly a decade of experience, I guide investors through the complex intersection of finance and cutting-edge technology.
 
 My career has been dedicated to exploring innovative approaches to **asset management** and **alpha capture**. My expertise spans:
