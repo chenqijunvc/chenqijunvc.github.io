@@ -1,38 +1,74 @@
 ---
 layout: post
-title: Is There A Relationship Between Free Cash Flow And Post-IPO Returns?
+title: "The Free Cash Flow Indicator: A Key to Post-IPO Returns?"
+date: 2025-07-02 17:55:00 -0400
+categories: investment-research IPOs free-cash-flow equity-analysis
 ---
 
-This article is jointly written with my mentor Mr. Ted Theodore, and is also published in the [Financial Advisor Magazine](https://www.fa-mag.com/news/is-there-a-relationship-between-free-cash-flow-and-post-ipo-returns-45197.html).
+**Unlock deeper insights into Initial Public Offering (IPO) performance.** This research-backed article, co-authored with Mr. Ted Theodore and originally featured in *Financial Advisor Magazine*, explores a critical fundamental indicator: **free cash flow**. Moving beyond market hype, discover how a company's free cash flow generation and its underlying trend can significantly predict stock returns in the crucial post-IPO period. This analysis provides a data-driven approach for investors considering newly listed companies.
 
-With the recent initial public offerings of Lyft, Pinterest and Uber, many investors have found themselves asking “should I invest?” One of the major concerns when a company goes public is whether they have a clear path to profitability. Sometimes that path can appear cloudy because they may be subject to significant fluctuations in response to numerous factors including lack of liquidity, market volatility and other factors unrelated to the operating performance of the issuer. But instead of guessing, we believe there might be a better way for investors to approach IPOs.
+---
 
-According to our proprietary research, free cash flow is a superior indicator in predicting stock returns across global equity markets and even for newly listed companies after the IPO. But first, what do we mean by “free cash flow?” Put simply, this is the cash a company generates from its operating activities after accounting for the capital expenditures needed to maintain its fixed assets.
+With the recent wave of initial public offerings, including prominent names like Lyft, Pinterest, and Uber, many investors are naturally pondering the advisability of investment. A pervasive concern surrounding a company's public debut often centers on its projected path to profitability. This outlook can frequently appear ambiguous, influenced by factors such as nascent liquidity, inherent market volatility, and other elements seemingly disconnected from the issuer's core operating performance. Instead of relying on speculation, a more systematic framework for evaluating IPOs may offer a superior approach.
 
-Free cash flow is an important consideration when looking at a company because it avoids much of the discretionary aspect of Generally Accepted Accounting Principles (GAAP). 
+Our proprietary research suggests that **free cash flow (FCF)** serves as a robust indicator for predicting stock returns, not only across global equity markets but also specifically for newly listed companies in the post-IPO phase. But what precisely constitutes "free cash flow" in this context? Simply defined, FCF represents the cash a company generates from its core operating activities, after accounting for the capital expenditures necessary to maintain its fixed assets.
 
-With the recent flurry of IPO activity, we decided to look at all IPOs with a market capitalization larger than US$1 billion that launched between May 1995 and March 2019. For the stock return, we use the month end date after an IPO as the starting point and then look at the next one-, three-, six- and twelve-month total returns.
+Free cash flow stands as a critical analytical consideration because it circumvents many of the discretionary elements inherent in Generally Accepted Accounting Principles (GAAP). Its direct focus on cash generation offers a less manipulable view of a company's underlying financial health.
 
-First, we looked at the relationship between the stock return after the IPO and a company’s free cash flow generation. Free-cash-flow generation is defined as the annual free cash flow in the latest fiscal year report. The average performance of IPOs with positive free cash flow generation outperformed those without by 1.08%, 3.37%, 10.07% and 15.67% in the next one-, three-, six- and twelve-month periods.
+---
 
-![_config.yml]({{ site.baseurl }}/images/IPO1 Scale.svg)
+### Research Methodology
 
-Next, we looked at whether the trend of free cash flow has an impact on post-IPO stock returns. We defined free cash flow trend as the general direction (positive or negative) in which a company’s free cash flow is developing or changing. The average performance of IPOs with positive free cash flow trend outperformed those without by 1.08%, 3.37%, 10.07% and 15.67% in the next one-, three-, six- and twelve-month periods.
+Given the recent surge in IPO activity, our study focused on all IPOs with a market capitalization exceeding US$1 billion that debuted between May 1995 and March 2019. For assessing stock return, we utilized the month-end date following an IPO as the starting point, then analyzed the subsequent one-, three-, six-, and twelve-month total returns.
 
-![_config.yml]({{ site.baseurl }}/images/IPO2 Scale.svg)
+---
 
-Lastly, we combined these two methods and got a more complete look at a company’s free cash flow conditions.
+### Free Cash Flow Generation vs. Post-IPO Performance
 
-We found that companies with both positive free cash flow generation and free cash flow trend outperformed companies with both negative free cash flow generation and free cash flow trend by 24% on average, which is higher than the average 16% spread in next twelve-month return using a single measure.
+Initially, we investigated the direct relationship between post-IPO stock return and a company’s free cash flow generation. Free cash flow generation was defined as the annual free cash flow reported in the company's latest fiscal year filing prior to the IPO. Our findings indicate a clear performance divergence: the average performance of IPOs with **positive free cash flow generation** consistently outperformed those without by notable margins across various time horizons:
+* **1.08%** in the next one-month period
+* **3.37%** in the next three-month period
+* **10.07%** in the next six-month period
+* **15.67%** in the next twelve-month period
 
-We also found that companies with positive free cash flow generation but negative free cash flow trend produced a moderate 6.59% return in the next twelve months on average or 7.35% in the median, which is better than companies with negative free cash flow generation and positive free cash flow trend.
+![Free Cash Flow Generation vs. Post-IPO Performance]({{ site.baseurl }}/images/IPO1 Scale.svg)
 
-![_config.yml]({{ site.baseurl }}/images/IPO3 Scale.svg)
+---
 
-Investors who are considering diving into an IPO usually pay more attention to the popularity of the company than they do lifting the hood and getting a true picture of that company’s short- and long-term outlook. But our evidence suggests that fundamental factors are still providing real insight into how a stock might perform, even for companies that just launched a public offering.
+### Impact of Free Cash Flow Trend
 
-Looking at the IPOs of the 30 largest companies by current market cap from May 1995 through March 2019, clear trends emerge about performance outcomes and a company’s free cash flow generation and free cash flow trend. For example, the five stocks in this group with the highest 12-month post-IPO return (Mastercard, Google, Synchrony Financial, Chicago Mercantile Exchange Holdings and ServiceNow) were all positive regarding their free cash flow generation and free cash flow trend. On the flip side, of the five worst-performing stocks on this list over their first 12 months (GM, Alibaba, MetroPCS, Philip Morris and HCA Healthcare) only one, Alibaba, was positive in its free cash flow generation and trend.
+Next, we examined whether the *trend* of free cash flow held predictive power for post-IPO returns. We defined **free cash flow trend** as the general direction (positive or negative) in which a company’s free cash flow was developing or changing leading up to the IPO. The results mirrored our initial findings, with IPOs exhibiting a **positive free cash flow trend** outperforming those without by identical margins:
+* **1.08%** in the next one-month period
+* **3.37%** in the next three-month period
+* **10.07%** in the next six-month period
+* **15.67%** in the next twelve-month period
 
-![_config.yml]({{ site.baseurl }}/images/IPO4 Scale.svg)
+![Impact of Free Cash Flow Trend]({{ site.baseurl }}/images/IPO2 Scale.svg)
 
-As we’ve seen in recent weeks, just because a company may have a bold-faced name or a large public profile, that doesn’t mean it’s guaranteed to outperform once it becomes part of the public markets. We believe free cash flow, in terms of both generation and the trends it can highlight—offers one potentially effective way of making educated and informed decisions about IPO investing that helps cut through the hype and shine a clearer light on how a company and its stock may perform over time and versus other newly public peers.
+---
+
+### Combined Free Cash Flow Metrics
+
+To gain a more holistic perspective, we integrated both free cash flow generation and free cash flow trend. The combined analysis yielded even more compelling results:
+
+We observed that companies demonstrating **both positive free cash flow generation and a positive free cash flow trend** outperformed companies with **both negative free cash flow generation and a negative free cash flow trend** by an average of **24%**. This spread is notably higher than the average 16% spread observed in next twelve-month returns when using a single free cash flow measure.
+
+Furthermore, our analysis revealed that companies with **positive free cash flow generation but a negative free cash flow trend** produced a moderate return of 6.59% on average (or 7.35% in median) over the subsequent twelve months. This performance was superior to companies exhibiting negative free cash flow generation coupled with a positive free cash flow trend, highlighting the sustained importance of current FCF generation.
+
+![Combined Free Cash Flow Metrics]({{ site.baseurl }}/images/IPO3 Scale.svg)
+
+---
+
+### Case Studies: Largest IPOs (1995-2019)
+
+Investors contemplating an IPO often gravitate towards popular names, sometimes at the expense of diligent fundamental analysis. Our evidence, however, strongly suggests that fundamental factors continue to provide meaningful insight into prospective stock performance, even for companies newly entering the public markets.
+
+Examining the IPOs of the 30 largest companies by current market capitalization from May 1995 through March 2019, clear patterns correlating performance outcomes with free cash flow generation and trend emerge. For instance, the five stocks in this cohort with the highest 12-month post-IPO return (Mastercard, Google, Synchrony Financial, Chicago Mercantile Exchange Holdings, and ServiceNow) consistently exhibited **positive free cash flow generation and a positive free cash flow trend**. Conversely, among the five worst-performing stocks on this list over their initial 12 months (GM, Alibaba, MetroPCS, Philip Morris, and HCA Healthcare), only one, Alibaba, displayed positive free cash flow generation and trend.
+
+![Case Studies: Largest IPOs]({{ site.baseurl }}/images/IPO4 Scale.svg)
+
+---
+
+### Conclusion
+
+As recent market activity underscores, a bold-faced name or significant public profile does not inherently guarantee outperformance in the public markets. We contend that **free cash flow**, assessed in terms of both its current generation and the discernible trends it highlights, offers a potentially effective methodology for making educated and informed decisions regarding IPO investments. This approach helps to cut through speculative hype, providing a clearer indication of how a company and its stock may perform over time, particularly relative to newly public peers.
