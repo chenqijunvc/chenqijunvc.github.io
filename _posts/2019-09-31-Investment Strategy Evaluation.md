@@ -6,6 +6,7 @@ categories: investment-strategy performance-measurement risk-management quantita
 ---
 
 Master the essential metrics for robust investment strategy evaluation. This comprehensive guide distills years of practical experience and analytical rigor, providing a structured overview of the key backtest statistics and performance indicators critical for assessing any investment approach. From understanding general characteristics to deep dives into risk, efficiency, and attribution, this post serves as a valuable reference for financial professionals.
+
 ---
 
 ### General Characteristics
