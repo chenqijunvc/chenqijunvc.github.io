@@ -1,0 +1,28 @@
+title:              PortfolioFuture Blog
+email:              chenqijunvc@gmail.com
+description:        Investment analysis, strategies, and market commentary by Vince Qijun Chen.
+author:             Vince Qijun Chen
+# For root domain (chenqijunvc.github.io), baseurl should be empty
+baseurl:            ""
+url:                "https://chenqijunvc.github.io"
+
+# Social Profiles
+# Replace these with your actual usernames or remove if not applicable
+twitter_username:   # Your Twitter username, e.g., "VinceQChen"
+github_username:    chenqijunvc
+facebook_username:  # Your Facebook username/page, if any
+instagram_username: # Your Instagram username, if any
+linkedin_username:  vinceqijunchen
+
+# Add your google-analytics ID here to activate google analytics
+# IMPORTANT: Replace UA-XXXXXXXXX-X with your actual Google Analytics Tracking ID
+google_analytics:   UA-XXXXXXXXX-X # e.g., UA-123456789-1
+
+# Build settings
+markdown:           kramdown
+paginate:           5
+paginate_path:      "/posts/page:num/"
+plugins:
+  - jekyll-feed
+  - jekyll-paginate
+  - jekyll-sitemap # Uncomment this line to silently generate a sitemaps.org compliant sitemap for your Jekyll site
