@@ -1,4 +1,3 @@
-```
 # chenqijunvc.github.io: Exploring AI, Data, and Finance
 
 Welcome to my personal blog, `chenqijunvc.github.io`! This space is dedicated to exploring the fascinating intersections of **Artificial Intelligence (AI)**, **data science**, and **capital markets**. With nearly a decade of experience in quantitative finance, I aim to share insights, analyses, and my journey in applying cutting-edge technologies to the world of investments.
@@ -64,4 +63,3 @@ The theme and its underlying code are released under the MIT license.
 ---
 
 I hope you find the content here insightful and engaging. Feel free to explore and connect!
-```
