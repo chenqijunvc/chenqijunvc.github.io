@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Investment Strategy Evaluation Metrics
-date: 2025-07-02 17:50:21 -0400
+date: 2019-09-30 10:00:00 -0500
 categories: investment-strategy performance-measurement risk-management quantitative-finance
 ---
 

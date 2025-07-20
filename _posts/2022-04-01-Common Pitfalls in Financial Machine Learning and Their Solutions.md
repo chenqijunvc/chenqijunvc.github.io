@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Common Pitfalls in Financial Machine Learning and Their Solutions
-date: 2025-07-02 17:44:14 -0400
+date: 2022-04-01 10:00:00 -0500
 categories: machine-learning quantitative-finance data-science
 ---
 

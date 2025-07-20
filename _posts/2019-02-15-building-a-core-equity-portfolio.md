@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Building a Core Equity Portfolio for Long-Term Appreciation"
-date: 2025-07-02 17:58:00 -0400
+date: 2019-02-15 10:00:00 -0500
 categories: investment-strategy equity-portfolio long-term-investing
 ---
 

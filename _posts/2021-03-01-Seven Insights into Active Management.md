@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Seven Insights into Active Management"
-date: 2025-07-02 17:40:53 -0400
+date: 2021-03-01 10:00:00 -0500
 categories: investment-strategy portfolio-management
 ---
 

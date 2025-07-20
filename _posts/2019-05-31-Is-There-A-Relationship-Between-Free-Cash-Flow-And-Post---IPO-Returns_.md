@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "The Free Cash Flow Indicator: A Key to Post-IPO Returns?"
-date: 2025-07-02 17:55:00 -0400
+date: 2019-05-31 10:00:00 -0500
 categories: investment-research IPOs free-cash-flow equity-analysis
 ---
 

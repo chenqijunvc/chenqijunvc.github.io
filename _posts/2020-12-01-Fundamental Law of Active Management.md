@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Fundamental Law of Active Management
-date: 2025-07-02 17:41:40 -0400
+date: 2020-12-01 10:00:00 -0500
 categories: investment-strategy portfolio-management
 ---
 
