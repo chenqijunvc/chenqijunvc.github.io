@@ -1,0 +1,19 @@
+User-agent: *
+Allow: /
+
+# Sitemaps
+Sitemap: https://chenqijunvc.github.io/sitemap.xml
+
+# Block crawling of any admin or private areas
+Disallow: /admin/
+Disallow: /private/
+
+# Allow crawling of important pages
+Allow: /posts/
+Allow: /categories/
+Allow: /search/
+Allow: /about/
+Allow: /contact/
+
+# Crawl delay (optional - set to 1 second)
+Crawl-delay: 1

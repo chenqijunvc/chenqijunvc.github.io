@@ -1,0 +1,89 @@
+<!-- Newsletter signup section -->
+<section class="newsletter-signup bg-primary text-white py-5">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8 col-md-10 mx-auto text-center">
+        <h3 class="mb-3">
+          <i class="fas fa-envelope-open"></i>
+          Stay Updated with PortfolioFuture
+        </h3>
+        <p class="lead mb-4">
+          Get the latest insights on AI, quantitative finance, and data science delivered directly to your inbox. 
+          Join our community of informed investors and data scientists.
+        </p>
+        
+        <form class="newsletter-form" action="#" method="post" novalidate>
+          <div class="form-row justify-content-center">
+            <div class="col-md-6 col-lg-5">
+              <div class="input-group mb-3">
+                <input type="email" class="form-control form-control-lg" placeholder="Your email address" required>
+                <div class="input-group-append">
+                  <button class="btn btn-light btn-lg" type="submit">
+                    <i class="fas fa-paper-plane"></i>
+                    Subscribe
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <small class="text-white-50">
+            <i class="fas fa-lock"></i>
+            No spam, unsubscribe at any time. We respect your privacy.
+          </small>
+        </form>
+        
+        <div class="newsletter-benefits mt-4">
+          <div class="row">
+            <div class="col-md-4">
+              <i class="fas fa-chart-line fa-2x mb-2"></i>
+              <h6>Market Insights</h6>
+              <small>Latest trends and analysis</small>
+            </div>
+            <div class="col-md-4">
+              <i class="fas fa-brain fa-2x mb-2"></i>
+              <h6>AI & ML Updates</h6>
+              <small>Cutting-edge research</small>
+            </div>
+            <div class="col-md-4">
+              <i class="fas fa-users fa-2x mb-2"></i>
+              <h6>Community Access</h6>
+              <small>Exclusive discussions</small>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+.newsletter-signup {
+  background: linear-gradient(135deg, #007bff 0%, #0056b3 100%);
+}
+
+.newsletter-form .form-control {
+  border: none;
+  border-radius: 50px 0 0 50px;
+}
+
+.newsletter-form .btn {
+  border-radius: 0 50px 50px 0;
+  font-weight: 600;
+}
+
+.newsletter-benefits .col-md-4 {
+  margin-bottom: 1rem;
+}
+
+.newsletter-benefits i {
+  opacity: 0.8;
+}
+
+@media (max-width: 768px) {
+  .newsletter-form .form-control,
+  .newsletter-form .btn {
+    border-radius: 25px;
+    margin-bottom: 0.5rem;
+  }
+}
+</style>

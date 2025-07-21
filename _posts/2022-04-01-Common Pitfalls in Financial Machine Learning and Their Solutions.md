@@ -3,6 +3,9 @@ layout: post
 title: Common Pitfalls in Financial Machine Learning and Their Solutions
 date: 2022-04-01 10:00:00 -0500
 categories: machine-learning quantitative-finance data-science
+tags: [machine-learning, financial-ml, backtesting, feature-importance, data-science, pitfalls, quantitative-analysis]
+author: Vince Qijun Chen
+excerpt: Navigate the complex world of financial machine learning with a clear understanding of common pitfalls and their robust solutions.
 ---
 
 **Navigate the complex world of financial machine learning with a clear understanding of common pitfalls and their robust solutions.** This essential guide, informed by Marcos Lopez de Prado's "Advances in Financial Machine Learning," highlights critical challenges from data processing to backtest overfitting. Discover practical strategies to build more reliable and accurate quantitative models for financial markets. This content is for personal study and reference; for comprehensive details, consider purchasing the original text.

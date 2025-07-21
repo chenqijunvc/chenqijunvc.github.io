@@ -1,4 +1,4 @@
-title:              "chenqijunvc.github.io"
+title:              "PortfolioFuture"
 email:              chenqijunvc@gmail.com
 description:        "Exploring AI, Data, and Finance - Investment analysis, strategies, and market commentary by Vince Qijun Chen."
 author:             Vince Qijun Chen
@@ -6,17 +6,25 @@ author:             Vince Qijun Chen
 baseurl:            ""
 url:                "https://chenqijunvc.github.io"
 
+# SEO and Social
+keywords:           "quantitative finance, machine learning, AI, investment strategy, portfolio management, data science"
+lang:               "en"
+locale:             "en_US"
+
 # Social Profiles
-# Replace these with your actual usernames or remove if not applicable
-twitter_username:   # Your Twitter username, e.g., "VinceQChen"
+twitter_username:   # Your Twitter username when available
 github_username:    chenqijunvc
-facebook_username:  # Your Facebook username/page, if any
-instagram_username: # Your Instagram username, if any
 linkedin_username:  vinceqijunchen
 
-# Add your google-analytics ID here to activate google analytics
-# IMPORTANT: Replace UA-XXXXXXXXX-X with your actual Google Analytics Tracking ID
-google_analytics:   UA-XXXXXXXXX-X # e.g., UA-123456789-1
+# Analytics - Replace with your actual Google Analytics 4 ID
+# google_analytics:   G-XXXXXXXXXX
+
+# Author information for structured data
+author_info:
+  name:             "Vince Qijun Chen"
+  bio:              "Quantitative analyst and data scientist specializing in AI applications in finance"
+  location:         "Global"
+  expertise:        ["Quantitative Finance", "Machine Learning", "Data Science", "Portfolio Management"]
 
 # Build settings
 markdown:           kramdown

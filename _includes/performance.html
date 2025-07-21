@@ -1,0 +1,63 @@
+<!-- Performance optimization scripts -->
+<script>
+  // Lazy loading for images
+  if ('IntersectionObserver' in window) {
+    const imageObserver = new IntersectionObserver((entries, observer) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          const img = entry.target;
+          img.src = img.dataset.src;
+          img.classList.remove('lazy');
+          imageObserver.unobserve(img);
+        }
+      });
+    });
+
+    document.querySelectorAll('img[data-src]').forEach(img => {
+      imageObserver.observe(img);
+    });
+  }
+
+  // Preload critical resources
+  const preloadLink = document.createElement('link');
+  preloadLink.rel = 'preload';
+  preloadLink.as = 'font';
+  preloadLink.type = 'font/woff2';
+  preloadLink.crossOrigin = 'anonymous';
+  preloadLink.href = 'https://fonts.gstatic.com/s/lora/v20/0QIvMX1D_JOuMwr7Ig.woff2';
+  document.head.appendChild(preloadLink);
+
+  // Service Worker registration (if available)
+  if ('serviceWorker' in navigator) {
+    window.addEventListener('load', () => {
+      navigator.serviceWorker.register('/sw.js')
+        .then(registration => {
+          console.log('SW registered: ', registration);
+        })
+        .catch(registrationError => {
+          console.log('SW registration failed: ', registrationError);
+        });
+    });
+  }
+</script>
+
+<!-- Critical CSS inline (minimal styles for above-the-fold content) -->
+<style>
+  .lazy {
+    background: #f0f0f0;
+    min-height: 200px;
+    transition: opacity 0.3s;
+  }
+  
+  .navbar-brand {
+    font-weight: 700;
+  }
+  
+  .masthead {
+    position: relative;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    min-height: 350px;
+  }
+</style>

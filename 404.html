@@ -1,0 +1,143 @@
+---
+layout: page
+title: Page Not Found
+description: The page you're looking for doesn't exist.
+background: '/img/bg-post.jpg'
+permalink: /404.html
+---
+
+<div class="row">
+  <div class="col-lg-8 col-md-10 mx-auto text-center">
+    
+    <div class="error-container py-5">
+      <h1 class="error-code">404</h1>
+      <h2 class="error-title">Page Not Found</h2>
+      <p class="lead error-description">
+        Sorry, the page you're looking for doesn't exist or has been moved.
+      </p>
+      
+      <div class="error-suggestions mt-5">
+        <h4>What you can do:</h4>
+        <div class="row mt-4">
+          <div class="col-md-4 mb-3">
+            <div class="suggestion-card">
+              <i class="fas fa-home fa-2x text-primary mb-3"></i>
+              <h5>Go Home</h5>
+              <p>Return to our homepage</p>
+              <a href="{{ '/' | relative_url }}" class="btn btn-primary">Home</a>
+            </div>
+          </div>
+          <div class="col-md-4 mb-3">
+            <div class="suggestion-card">
+              <i class="fas fa-list fa-2x text-success mb-3"></i>
+              <h5>Browse Posts</h5>
+              <p>Explore our latest articles</p>
+              <a href="{{ '/posts' | relative_url }}" class="btn btn-success">All Posts</a>
+            </div>
+          </div>
+          <div class="col-md-4 mb-3">
+            <div class="suggestion-card">
+              <i class="fas fa-search fa-2x text-info mb-3"></i>
+              <h5>Search</h5>
+              <p>Find what you're looking for</p>
+              <a href="{{ '/search' | relative_url }}" class="btn btn-info">Search</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="popular-content mt-5">
+        <h4>Popular Content</h4>
+        <div class="row">
+          {% assign popular_posts = site.posts | sort: 'date' | reverse | limit: 3 %}
+          {% for post in popular_posts %}
+          <div class="col-md-4 mb-3">
+            <div class="card h-100">
+              <div class="card-body">
+                <h6 class="card-title">
+                  <a href="{{ post.url | relative_url }}" class="text-decoration-none">
+                    {{ post.title | truncate: 50 }}
+                  </a>
+                </h6>
+                <p class="card-text text-muted small">
+                  {{ post.excerpt | strip_html | truncatewords: 15 }}
+                </p>
+                <small class="text-muted">
+                  <i class="far fa-calendar-alt"></i>
+                  {{ post.date | date: '%B %d, %Y' }}
+                </small>
+              </div>
+            </div>
+          </div>
+          {% endfor %}
+        </div>
+      </div>
+
+      <div class="contact-section mt-5 p-4 bg-light rounded">
+        <h5>Still can't find what you're looking for?</h5>
+        <p>Let us know what you were trying to find and we'll help you out.</p>
+        <a href="{{ '/contact' | relative_url }}" class="btn btn-outline-primary">
+          <i class="fas fa-envelope"></i> Contact Us
+        </a>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+<style>
+.error-container {
+  min-height: 400px;
+}
+
+.error-code {
+  font-size: 8rem;
+  font-weight: 900;
+  color: #dee2e6;
+  line-height: 1;
+  margin-bottom: 0;
+}
+
+.error-title {
+  color: #343a40;
+  margin-bottom: 1rem;
+}
+
+.error-description {
+  color: #6c757d;
+  margin-bottom: 2rem;
+}
+
+.suggestion-card {
+  text-align: center;
+  padding: 2rem 1rem;
+  border-radius: 8px;
+  transition: transform 0.3s ease;
+  height: 100%;
+}
+
+.suggestion-card:hover {
+  transform: translateY(-5px);
+}
+
+.card {
+  transition: transform 0.3s ease;
+  border: none;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+.card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 20px rgba(0,0,0,0.15);
+}
+
+@media (max-width: 768px) {
+  .error-code {
+    font-size: 4rem;
+  }
+  
+  .suggestion-card {
+    margin-bottom: 1rem;
+  }
+}
+</style>

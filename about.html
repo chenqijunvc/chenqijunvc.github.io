@@ -5,8 +5,122 @@ description: Learn more about Vince's journey and the motivation behind his inve
 background: '/img/bg-about.jpg'
 ---
 
-<p>Hi, I'm Vince Qijun Chen, and welcome to my blog! With a deep-rooted passion for understanding market dynamics and a belief in informed decision-making, I've created this space to share my insights into the world of investments.</p>
+<div class="row">
+  <div class="col-lg-8 col-md-10 mx-auto">
+    
+    <p class="lead">Hi, I'm Vince Qijun Chen, and welcome to PortfolioFuture! With a deep-rooted passion for understanding market dynamics and a belief in informed decision-making, I've created this space to share my insights into the intersection of AI, data science, and finance.</p>
 
-<p>My journey into finance began with a fascination for how economic forces shape our lives and how strategic investments can build long-term wealth. Through years of observation, research, and practical experience, I've cultivated a keen eye for identifying trends and analyzing opportunities across various asset classes.</p>
+    <h3>My Background</h3>
+    <p>My journey into quantitative finance began with a fascination for how economic forces shape our lives and how strategic investments can build long-term wealth. Through years of observation, research, and practical experience, I've cultivated expertise in:</p>
+    
+    <ul class="expertise-list">
+      <li><strong>Quantitative Analysis:</strong> Developing mathematical models for investment decision-making</li>
+      <li><strong>Machine Learning in Finance:</strong> Applying AI techniques to market prediction and portfolio optimization</li>
+      <li><strong>Risk Management:</strong> Creating robust frameworks for portfolio protection</li>
+      <li><strong>Data Science:</strong> Extracting actionable insights from complex financial datasets</li>
+    </ul>
 
-<p class="mb-5">The primary motivation behind this blog is to demystify complex financial concepts and provide clear, actionable commentary for both seasoned investors and those just starting their journey. I aim to offer well-researched analysis, explore diverse investment strategies, and share my perspectives on current market events, all with the goal of fostering a more informed and confident investment community. Join me as we navigate the exciting and ever-evolving landscape of finance together.</p>
+    <h3>What You'll Find Here</h3>
+    <p>This blog focuses on the practical application of advanced technologies in finance:</p>
+    
+    <div class="row mt-4">
+      <div class="col-md-6">
+        <div class="topic-card">
+          <h5><i class="fas fa-robot text-primary"></i> AI & Machine Learning</h5>
+          <p>Exploring how artificial intelligence is transforming investment strategies and market analysis.</p>
+        </div>
+      </div>
+      <div class="col-md-6">
+        <div class="topic-card">
+          <h5><i class="fas fa-chart-line text-success"></i> Quantitative Finance</h5>
+          <p>Deep dives into mathematical models, portfolio theory, and systematic trading approaches.</p>
+        </div>
+      </div>
+      <div class="col-md-6">
+        <div class="topic-card">
+          <h5><i class="fas fa-database text-info"></i> Data Science</h5>
+          <p>Practical examples of leveraging data to uncover patterns and make informed financial decisions.</p>
+        </div>
+      </div>
+      <div class="col-md-6">
+        <div class="topic-card">
+          <h5><i class="fas fa-comments text-warning"></i> Market Commentary</h5>
+          <p>My perspectives on current market trends, economic shifts, and their implications for investors.</p>
+        </div>
+      </div>
+    </div>
+
+    <h3>My Mission</h3>
+    <p class="mb-5">The primary motivation behind this blog is to demystify complex financial concepts and provide clear, actionable commentary for both seasoned investors and those just starting their journey. I aim to offer well-researched analysis, explore diverse investment strategies, and share my perspectives on current market events, all with the goal of fostering a more informed and confident investment community.</p>
+
+    <div class="connect-section text-center bg-light p-4 rounded">
+      <h4>Let's Connect</h4>
+      <p>Join me as we navigate the exciting and ever-evolving landscape of finance together.</p>
+      <div class="social-links">
+        {% if site.linkedin_username %}
+        <a href="https://linkedin.com/in/{{ site.linkedin_username }}" class="btn btn-outline-primary mr-2" target="_blank">
+          <i class="fab fa-linkedin"></i> LinkedIn
+        </a>
+        {% endif %}
+        {% if site.github_username %}
+        <a href="https://github.com/{{ site.github_username }}" class="btn btn-outline-dark mr-2" target="_blank">
+          <i class="fab fa-github"></i> GitHub
+        </a>
+        {% endif %}
+        <a href="{{ '/contact' | relative_url }}" class="btn btn-primary">
+          <i class="fas fa-envelope"></i> Contact Me
+        </a>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<style>
+.expertise-list {
+  list-style: none;
+  padding-left: 0;
+}
+
+.expertise-list li {
+  padding: 0.5rem 0;
+  border-left: 3px solid #007bff;
+  padding-left: 1rem;
+  margin-bottom: 0.5rem;
+}
+
+.topic-card {
+  background: #f8f9fa;
+  padding: 1.5rem;
+  border-radius: 8px;
+  margin-bottom: 1rem;
+  height: 100%;
+  transition: transform 0.3s ease;
+}
+
+.topic-card:hover {
+  transform: translateY(-5px);
+}
+
+.topic-card h5 {
+  margin-bottom: 1rem;
+}
+
+.topic-card i {
+  margin-right: 0.5rem;
+}
+
+.connect-section {
+  margin-top: 3rem;
+}
+
+.social-links .btn {
+  margin: 0.25rem;
+}
+
+@media (max-width: 768px) {
+  .topic-card {
+    margin-bottom: 1rem;
+  }
+}
+</style>

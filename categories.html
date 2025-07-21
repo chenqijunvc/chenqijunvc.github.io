@@ -1,0 +1,87 @@
+---
+layout: page
+title: Categories
+description: Browse posts by category to explore specific topics in AI, finance, and data science.
+background: '/img/bg-post.jpg'
+---
+
+<div class="row">
+  <div class="col-lg-8 col-md-10 mx-auto">
+    
+    {% assign categories = site.categories | sort %}
+    {% for category in categories %}
+      {% assign posts = category[1] %}
+      {% if posts.size > 0 %}
+        <div class="category-section mb-5">
+          <h2 class="category-title">
+            <i class="fas fa-folder-open"></i> 
+            {{ category[0] | replace: '-', ' ' | capitalize }}
+            <span class="badge badge-secondary ml-2">{{ posts.size }}</span>
+          </h2>
+          <hr class="category-divider">
+          
+          {% for post in posts %}
+            <article class="post-preview">
+              <a href="{{ post.url | prepend: site.baseurl | replace: '//', '/' }}">
+                <h3 class="post-title">{{ post.title }}</h3>
+                {% if post.subtitle %}
+                <h4 class="post-subtitle">{{ post.subtitle }}</h4>
+                {% else %}
+                <h4 class="post-subtitle">{{ post.excerpt | strip_html | truncatewords: 15 }}</h4>
+                {% endif %}
+              </a>
+              <p class="post-meta">
+                <i class="far fa-calendar-alt"></i> {{ post.date | date: '%B %d, %Y' }}
+                <span class="mx-2">•</span>
+                <i class="far fa-clock"></i> {% include read_time.html content=post.content %}
+                {% if post.tags.size > 0 %}
+                <span class="mx-2">•</span>
+                <i class="fas fa-tags"></i>
+                {% for tag in post.tags limit:3 %}
+                  <span class="badge badge-light">{{ tag }}</span>
+                {% endfor %}
+                {% endif %}
+              </p>
+            </article>
+            {% unless forloop.last %}<hr>{% endunless %}
+          {% endfor %}
+        </div>
+      {% endif %}
+    {% endfor %}
+
+    {% if site.categories.size == 0 %}
+      <div class="text-center py-5">
+        <i class="fas fa-folder-open fa-3x text-muted mb-3"></i>
+        <h3>No Categories Yet</h3>
+        <p class="text-muted">Categories will appear here as posts are tagged.</p>
+      </div>
+    {% endif %}
+
+  </div>
+</div>
+
+<style>
+.category-title {
+  color: #212529;
+  font-weight: 700;
+  margin-bottom: 1rem;
+}
+
+.category-divider {
+  border-top: 2px solid #868e96;
+  margin-bottom: 2rem;
+}
+
+.category-section {
+  border-bottom: 1px solid #dee2e6;
+  padding-bottom: 2rem;
+}
+
+.badge {
+  font-size: 0.75em;
+}
+
+.post-meta i {
+  margin-right: 0.25rem;
+}
+</style>
