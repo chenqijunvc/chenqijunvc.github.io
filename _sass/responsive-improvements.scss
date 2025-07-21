@@ -1,0 +1,150 @@
+/* Responsive improvements for all pages */
+
+/* Base responsive layout improvements */
+@media (min-width: 1200px) {
+  .container {
+    max-width: 1200px;
+  }
+}
+
+@media (min-width: 1400px) {
+  .container {
+    max-width: 1320px;
+  }
+}
+
+/* Newsletter responsive fixes */
+.newsletter-signup {
+  padding: 3rem 0 2rem;
+}
+
+.newsletter-form .input-group {
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+@media (max-width: 576px) {
+  .newsletter-signup {
+    padding: 2rem 0 1.5rem;
+  }
+  
+  .newsletter-signup h3 {
+    font-size: 1.5rem;
+  }
+  
+  .newsletter-form .input-group {
+    flex-direction: column;
+  }
+  
+  .newsletter-form .input-group-append {
+    width: 100%;
+    margin-top: 10px;
+  }
+  
+  .newsletter-form .btn {
+    width: 100%;
+    border-radius: 25px !important;
+  }
+  
+  .newsletter-form .form-control {
+    border-radius: 25px !important;
+    text-align: center;
+  }
+  
+  .newsletter-benefits {
+    margin-top: 2rem !important;
+  }
+  
+  .newsletter-benefits .col-md-4 {
+    margin-bottom: 1.5rem;
+  }
+}
+
+/* Content width improvements */
+.post-preview h2.post-title {
+  line-height: 1.3;
+  margin-bottom: 0.5rem;
+}
+
+.post-preview h3.post-subtitle {
+  line-height: 1.4;
+  margin-bottom: 1rem;
+}
+
+/* Footer responsive improvements */
+.footer-enhanced {
+  margin-top: 2rem;
+}
+
+.footer-links .row > div {
+  margin-bottom: 0.5rem;
+}
+
+@media (max-width: 768px) {
+  .footer-links .row {
+    text-align: center;
+  }
+  
+  .footer-links .row > div {
+    margin-bottom: 1rem;
+  }
+}
+
+/* Improve readability on larger screens */
+@media (min-width: 992px) {
+  .post-preview,
+  .page-content p,
+  .page-content ul,
+  .page-content ol {
+    font-size: 1.1rem;
+    line-height: 1.6;
+  }
+}
+
+/* Better spacing for mobile */
+@media (max-width: 768px) {
+  .masthead {
+    min-height: 250px;
+  }
+  
+  .post-preview {
+    margin-bottom: 2rem;
+  }
+  
+  .page-heading h1,
+  .post-heading h1 {
+    font-size: 2rem;
+  }
+  
+  .page-heading .subheading,
+  .post-heading .subheading {
+    font-size: 1.1rem;
+  }
+}
+
+/* Filter section improvements */
+.filter-section .form-control,
+.filter-section .form-select {
+  border-radius: 6px;
+  border: 1px solid #ced4da;
+  transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+}
+
+.filter-section .form-control:focus,
+.filter-section .form-select:focus {
+  border-color: #80bdff;
+  box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
+}
+
+/* Tag badges responsive */
+.tag-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+@media (max-width: 576px) {
+  .tag-container {
+    justify-content: center;
+  }
+}

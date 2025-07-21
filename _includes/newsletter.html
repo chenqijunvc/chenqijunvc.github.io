@@ -2,7 +2,7 @@
 <section class="newsletter-signup bg-primary text-white py-5">
   <div class="container">
     <div class="row">
-      <div class="col-lg-8 col-md-10 mx-auto text-center">
+      <div class="col-xl-10 col-lg-11 mx-auto text-center">
         <h3 class="mb-3">
           <i class="fas fa-envelope-open"></i>
           Stay Updated with PortfolioFuture
@@ -14,13 +14,13 @@
         
         <form class="newsletter-form" action="#" method="post" novalidate>
           <div class="form-row justify-content-center">
-            <div class="col-md-6 col-lg-5">
+            <div class="col-md-8 col-lg-6">
               <div class="input-group mb-3">
-                <input type="email" class="form-control form-control-lg" placeholder="Your email address" required>
+                <input type="email" class="form-control" placeholder="Your email address" required>
                 <div class="input-group-append">
-                  <button class="btn btn-light btn-lg" type="submit">
+                  <button class="btn btn-light" type="submit">
                     <i class="fas fa-paper-plane"></i>
-                    Subscribe
+                    <span class="d-none d-sm-inline">Subscribe</span>
                   </button>
                 </div>
               </div>
@@ -63,12 +63,23 @@
 
 .newsletter-form .form-control {
   border: none;
-  border-radius: 50px 0 0 50px;
+  border-radius: 25px 0 0 25px;
+  padding: 12px 20px;
+  font-size: 1rem;
 }
 
 .newsletter-form .btn {
-  border-radius: 0 50px 50px 0;
+  border-radius: 0 25px 25px 0;
   font-weight: 600;
+  padding: 12px 16px;
+  font-size: 1rem;
+  white-space: nowrap;
+}
+
+.newsletter-form .input-group {
+  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+  border-radius: 25px;
+  overflow: hidden;
 }
 
 .newsletter-benefits .col-md-4 {
@@ -84,6 +95,20 @@
   .newsletter-form .btn {
     border-radius: 25px;
     margin-bottom: 0.5rem;
+  }
+  
+  .newsletter-form .input-group {
+    flex-direction: column;
+  }
+  
+  .newsletter-form .input-group-append {
+    width: 100%;
+    margin-top: 10px;
+  }
+  
+  .newsletter-form .btn {
+    width: 100%;
+    border-radius: 25px;
   }
 }
 </style>
