@@ -8,6 +8,49 @@
   background-repeat: no-repeat;
   background-attachment: scroll;
   min-height: 350px;
+  color: white;
+}
+
+.masthead .page-heading,
+.masthead .post-heading {
+  color: white;
+}
+
+.masthead .page-heading h1,
+.masthead .post-heading h1,
+.masthead h1 {
+  color: white !important;
+  text-shadow: 0 2px 4px rgba(0,0,0,0.5);
+}
+
+.masthead .page-heading h2,
+.masthead .post-heading h2,
+.masthead .page-heading .subheading,
+.masthead .post-heading .subheading,
+.masthead h2,
+.masthead .subheading {
+  color: white !important;
+  text-shadow: 0 1px 2px rgba(0,0,0,0.5);
+}
+
+.masthead .post-heading .meta,
+.masthead .meta,
+.masthead span {
+  color: rgba(255,255,255,0.9) !important;
+  text-shadow: 0 1px 2px rgba(0,0,0,0.5);
+}
+
+.masthead .post-heading .meta a,
+.masthead .meta a,
+.masthead a {
+  color: rgba(255,255,255,0.9) !important;
+  text-decoration: none;
+}
+
+.masthead .post-heading .meta a:hover,
+.masthead .meta a:hover,
+.masthead a:hover {
+  color: white !important;
 }
 
 .masthead::before {

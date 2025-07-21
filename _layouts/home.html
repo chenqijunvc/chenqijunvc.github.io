@@ -3,7 +3,6 @@ layout: default
 ---
 
 <!-- Page Header -->
-{% assign dynamic_bg = include.dynamic_background.html %}
 {% capture background_url %}{% include dynamic_background.html %}{% endcapture %}
 <header class="masthead" style="background-image: url('{{ background_url | strip }}')">
   <div class="overlay"></div>
@@ -47,15 +46,8 @@ layout: default
             <div class="row">
               <div class="col-md-4">
                 <div class="post-image">
-                  {% if post.image %}
-                    <img src="{{ post.image | relative_url }}" alt="{{ post.title | escape }}" class="img-fluid rounded">
-                  {% elsif post.background %}
-                    <img src="{{ post.background | relative_url }}" alt="{{ post.title | escape }}" class="img-fluid rounded">
-                  {% else %}
-                    <div class="placeholder-image rounded d-flex align-items-center justify-content-center">
-                      <i class="fas fa-chart-line fa-3x text-muted"></i>
-                    </div>
-                  {% endif %}
+                  {% capture auto_image %}{% include auto_image.html post=post %}{% endcapture %}
+                  <img src="{{ auto_image | strip | relative_url }}" alt="{{ post.title | escape }}" class="img-fluid rounded">
                 </div>
               </div>
               <div class="col-md-8">
@@ -122,15 +114,8 @@ layout: default
             <div class="col-md-6 mb-4">
               <article class="recent-post-card h-100">
                 <div class="card-image mb-3">
-                  {% if post.image %}
-                    <img src="{{ post.image | relative_url }}" alt="{{ post.title | escape }}" class="img-fluid rounded">
-                  {% elsif post.background %}
-                    <img src="{{ post.background | relative_url }}" alt="{{ post.title | escape }}" class="img-fluid rounded">
-                  {% else %}
-                    <div class="placeholder-image-small rounded d-flex align-items-center justify-content-center">
-                      <i class="fas fa-file-alt fa-2x text-muted"></i>
-                    </div>
-                  {% endif %}
+                  {% capture auto_image %}{% include auto_image.html post=post %}{% endcapture %}
+                  <img src="{{ auto_image | strip | relative_url }}" alt="{{ post.title | escape }}" class="img-fluid rounded">
                 </div>
                 
                 <div class="card-content">

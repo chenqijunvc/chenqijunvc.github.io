@@ -2,8 +2,9 @@
 Dynamic Background Image Generator
 This include generates background images for pages and posts based on:
 1. Page/post specific background property
-2. Category-based default images
-3. Default fallback images
+2. Category-based rotation of existing images
+3. Page-type specific defaults
+4. Ultimate fallback
 {% endcomment %}
 
 {% assign background_image = '' %}
@@ -14,30 +15,53 @@ This include generates background images for pages and posts based on:
 {% elsif post.background %}
   {% assign background_image = post.background %}
 
-{% comment %} Second priority: category-based images {% endcomment %}
-{% else %}
+{% comment %} Second priority: category-based images using existing backgrounds {% endcomment %}
+{% elsif page.categories.size > 0 or post.categories.size > 0 %}
   {% assign categories = page.categories | default: post.categories %}
-  {% assign page_type = page.layout | default: 'default' %}
   
-  {% comment %} Assign background based on categories {% endcomment %}
+  {% comment %} Assign different existing backgrounds based on categories {% endcomment %}
   {% if categories contains 'machine-learning' or categories contains 'ai' %}
-    {% assign background_image = '/img/bg-ai.jpg' %}
+    {% assign background_image = '/img/bg-post.jpg' %}
   {% elsif categories contains 'quantitative-finance' or categories contains 'finance' %}
-    {% assign background_image = '/img/bg-finance.jpg' %}
+    {% assign background_image = '/img/bg-about.jpg' %}
   {% elsif categories contains 'data-science' %}
-    {% assign background_image = '/img/bg-data.jpg' %}
-  {% elsif categories contains 'investment-strategy' %}
-    {% assign background_image = '/img/bg-strategy.jpg' %}
+    {% assign background_image = '/img/bg-contact.jpg' %}
+  {% elsif categories contains 'investment-strategy' or categories contains 'portfolio-management' %}
+    {% assign background_image = '/img/bg-index.jpg' %}
   {% else %}
-    {% comment %} Default backgrounds based on page type {% endcomment %}
-    {% assign page_name = page.url | remove: '/' | remove: '.html' %}
-    {% if page_name == '' %}
-      {% assign page_name = 'home' %}
-    {% endif %}
-    
-    {% assign background_image = site.default_backgrounds[page_name] | default: site.default_backgrounds.default %}
+    {% comment %} For posts without specific categories, use post background {% endcomment %}
+    {% assign background_image = '/img/bg-post.jpg' %}
   {% endif %}
 {% endif %}
 
-{% comment %} Output the final background image {% endcomment %}
+{% comment %} Third priority: page-type specific defaults {% endcomment %}
+{% if background_image == '' %}
+  {% assign page_name = page.url | remove: '/' | remove: '.html' | remove: 'index' %}
+  {% if page_name == '' %}
+    {% assign page_name = 'home' %}
+  {% endif %}
+  
+  {% comment %} Use configured backgrounds from _config.yml or defaults {% endcomment %}
+  {% case page_name %}
+    {% when 'home' %}
+      {% assign background_image = site.default_backgrounds.home | default: '/img/bg-index.jpg' %}
+    {% when 'about' %}
+      {% assign background_image = site.default_backgrounds.about | default: '/img/bg-about.jpg' %}
+    {% when 'posts' %}
+      {% assign background_image = site.default_backgrounds.posts | default: '/img/bg-post.jpg' %}
+    {% when 'contact' %}
+      {% assign background_image = site.default_backgrounds.contact | default: '/img/bg-contact.jpg' %}
+    {% when 'search' %}
+      {% assign background_image = site.default_backgrounds.search | default: '/img/bg-post.jpg' %}
+    {% else %}
+      {% assign background_image = site.default_backgrounds.default | default: '/img/bg-post.jpg' %}
+  {% endcase %}
+{% endif %}
+
+{% comment %} Ultimate fallback {% endcomment %}
+{% if background_image == '' %}
+  {% assign background_image = '/img/bg-post.jpg' %}
+{% endif %}
+
+{% comment %} Output the final background image with proper URL handling {% endcomment %}
 {{ background_image | prepend: site.baseurl | replace: '//', '/' }}
