@@ -3,15 +3,12 @@ layout: default
 ---
 
 <!-- Page Header -->
-{% if page.background %}
-<header class="masthead" style="background-image: url('{{ page.background | prepend: site.baseurl | replace: '//', '/' }}')">
-  {% else %}
-  <header class="masthead">
-    {% endif %}
-    <div class="overlay"></div>
+{% capture background_url %}{% include dynamic_background.html %}{% endcapture %}
+<header class="masthead" style="background-image: url('{{ background_url | strip }}')">
+  <div class="overlay"></div>
     <div class="container">
       <div class="row">
-        <div class="col-xl-10 col-lg-11 mx-auto">
+        <div class="col-lg-10 col-md-11 mx-auto">
           <div class="post-heading">
             <h1>{{ page.title }}</h1>
             {% if page.subtitle %}
@@ -30,7 +27,7 @@ layout: default
 
   <div class="container">
     <div class="row">
-      <div class="col-xl-10 col-lg-11 mx-auto">
+      <div class="col-lg-10 col-md-11 mx-auto">
 
         {{ content }}
 

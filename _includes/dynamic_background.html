@@ -1,0 +1,43 @@
+{% comment %}
+Dynamic Background Image Generator
+This include generates background images for pages and posts based on:
+1. Page/post specific background property
+2. Category-based default images
+3. Default fallback images
+{% endcomment %}
+
+{% assign background_image = '' %}
+
+{% comment %} First priority: explicit background in page/post {% endcomment %}
+{% if page.background %}
+  {% assign background_image = page.background %}
+{% elsif post.background %}
+  {% assign background_image = post.background %}
+
+{% comment %} Second priority: category-based images {% endcomment %}
+{% else %}
+  {% assign categories = page.categories | default: post.categories %}
+  {% assign page_type = page.layout | default: 'default' %}
+  
+  {% comment %} Assign background based on categories {% endcomment %}
+  {% if categories contains 'machine-learning' or categories contains 'ai' %}
+    {% assign background_image = '/img/bg-ai.jpg' %}
+  {% elsif categories contains 'quantitative-finance' or categories contains 'finance' %}
+    {% assign background_image = '/img/bg-finance.jpg' %}
+  {% elsif categories contains 'data-science' %}
+    {% assign background_image = '/img/bg-data.jpg' %}
+  {% elsif categories contains 'investment-strategy' %}
+    {% assign background_image = '/img/bg-strategy.jpg' %}
+  {% else %}
+    {% comment %} Default backgrounds based on page type {% endcomment %}
+    {% assign page_name = page.url | remove: '/' | remove: '.html' %}
+    {% if page_name == '' %}
+      {% assign page_name = 'home' %}
+    {% endif %}
+    
+    {% assign background_image = site.default_backgrounds[page_name] | default: site.default_backgrounds.default %}
+  {% endif %}
+{% endif %}
+
+{% comment %} Output the final background image {% endcomment %}
+{{ background_image | prepend: site.baseurl | replace: '//', '/' }}

@@ -34,3 +34,19 @@ plugins:
   - jekyll-feed
   - jekyll-paginate
   - jekyll-sitemap # Uncomment this line to silently generate a sitemaps.org compliant sitemap for your Jekyll site
+
+# Dynamic background images
+default_backgrounds:
+  home: '/img/bg-index.jpg'
+  about: '/img/bg-about.jpg'
+  posts: '/img/bg-post.jpg'
+  contact: '/img/bg-contact.jpg'
+  search: '/img/bg-post.jpg'
+  default: '/img/bg-post.jpg'
+
+# Category-specific backgrounds (will fallback to defaults if these don't exist)
+category_backgrounds:
+  ai: '/img/bg-post.jpg'
+  finance: '/img/bg-post.jpg'
+  data-science: '/img/bg-post.jpg'
+  investment-strategy: '/img/bg-post.jpg'

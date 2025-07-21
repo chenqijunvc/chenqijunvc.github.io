@@ -3,6 +3,11 @@ layout: post
 title: "Seven Insights into Active Management"
 date: 2021-03-01 10:00:00 -0500
 categories: investment-strategy portfolio-management
+tags: [active-management, portfolio-management, investment-strategy, alpha-generation, risk-management]
+author: Vince Qijun Chen
+excerpt: The pursuit of superior investment returns through active management demands a disciplined approach and a profound understanding of market dynamics.
+featured: true
+image: /img/posts/03.jpg
 ---
 
 The pursuit of superior investment returns through active management demands a disciplined approach and a profound understanding of market dynamics. For professionals tasked with navigating complex financial landscapes, certain foundational principles, notably articulated by thought leaders like **Richard Grinold and Ronald Kahn**, illuminate the path toward generating genuine value. Herein, we explore seven critical insights that shape the very essence of effective active portfolio management.
