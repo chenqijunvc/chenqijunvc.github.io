@@ -7,7 +7,7 @@ outlet: "CBOE Global Markets"
 show: "3 Questions in 3 Minutes"
 host: "CBOE"
 duration: "3 minutes 13 seconds"
-media_type: "video"
+media_type: "tv"
 featured: true
 external_url: "https://www.cboe.com/video/wab3i5hlwh/"
 video_url: "https://www.cboe.com/video/wab3i5hlwh/"
