@@ -10,40 +10,40 @@
   min-height: 350px;
 }
 
-/* Simple, direct white font styling for all header text */
-.masthead * {
+/* Clean header text styling - back to original Jekyll theme approach */
+header.masthead .page-heading,
+header.masthead .post-heading,
+header.masthead .site-heading {
   color: white !important;
-  text-shadow: 2px 2px 4px rgba(0,0,0,0.8) !important;
 }
 
-.masthead h1 {
+header.masthead .site-heading h1,
+header.masthead .page-heading h1,
+header.masthead .post-heading h1 {
   color: white !important;
-  text-shadow: 2px 2px 4px rgba(0,0,0,0.8) !important;
+  text-shadow: none !important;
   font-weight: bold !important;
 }
 
-.masthead h2,
-.masthead .subheading {
+header.masthead .site-heading .subheading,
+header.masthead .page-heading .subheading,
+header.masthead .post-heading .subheading {
   color: white !important;
-  text-shadow: 1px 1px 3px rgba(0,0,0,0.8) !important;
+  text-shadow: none !important;
 }
 
-.masthead span,
-.masthead .meta,
-.masthead a {
-  color: white !important;
-  text-shadow: 1px 1px 2px rgba(0,0,0,0.8) !important;
-}
+header.masthead .meta,
+header.masthead .meta a,
 header.masthead a {
   color: rgba(255,255,255,0.95) !important;
+  text-shadow: none !important;
   text-decoration: none !important;
 }
 
-header.masthead .post-heading .meta a:hover,
 header.masthead .meta a:hover,
 header.masthead a:hover {
   color: white !important;
-  text-shadow: 1px 1px 2px rgba(0,0,0,0.8) !important;
+  text-decoration: underline !important;
 }
 
 .masthead::before {
