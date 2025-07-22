@@ -1,76 +1,106 @@
 /* Responsive improvements for all pages */
 
-/* Dynamic background image improvements */
-.masthead {
-  position: relative;
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-attachment: scroll;
-  min-height: 350px;
+/* Original Clean Blog masthead styling - exact copy from StartBootstrap template */
+header.masthead {
+    margin-bottom: 50px;
+    background: no-repeat center center;
+    background-color: #6c757d;
+    background-attachment: scroll;
+    position: relative;
+    background-size: cover;
 }
 
-/* Clean header text styling - back to original Jekyll theme approach */
+header.masthead .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-color: #212529;
+    opacity: 0.5;
+}
+
 header.masthead .page-heading,
 header.masthead .post-heading,
 header.masthead .site-heading {
-  color: white !important;
+    padding: 200px 0 150px;
+    color: white;
 }
 
-header.masthead .site-heading h1,
+@media only screen and (min-width: 768px) {
+    header.masthead .page-heading,
+    header.masthead .post-heading,
+    header.masthead .site-heading {
+        padding: 200px 0;
+    }
+}
+
+header.masthead .page-heading,
+header.masthead .site-heading {
+    text-align: center;
+}
+
 header.masthead .page-heading h1,
-header.masthead .post-heading h1 {
-  color: white !important;
-  text-shadow: none !important;
-  font-weight: bold !important;
+header.masthead .site-heading h1 {
+    font-size: 50px;
+    margin-top: 0;
+    color: white;
 }
 
-header.masthead .site-heading .subheading,
 header.masthead .page-heading .subheading,
+header.masthead .site-heading .subheading {
+    font-size: 24px;
+    font-weight: 300;
+    line-height: 1.1;
+    display: block;
+    margin: 10px 0 0;
+    color: white;
+}
+
+@media only screen and (min-width: 768px) {
+    header.masthead .page-heading h1,
+    header.masthead .site-heading h1 {
+        font-size: 80px;
+    }
+}
+
+header.masthead .post-heading h1 {
+    font-size: 35px;
+    color: white;
+}
+
+header.masthead .post-heading .meta,
 header.masthead .post-heading .subheading {
-  color: white !important;
-  text-shadow: none !important;
+    line-height: 1.1;
+    display: block;
 }
 
-header.masthead .meta,
-header.masthead .meta a,
-header.masthead a {
-  color: rgba(255,255,255,0.95) !important;
-  text-shadow: none !important;
-  text-decoration: none !important;
+header.masthead .post-heading .subheading {
+    font-size: 24px;
+    font-weight: 600;
+    margin: 10px 0 30px;
+    color: white;
 }
 
-header.masthead .meta a:hover,
-header.masthead a:hover {
-  color: white !important;
-  text-decoration: underline !important;
+header.masthead .post-heading .meta {
+    font-size: 20px;
+    font-weight: 300;
+    font-style: italic;
+    color: white;
 }
 
-.masthead::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background: linear-gradient(45deg, #1e3c72 0%, #2a5298 100%);
-  opacity: 0;
-  transition: opacity 0.3s ease;
-  z-index: 1;
+header.masthead .post-heading .meta a {
+    color: white;
 }
 
-.masthead.fallback-bg::before {
-  opacity: 0.8;
-}
-
-.masthead .overlay {
-  position: relative;
-  z-index: 2;
-}
-
-/* Handle image loading errors gracefully */
-.masthead {
-  background-image: url('/img/bg-post.jpg');
+@media only screen and (min-width: 768px) {
+    header.masthead .post-heading h1 {
+        font-size: 55px;
+    }
+    
+    header.masthead .post-heading .subheading {
+        font-size: 30px;
+    }
 }
 
 /* Base responsive layout improvements */

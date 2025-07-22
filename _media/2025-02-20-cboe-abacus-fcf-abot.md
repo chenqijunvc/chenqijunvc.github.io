@@ -11,8 +11,8 @@ media_type: "tv"
 featured: true
 external_url: "https://www.cboe.com/video/"
 video_url: "/video/3 Questions in 3 Minutes_Abacus FCF (ABOT)_Vince Chen.mp4"
-thumbnail: "/img/posts/Crystal_Ball.jpg"
-image: "/img/posts/Crystal_Ball.jpg"
+thumbnail: "/img/media/Cboe_Global_Markets_Logo.svg"
+image: "/img/media/Cboe_Global_Markets_Logo.svg"
 topics:
   - "Innovation Investing"
   - "Free Cash Flow ETF"
