@@ -4,18 +4,18 @@ layout: default
 
 <!-- Page Header -->
 {% capture background_url %}{% include dynamic_background.html %}{% endcapture %}
-<header class="masthead" style="background-image: url('{{ background_url | strip }}')">
+<header class="masthead" style="background-image: url('{{ background_url | strip }}'); color: white;">
   <div class="overlay"></div>
     <div class="container">
       <div class="row">
         <div class="col-lg-10 col-md-11 mx-auto">
           <div class="post-heading">
-            <h1>{{ page.title }}</h1>
+            <h1 style="color: white !important; text-shadow: 2px 2px 4px rgba(0,0,0,0.8);">{{ page.title }}</h1>
             {% if page.subtitle %}
-            <h2 class="subheading">{{ page.subtitle }}</h2>
+            <h2 class="subheading" style="color: white !important; text-shadow: 1px 1px 3px rgba(0,0,0,0.8);">{{ page.subtitle }}</h2>
             {% endif %}
-            <span class="meta">Posted by
-              <a href="#">{% if page.author %}{{ page.author }}{% else %}{{ site.author }}{% endif %}</a>
+            <span class="meta" style="color: white !important; text-shadow: 1px 1px 2px rgba(0,0,0,0.8);">Posted by
+              <a href="#" style="color: white !important; text-shadow: 1px 1px 2px rgba(0,0,0,0.8);">{% if page.author %}{{ page.author }}{% else %}{{ site.author }}{% endif %}</a>
               on {{ page.date | date: '%B %d, %Y' }} &middot; {% include read_time.html
               content=page.content %}
             </span>

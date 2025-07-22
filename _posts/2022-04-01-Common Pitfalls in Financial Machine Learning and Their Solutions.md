@@ -7,7 +7,7 @@ tags: [machine-learning, financial-ml, backtesting, feature-importance, data-sci
 author: Vince Qijun Chen
 excerpt: Navigate the complex world of financial machine learning with a clear understanding of common pitfalls and their robust solutions.
 featured: true
-image: /img/posts/01.jpg
+image: /img/posts/Machine_Learning.jpeg
 ---
 
 **Navigate the complex world of financial machine learning with a clear understanding of common pitfalls and their robust solutions.** This essential guide, informed by Marcos Lopez de Prado's "Advances in Financial Machine Learning," highlights critical challenges from data processing to backtest overfitting. Discover practical strategies to build more reliable and accurate quantitative models for financial markets. This content is for personal study and reference; for comprehensive details, consider purchasing the original text.

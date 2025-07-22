@@ -4,15 +4,15 @@ layout: default
 
 <!-- Page Header -->
 {% capture background_url %}{% include dynamic_background.html %}{% endcapture %}
-<header class="masthead" style="background-image: url('{{ background_url | strip }}')">
+<header class="masthead" style="background-image: url('{{ background_url | strip }}'); color: white;">
   <div class="overlay"></div>
     <div class="container">
       <div class="row">
         <div class="col-lg-10 col-md-11 mx-auto">
           <div class="page-heading">
-            <h1>{{ site.title }}</h1>
+            <h1 style="color: white !important; text-shadow: 2px 2px 4px rgba(0,0,0,0.8);">{{ site.title }}</h1>
             {% if site.description %}
-            <span class="subheading">{{ site.description }}</span>
+            <span class="subheading" style="color: white !important; text-shadow: 1px 1px 3px rgba(0,0,0,0.8);">{{ site.description }}</span>
             {% endif %}
           </div>
         </div>

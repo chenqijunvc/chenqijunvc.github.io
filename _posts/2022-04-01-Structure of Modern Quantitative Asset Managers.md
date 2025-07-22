@@ -7,7 +7,7 @@ tags: [quantitative-finance, asset-management, organizational-structure, team-st
 author: Vince Qijun Chen
 excerpt: Unravel the sophisticated operational structure of a modern quantitative asset management firm.
 featured: true
-image: /img/posts/02.jpg
+image: /img/posts/Global.jpg
 ---
 
 **Unravel the sophisticated operational structure of a modern quantitative asset management firm.** This detailed overview, drawing insights from Marcos Lopez de Prado's "Advances in Financial Machine Learning," illuminates how top-tier quant teams are organized to develop, implement, and oversee algorithmic trading strategies. Learn about the specialized roles, from data curation to portfolio oversight, that drive high-performance quantitative investment. This content is for personal study and reference; for comprehensive details, consider purchasing the original text.

@@ -6,7 +6,7 @@ categories: investment-strategy portfolio-management
 tags: [active-management, fundamental-law, portfolio-theory, information-ratio, skill-analysis]
 author: Vince Qijun Chen
 excerpt: The Fundamental Law of Active Management provides a critical framework for understanding how active managers generate excess returns.
-image: /img/posts/04.jpg
+image: /img/posts/Crystal_Ball.jpg
 ---
 
 The **Fundamental Law of Active Management** provides a critical framework for understanding how active managers generate excess returns. It quantitatively links a manager's skill and opportunity to their ability to add value. At its core, this law helps us dissect the sources of active performance.

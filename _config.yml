@@ -35,6 +35,12 @@ plugins:
   - jekyll-paginate
   - jekyll-sitemap # Uncomment this line to silently generate a sitemaps.org compliant sitemap for your Jekyll site
 
+# Collections
+collections:
+  media:
+    output: true
+    permalink: /media/:title/
+
 # Dynamic background images
 default_backgrounds:
   home: '/img/bg-index.jpg'

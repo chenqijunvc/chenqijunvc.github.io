@@ -73,7 +73,9 @@ background: '/img/bg-about.jpg'
         <section class="featured-media mb-5">
           <h2 class="section-title mb-4">Featured Coverage</h2>
           <div class="row">
+            {% if site.media and site.media.size > 0 %}
             {% assign featured_media = site.media | where: "featured", true | sort: "date" | reverse | limit: 2 %}
+            {% if featured_media.size > 0 %}
             {% for media in featured_media %}
             <div class="col-md-6 mb-4">
               <div class="featured-media-card">
@@ -109,6 +111,20 @@ background: '/img/bg-about.jpg'
               </div>
             </div>
             {% endfor %}
+            {% else %}
+            <div class="col-12">
+              <div class="text-center p-4">
+                <p class="text-muted">Featured media coverage will be displayed here once available.</p>
+              </div>
+            </div>
+            {% endif %}
+            {% else %}
+            <div class="col-12">
+              <div class="text-center p-4">
+                <p class="text-muted">Media coverage section is being set up. Check back soon!</p>
+              </div>
+            </div>
+            {% endif %}
           </div>
         </section>
 
@@ -117,6 +133,7 @@ background: '/img/bg-about.jpg'
           <h2 class="section-title mb-4">All Media Coverage</h2>
           
           <div class="media-timeline">
+            {% if site.media and site.media.size > 0 %}
             {% assign all_media = site.media | sort: "date" | reverse %}
             {% for media in all_media %}
             <div class="media-item" data-media-type="{{ media.media_type }}" data-year="{{ media.date | date: '%Y' }}">
@@ -172,6 +189,13 @@ background: '/img/bg-about.jpg'
               </div>
             </div>
             {% endfor %}
+            {% else %}
+            <div class="text-center p-5">
+              <i class="fas fa-newspaper fa-3x text-muted mb-3"></i>
+              <h4>Media Coverage Coming Soon</h4>
+              <p class="text-muted">This section will showcase Vince's TV appearances, interviews, and press coverage.<br>Check back soon for updates!</p>
+            </div>
+            {% endif %}
           </div>
         </section>
 

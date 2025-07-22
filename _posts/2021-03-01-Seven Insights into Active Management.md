@@ -7,7 +7,7 @@ tags: [active-management, portfolio-management, investment-strategy, alpha-gener
 author: Vince Qijun Chen
 excerpt: The pursuit of superior investment returns through active management demands a disciplined approach and a profound understanding of market dynamics.
 featured: true
-image: /img/posts/03.jpg
+image: /img/posts/Market.jpeg
 ---
 
 The pursuit of superior investment returns through active management demands a disciplined approach and a profound understanding of market dynamics. For professionals tasked with navigating complex financial landscapes, certain foundational principles, notably articulated by thought leaders like **Richard Grinold and Ronald Kahn**, illuminate the path toward generating genuine value. Herein, we explore seven critical insights that shape the very essence of effective active portfolio management.
