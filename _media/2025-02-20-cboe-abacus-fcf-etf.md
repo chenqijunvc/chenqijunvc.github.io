@@ -11,8 +11,8 @@ media_type: "tv"
 featured: true
 external_url: "https://www.cboe.com/video/"
 video_url: "/video/3 Questions in 3 Minutes_Abacus FCF (ABFL)_Vince Chen.mp4"
-thumbnail: "/img/media/Cboe_Global_Markets_Logo.svg"
-image: "/img/media/Cboe_Global_Markets_Logo.svg"
+thumbnail: "/img/media/Cboe_Global_Markets_Logo.svg.png"
+image: "/img/media/Cboe_Global_Markets_Logo.svg.png"
 topics:
   - "Free Cash Flow Investing"
   - "Quality Investing ETF"
