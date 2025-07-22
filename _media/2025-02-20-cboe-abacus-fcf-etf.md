@@ -1,5 +1,8 @@
 ---
-layout: media
+layoutexternal_url: "https://www.cboe.com/video/wab3i5hlwh/"
+video_url: "/video/3 Questions in 3 Minutes_Abacus FCF (ABFL)_Vince Chen.mp4"
+thumbnail: "https://embed-ssl.wistia.com/deliveries/1ee646cf9771e0b095a871e2b79a73e5.webp?image_crop_resized=960x540"
+image: "/img/posts/Market.jpeg"dia
 title: "3 Questions in 3 Minutes: Abacus FCF (ABFL)"
 subtitle: "Discussing the Abacus Free Cash Flow ETF and investment strategies"
 date: 2025-02-20
@@ -24,7 +27,7 @@ key_quotes:
     context: "On the importance of FCF in investment decisions"
   - text: "The Abacus FCF ETF provides investors with exposure to companies that demonstrate strong free cash flow generation."
     context: "Explaining the ETF's investment approach"
-video_embed: '<iframe src="https://fast.wistia.net/embed/iframe/wab3i5hlwh" title="3 Questions in 3 Minutes: Abacus FCF (ABFL) | Vince Chen" allow="autoplay; fullscreen" allowtransparency="true" frameborder="0" scrolling="no" class="wistia_embed" name="wistia_embed" msallowfullscreen width="620" height="349"></iframe>'
+video_embed: '<video width="620" height="349" controls><source src="/video/3 Questions in 3 Minutes_Abacus FCF (ABFL)_Vince Chen.mp4" type="video/mp4">Your browser does not support the video tag.</video>'
 ---
 
 In this focused CBOE video segment, I discuss the Abacus Free Cash Flow ETF (ABFL) and the importance of free cash flow analysis in modern investment strategies.
