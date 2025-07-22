@@ -1,9 +1,10 @@
 {% comment %}
-Auto Image Assignment for Posts
+Auto Image Assignment for Posts - Updated for New Descriptive Image Names
 This include assigns images to posts based on:
 1. Explicit image property
-2. Category-based assignment
-3. Sequential fallback based on post index
+2. Category-based assignment with descriptive themed images
+3. Intelligent fallback system for new categories
+4. Uses descriptive image names: Adventure.jpg, Coins.jpg, Crystal_Ball.jpg, Data_Science.jpeg, Global.jpg, Machine_Learning.jpeg, Market.jpeg, Risk.jpg, Space.jpg
 {% endcomment %}
 
 {% assign post_image = '' %}
@@ -14,24 +15,74 @@ This include assigns images to posts based on:
 {% elsif include.post.background %}
   {% assign post_image = include.post.background %}
 {% else %}
-  {% comment %} Auto-assign based on categories or post index {% endcomment %}
+  {% comment %} Enhanced category-based assignment with new descriptive image names {% endcomment %}
   {% assign categories = include.post.categories %}
   
-  {% if categories contains 'machine-learning' or categories contains 'ai' %}
-    {% assign category_images = '/img/posts/01.jpg,/img/posts/03.jpg,/img/posts/05.jpg' | split: ',' %}
-  {% elsif categories contains 'quantitative-finance' or categories contains 'finance' %}
-    {% assign category_images = '/img/posts/02.jpg,/img/posts/04.jpg,/img/posts/06.jpg' | split: ',' %}
+  {% comment %} Primary category assignments with descriptive themed images {% endcomment %}
+  {% if categories contains 'machine-learning' %}
+    {% assign category_images = '/img/posts/Machine_Learning.jpeg,/img/posts/Data_Science.jpeg,/img/posts/Space.jpg' | split: ',' %}
+  {% elsif categories contains 'quantitative-finance' %}
+    {% assign category_images = '/img/posts/Market.jpeg,/img/posts/Coins.jpg,/img/posts/Global.jpg' | split: ',' %}
   {% elsif categories contains 'data-science' %}
-    {% assign category_images = '/img/posts/03.jpg,/img/posts/05.jpg,/img/posts/01.jpg' | split: ',' %}
-  {% elsif categories contains 'investment-strategy' or categories contains 'portfolio-management' %}
-    {% assign category_images = '/img/posts/04.jpg,/img/posts/06.jpg,/img/posts/02.jpg' | split: ',' %}
+    {% assign category_images = '/img/posts/Data_Science.jpeg,/img/posts/Machine_Learning.jpeg,/img/posts/Crystal_Ball.jpg' | split: ',' %}
+  {% elsif categories contains 'investment-strategy' %}
+    {% assign category_images = '/img/posts/Crystal_Ball.jpg,/img/posts/Market.jpeg,/img/posts/Global.jpg' | split: ',' %}
+  {% elsif categories contains 'portfolio-management' %}
+    {% assign category_images = '/img/posts/Global.jpg,/img/posts/Market.jpeg,/img/posts/Coins.jpg' | split: ',' %}
+  {% elsif categories contains 'performance-measurement' %}
+    {% assign category_images = '/img/posts/Market.jpeg,/img/posts/Data_Science.jpeg,/img/posts/Crystal_Ball.jpg' | split: ',' %}
+  {% elsif categories contains 'risk-management' %}
+    {% assign category_images = '/img/posts/Risk.jpg,/img/posts/Market.jpeg,/img/posts/Global.jpg' | split: ',' %}
+  {% elsif categories contains 'organizational-structure' %}
+    {% assign category_images = '/img/posts/Global.jpg,/img/posts/Space.jpg,/img/posts/Crystal_Ball.jpg' | split: ',' %}
+  {% elsif categories contains 'investment-research' %}
+    {% assign category_images = '/img/posts/Data_Science.jpeg,/img/posts/Crystal_Ball.jpg,/img/posts/Market.jpeg' | split: ',' %}
+  {% elsif categories contains 'IPOs' %}
+    {% assign category_images = '/img/posts/Adventure.jpg,/img/posts/Market.jpeg,/img/posts/Coins.jpg' | split: ',' %}
+  {% elsif categories contains 'equity-analysis' or categories contains 'free-cash-flow' %}
+    {% assign category_images = '/img/posts/Coins.jpg,/img/posts/Market.jpeg,/img/posts/Data_Science.jpeg' | split: ',' %}
+  {% elsif categories contains 'equity-portfolio' or categories contains 'long-term-investing' %}
+    {% assign category_images = '/img/posts/Adventure.jpg,/img/posts/Global.jpg,/img/posts/Crystal_Ball.jpg' | split: ',' %}
+  
+  {% comment %} Fallback assignments for posts with multiple categories {% endcomment %}
+  {% elsif categories.size > 1 %}
+    {% comment %} Multi-category posts get a broader selection {% endcomment %}
+    {% if categories contains 'finance' or categories contains 'financial' %}
+      {% assign category_images = '/img/posts/Market.jpeg,/img/posts/Coins.jpg,/img/posts/Global.jpg' | split: ',' %}
+    {% elsif categories contains 'analysis' or categories contains 'research' %}
+      {% assign category_images = '/img/posts/Data_Science.jpeg,/img/posts/Crystal_Ball.jpg,/img/posts/Machine_Learning.jpeg' | split: ',' %}
+    {% elsif categories contains 'strategy' or categories contains 'management' %}
+      {% assign category_images = '/img/posts/Crystal_Ball.jpg,/img/posts/Global.jpg,/img/posts/Adventure.jpg' | split: ',' %}
+    {% else %}
+      {% assign category_images = '/img/posts/Machine_Learning.jpeg,/img/posts/Market.jpeg,/img/posts/Data_Science.jpeg' | split: ',' %}
+    {% endif %}
   {% else %}
-    {% assign category_images = '/img/posts/01.jpg,/img/posts/02.jpg,/img/posts/03.jpg,/img/posts/04.jpg,/img/posts/05.jpg,/img/posts/06.jpg' | split: ',' %}
+    {% comment %} Default: use full library for maximum variety {% endcomment %}
+    {% assign category_images = '/img/posts/Adventure.jpg,/img/posts/Coins.jpg,/img/posts/Crystal_Ball.jpg,/img/posts/Data_Science.jpeg,/img/posts/Global.jpg,/img/posts/Machine_Learning.jpeg,/img/posts/Market.jpeg,/img/posts/Risk.jpg,/img/posts/Space.jpg' | split: ',' %}
   {% endif %}
   
-  {% comment %} Use post date or title hash to deterministically assign image {% endcomment %}
-  {% assign post_hash = include.post.title | size | modulo: category_images.size %}
-  {% assign post_image = category_images[post_hash] %}
+  {% comment %} Enhanced pseudo-random distribution algorithm {% endcomment %}
+  {% assign title_chars = include.post.title | split: '' %}
+  {% assign char_sum = 0 %}
+  {% for char in title_chars %}
+    {% assign ascii_val = char | size | plus: 97 %}
+    {% assign char_sum = char_sum | plus: ascii_val %}
+  {% endfor %}
+  
+  {% comment %} Combine multiple factors for better distribution {% endcomment %}
+  {% assign date_num = include.post.date | date: "%d" | plus: 0 %}
+  {% assign month_num = include.post.date | date: "%m" | plus: 0 %}
+  {% assign year_num = include.post.date | date: "%y" | plus: 0 %}
+  
+  {% assign combined_hash = char_sum | plus: date_num | plus: month_num | plus: year_num | modulo: category_images.size %}
+  {% assign post_image = category_images[combined_hash] %}
+  
+  {% comment %} Final fallback to ensure we always have an image {% endcomment %}
+  {% if post_image == '' %}
+    {% assign fallback_images = '/img/posts/Market.jpeg,/img/posts/Data_Science.jpeg,/img/posts/Global.jpg' | split: ',' %}
+    {% assign fallback_hash = char_sum | modulo: 3 %}
+    {% assign post_image = fallback_images[fallback_hash] %}
+  {% endif %}
 {% endif %}
 
 {{ post_image }}
