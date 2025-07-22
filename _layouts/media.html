@@ -1,0 +1,185 @@
+---
+layout: default
+---
+
+<!-- Page Header -->
+{% capture background_url %}{% include dynamic_background.html %}{% endcapture %}
+<header class="masthead" style="background-image: url('{{ background_url | strip }}')">
+  <div class="overlay"></div>
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-10 col-md-11 mx-auto">
+          <div class="post-heading">
+            <h1>{{ page.title }}</h1>
+            {% if page.subtitle %}
+            <h2 class="subheading">{{ page.subtitle }}</h2>
+            {% endif %}
+            <span class="meta">
+              <span class="media-outlet">{{ page.outlet }}</span> • 
+              <span class="media-date">{{ page.date | date: '%B %d, %Y' }}</span>
+              {% if page.media_type %}
+              • <span class="media-type">{{ page.media_type | capitalize }}</span>
+              {% endif %}
+            </span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-10 col-md-11 mx-auto">
+
+        <!-- Media Header Info -->
+        <div class="media-header-info mb-4">
+          <div class="row">
+            <div class="col-md-8">
+              {% if page.host %}
+              <p><strong>Host:</strong> {{ page.host }}</p>
+              {% endif %}
+              {% if page.show %}
+              <p><strong>Show:</strong> {{ page.show }}</p>
+              {% endif %}
+              {% if page.duration %}
+              <p><strong>Duration:</strong> {{ page.duration }}</p>
+              {% endif %}
+            </div>
+            <div class="col-md-4 text-right">
+              {% if page.external_url %}
+              <a href="{{ page.external_url }}" class="btn btn-primary mb-2" target="_blank">
+                {% if page.media_type == 'tv' %}
+                Watch Interview <i class="fas fa-tv"></i>
+                {% elsif page.media_type == 'podcast' %}
+                Listen to Podcast <i class="fas fa-podcast"></i>
+                {% elsif page.media_type == 'article' %}
+                Read Article <i class="fas fa-newspaper"></i>
+                {% else %}
+                View Coverage <i class="fas fa-external-link-alt"></i>
+                {% endif %}
+              </a>
+              {% endif %}
+              {% if page.video_url %}
+              <a href="{{ page.video_url }}" class="btn btn-outline-secondary mb-2" target="_blank">
+                Watch Video <i class="fas fa-play"></i>
+              </a>
+              {% endif %}
+            </div>
+          </div>
+        </div>
+
+        <!-- Media Embed Section -->
+        {% if page.video_embed %}
+        <div class="media-embed mb-4">
+          <div class="embed-responsive embed-responsive-16by9">
+            {{ page.video_embed }}
+          </div>
+        </div>
+        {% endif %}
+
+        {% if page.audio_embed %}
+        <div class="media-embed mb-4">
+          {{ page.audio_embed }}
+        </div>
+        {% endif %}
+
+        <!-- Topics Covered -->
+        {% if page.topics %}
+        <div class="topics-covered mb-4">
+          <h4>Topics Discussed</h4>
+          <div class="topic-tags">
+            {% for topic in page.topics %}
+            <span class="badge badge-primary">{{ topic }}</span>
+            {% endfor %}
+          </div>
+        </div>
+        {% endif %}
+
+        <!-- Key Quotes -->
+        {% if page.key_quotes %}
+        <div class="key-quotes mb-4">
+          <h4>Key Insights</h4>
+          {% for quote in page.key_quotes %}
+          <blockquote class="blockquote media-quote">
+            <p class="mb-0">"{{ quote.text }}"</p>
+            {% if quote.context %}
+            <footer class="blockquote-footer">{{ quote.context }}</footer>
+            {% endif %}
+          </blockquote>
+          {% endfor %}
+        </div>
+        {% endif %}
+
+        <!-- Main Content -->
+        <div class="media-content">
+          {{ content }}
+        </div>
+
+        <!-- Media Gallery -->
+        {% if page.gallery %}
+        <div class="media-gallery mt-4">
+          <h4>Media Gallery</h4>
+          <div class="row">
+            {% for image in page.gallery %}
+            <div class="col-md-4 col-sm-6 mb-3">
+              <div class="gallery-item">
+                <img src="{{ image.url | prepend: site.baseurl }}" alt="{{ image.caption }}" class="img-fluid">
+                {% if image.caption %}
+                <p class="gallery-caption">{{ image.caption }}</p>
+                {% endif %}
+              </div>
+            </div>
+            {% endfor %}
+          </div>
+        </div>
+        {% endif %}
+
+        <!-- Related Coverage -->
+        <div class="related-media mt-5">
+          <h4>Related Media Coverage</h4>
+          <div class="row">
+            {% assign related_media = site.media | where_exp: "item", "item.url != page.url" | sort: "date" | reverse | limit: 3 %}
+            {% for media in related_media %}
+            <div class="col-md-4 mb-3">
+              <div class="card">
+                {% if media.thumbnail %}
+                <img src="{{ media.thumbnail | prepend: site.baseurl }}" class="card-img-top" alt="{{ media.title }}">
+                {% endif %}
+                <div class="card-body">
+                  <h6 class="card-title">
+                    <a href="{{ media.url | prepend: site.baseurl }}">{{ media.title }}</a>
+                  </h6>
+                  <p class="card-text small">{{ media.outlet }} • {{ media.date | date: "%B %Y" }}</p>
+                </div>
+              </div>
+            </div>
+            {% endfor %}
+          </div>
+        </div>
+
+        <!-- Share Section -->
+        <div class="share-media mt-4 pt-4 border-top">
+          <h5>Share This Coverage</h5>
+          <div class="share-buttons">
+            <a href="https://twitter.com/intent/tweet?url={{ page.url | absolute_url | url_encode }}&text={{ page.title | url_encode }}" class="btn btn-outline-info btn-sm" target="_blank">
+              <i class="fab fa-twitter"></i> Tweet
+            </a>
+            <a href="https://www.linkedin.com/sharing/share-offsite/?url={{ page.url | absolute_url | url_encode }}" class="btn btn-outline-primary btn-sm" target="_blank">
+              <i class="fab fa-linkedin"></i> Share
+            </a>
+            <a href="mailto:?subject={{ page.title | url_encode }}&body={{ page.url | absolute_url | url_encode }}" class="btn btn-outline-secondary btn-sm">
+              <i class="fas fa-envelope"></i> Email
+            </a>
+          </div>
+        </div>
+
+        <!-- Back to Media -->
+        <div class="back-to-media mt-4 text-center">
+          <a href="/media" class="btn btn-outline-dark">
+            <i class="fas fa-arrow-left"></i> Back to All Media Coverage
+          </a>
+        </div>
+
+      </div>
+    </div>
+  </div>

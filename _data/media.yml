@@ -1,0 +1,26 @@
+# Media Statistics and Configuration
+tv_appearances: "15+"
+publications: "25+"
+podcast_features: "8+"
+conference_presentations: "12+"
+
+# Media Contact Information
+media_contact:
+  email: "media@vincechen.com"
+  phone: "+1 (555) 123-4567"
+  availability: "Available for interviews, expert commentary, and speaking engagements"
+
+# Featured Media Outlets
+outlets:
+  - name: "CNBC"
+    logo: "/img/outlets/cnbc-logo.png"
+    appearances: 5
+  - name: "Bloomberg"
+    logo: "/img/outlets/bloomberg-logo.png"
+    appearances: 3
+  - name: "Financial Times"
+    logo: "/img/outlets/ft-logo.png"
+    appearances: 4
+  - name: "Wall Street Journal"
+    logo: "/img/outlets/wsj-logo.png"
+    appearances: 2
