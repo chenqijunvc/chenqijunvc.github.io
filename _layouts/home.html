@@ -108,138 +108,49 @@ layout: default
             <p class="section-subtitle text-muted">Professional insights and expert commentary on financial markets</p>
           </div>
 
+          {% assign featured_media = site.media | where: "featured", true | limit: 4 %}
+          {% if featured_media.size == 0 %}
+            {% assign featured_media = site.media | limit: 4 %}
+          {% endif %}
+
           <div class="row">
-            <!-- CBOE Interview 1 -->
+            {% for media in featured_media %}
             <div class="col-md-6 mb-4">
               <article class="recent-post-card h-100">
                 <div class="card-image mb-3">
-                  <img src="{{ '/assets/img/cboe-logo.png' | relative_url }}" alt="CBOE Global Markets" class="img-fluid rounded">
+                  <img src="{{ media.image | relative_url }}" alt="{{ media.outlet }}" class="img-fluid rounded">
                 </div>
                 
                 <div class="card-content">
                   <div class="post-meta-small mb-2">
-                    <span class="badge badge-secondary">Financial Commentary</span>
+                    <span class="badge badge-secondary">{{ media.show | default: media.outlet }}</span>
                     <small class="text-muted ml-2">
                       <i class="far fa-calendar-alt"></i>
-                      Recent Interview
+                      {{ media.date | date: '%b %Y' }}
                     </small>
                   </div>
                   
                   <h4 class="card-title">
-                    <a href="{{ '/media' | relative_url }}" class="text-decoration-none">
-                      CBOE: Quality Investing Challenge
+                    <a href="{{ media.url | relative_url }}" class="text-decoration-none">
+                      {{ media.title | truncate: 60 }}
                     </a>
                   </h4>
                   
                   <p class="card-text">
-                    Discussion on systematic approaches to quality investing and how to identify companies that consistently generate superior returns through disciplined fundamental analysis.
+                    {% if media.subtitle %}
+                      {{ media.subtitle | truncatewords: 20 }}
+                    {% else %}
+                      {{ media.content | strip_html | truncatewords: 20 }}
+                    {% endif %}
                   </p>
                   
-                  <a href="{{ '/media' | relative_url }}" class="btn btn-sm btn-outline-secondary">
-                    Watch Video
+                  <a href="{{ media.url | relative_url }}" class="btn btn-sm btn-outline-secondary">
+                    {% if media.media_type == "tv" %}Watch Video{% else %}Learn More{% endif %}
                   </a>
                 </div>
               </article>
             </div>
-
-            <!-- CBOE Interview 2 -->
-            <div class="col-md-6 mb-4">
-              <article class="recent-post-card h-100">
-                <div class="card-image mb-3">
-                  <img src="{{ '/assets/img/cboe-logo.png' | relative_url }}" alt="CBOE Global Markets" class="img-fluid rounded">
-                </div>
-                
-                <div class="card-content">
-                  <div class="post-meta-small mb-2">
-                    <span class="badge badge-secondary">Investment Strategy</span>
-                    <small class="text-muted ml-2">
-                      <i class="far fa-calendar-alt"></i>
-                      Recent Interview
-                    </small>
-                  </div>
-                  
-                  <h4 class="card-title">
-                    <a href="{{ '/media' | relative_url }}" class="text-decoration-none">
-                      CBOE: Small Cap Profitability
-                    </a>
-                  </h4>
-                  
-                  <p class="card-text">
-                    Expert analysis on avoiding zombie companies in small cap investing and identifying profitable growth opportunities through systematic screening methodologies.
-                  </p>
-                  
-                  <a href="{{ '/media' | relative_url }}" class="btn btn-sm btn-outline-secondary">
-                    Watch Video
-                  </a>
-                </div>
-              </article>
-            </div>
-
-            <!-- CBOE Interview 3 -->
-            <div class="col-md-6 mb-4">
-              <article class="recent-post-card h-100">
-                <div class="card-image mb-3">
-                  <img src="{{ '/assets/img/cboe-logo.png' | relative_url }}" alt="CBOE Global Markets" class="img-fluid rounded">
-                </div>
-                
-                <div class="card-content">
-                  <div class="post-meta-small mb-2">
-                    <span class="badge badge-secondary">Innovation Strategy</span>
-                    <small class="text-muted ml-2">
-                      <i class="far fa-calendar-alt"></i>
-                      Recent Interview
-                    </small>
-                  </div>
-                  
-                  <h4 class="card-title">
-                    <a href="{{ '/media' | relative_url }}" class="text-decoration-none">
-                      CBOE: Innovation Investing
-                    </a>
-                  </h4>
-                  
-                  <p class="card-text">
-                    Insights on finding profitable innovation companies and developing systematic approaches to technology investing through quantamental analysis frameworks.
-                  </p>
-                  
-                  <a href="{{ '/media' | relative_url }}" class="btn btn-sm btn-outline-secondary">
-                    Watch Video
-                  </a>
-                </div>
-              </article>
-            </div>
-
-            <!-- ETF Strategy Discussion -->
-            <div class="col-md-6 mb-4">
-              <article class="recent-post-card h-100">
-                <div class="card-image mb-3">
-                  <img src="{{ '/assets/img/cboe-logo.png' | relative_url }}" alt="CBOE Global Markets" class="img-fluid rounded">
-                </div>
-                
-                <div class="card-content">
-                  <div class="post-meta-small mb-2">
-                    <span class="badge badge-secondary">ETF Development</span>
-                    <small class="text-muted ml-2">
-                      <i class="far fa-calendar-alt"></i>
-                      Professional Commentary
-                    </small>
-                  </div>
-                  
-                  <h4 class="card-title">
-                    <a href="{{ '/media' | relative_url }}" class="text-decoration-none">
-                      ETF Strategy Development
-                    </a>
-                  </h4>
-                  
-                  <p class="card-text">
-                    Professional insights on designing institutional-grade investment strategies through accessible ETF formats, including ABFL, ABLS, and ABOT development approaches.
-                  </p>
-                  
-                  <a href="{{ '/media' | relative_url }}" class="btn btn-sm btn-outline-secondary">
-                    Learn More
-                  </a>
-                </div>
-              </article>
-            </div>
+            {% endfor %}
           </div>
         </section>
 
