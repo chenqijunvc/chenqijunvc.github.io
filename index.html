@@ -3,69 +3,289 @@ layout: home
 background: '/img/bg-index.jpg'
 ---
 
-<div class="intro-section mb-5">
+<!-- Introduction Section -->
+<section class="intro-section mb-5">
   <div class="row">
-    <div class="col-lg-8 mx-auto text-center">
-      <p class="lead">Portfolio manager and quantamental strategist specializing in systematic investing approaches. Featured on CBOE for discussions on free cash flow investing, ETF strategy development, and market analysis.</p>
-      
-      <div class="row mt-4">
-        <div class="col-md-4 mb-3">
-          <div class="highlight-card">
-            <i class="fas fa-chart-line fa-2x text-primary mb-2"></i>
-            <h5>ETF Strategies</h5>
-            <p>ABFL, ABLS, ABOT development</p>
+    <div class="col-lg-8 mx-auto">
+      <div class="intro-content text-center">
+        <p class="lead mb-4">Portfolio manager and quantamental strategist bridging institutional-grade analysis with accessible investment solutions. Featured on CBOE for expertise in systematic investing and ETF strategy development.</p>
+        
+        <div class="row expertise-highlights">
+          <div class="col-md-4 mb-3">
+            <div class="expertise-item">
+              <div class="icon-wrapper">
+                <i class="fas fa-chart-line"></i>
+              </div>
+              <h6>ETF Innovation</h6>
+              <p>ABFL, ABLS, ABOT strategies</p>
+            </div>
+          </div>
+          <div class="col-md-4 mb-3">
+            <div class="expertise-item">
+              <div class="icon-wrapper">
+                <i class="fas fa-calculator"></i>
+              </div>
+              <h6>FCF-ROIC Framework</h6>
+              <p>Systematic quality selection</p>
+            </div>
+          </div>
+          <div class="col-md-4 mb-3">
+            <div class="expertise-item">
+              <div class="icon-wrapper">
+                <i class="fas fa-microscope"></i>
+              </div>
+              <h6>Quantamental Analysis</h6>
+              <p>Data-driven fundamentals</p>
+            </div>
           </div>
         </div>
-        <div class="col-md-4 mb-3">
-          <div class="highlight-card">
-            <i class="fas fa-calculator fa-2x text-success mb-2"></i>
-            <h5>FCF-ROIC Analysis</h5>
-            <p>Systematic quality investing</p>
-          </div>
+        
+        <div class="intro-cta mt-4">
+          <a href="{{ '/about' | relative_url }}" class="btn btn-outline-primary btn-lg">
+            <i class="fas fa-user"></i> Learn More About Vince
+          </a>
         </div>
-        <div class="col-md-4 mb-3">
-          <div class="highlight-card">
-            <i class="fas fa-tv fa-2x text-info mb-2"></i>
-            <h5>Media Appearances</h5>
-            <p>CBOE financial commentary</p>
-          </div>
-        </div>
-      </div>
-      
-      <div class="cta-buttons mt-4">
-        <a href="{{ '/media' | relative_url }}" class="btn btn-primary btn-lg mr-3">
-          <i class="fas fa-tv"></i> View Media Appearances
-        </a>
-        <a href="{{ '/about' | relative_url }}" class="btn btn-outline-primary btn-lg">
-          <i class="fas fa-user"></i> Learn More About Me
-        </a>
       </div>
     </div>
   </div>
-</div>
+</section>
+
+<!-- Featured Content Section -->
+<section class="featured-content mb-5">
+  <div class="row">
+    <!-- Featured Posts -->
+    <div class="col-lg-6 mb-4">
+      <div class="content-block">
+        <h3><i class="fas fa-pen-fancy text-primary"></i> Featured Insights</h3>
+        <div class="featured-posts">
+          {% assign featured_posts = site.posts | limit: 3 %}
+          {% for post in featured_posts %}
+          <div class="post-preview">
+            <a href="{{ post.url | relative_url }}">
+              <h5 class="post-title">{{ post.title }}</h5>
+            </a>
+            <p class="post-meta">{{ post.date | date: '%B %d, %Y' }}</p>
+            <p class="post-excerpt">{{ post.excerpt | strip_html | truncatewords: 20 }}</p>
+          </div>
+          {% if forloop.last == false %}<hr class="small">{% endif %}
+          {% endfor %}
+        </div>
+        <div class="text-center mt-3">
+          <a href="{{ '/posts' | relative_url }}" class="btn btn-primary">
+            <i class="fas fa-arrow-right"></i> All Posts
+          </a>
+        </div>
+      </div>
+    </div>
+    
+    <!-- Featured Media -->
+    <div class="col-lg-6 mb-4">
+      <div class="content-block">
+        <h3><i class="fas fa-tv text-success"></i> Featured Media</h3>
+        <div class="featured-media">
+          <div class="media-preview">
+            <div class="media-thumbnail">
+              <img src="{{ '/assets/img/cboe-logo.png' | relative_url }}" alt="CBOE Global Markets" class="img-fluid">
+            </div>
+            <div class="media-content">
+              <h5>CBOE "3 Questions in 3 Minutes"</h5>
+              <p>Expert discussions on quality investing, small cap profitability, and innovation strategies.</p>
+              <small class="text-muted">Financial Commentary Series</small>
+            </div>
+          </div>
+          <hr class="small">
+          <div class="media-preview">
+            <div class="media-content">
+              <h6>Investment Strategy Commentary</h6>
+              <p>Regular insights on quantamental approaches and market analysis.</p>
+            </div>
+          </div>
+        </div>
+        <div class="text-center mt-3">
+          <a href="{{ '/media' | relative_url }}" class="btn btn-success">
+            <i class="fas fa-play-circle"></i> All Media
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Inspirational Quote Section -->
+<section class="quote-section text-center py-5">
+  <div class="row">
+    <div class="col-lg-8 mx-auto">
+      <div class="quote-container">
+        <blockquote class="blockquote">
+          <p class="mb-3">"Whatever task you undertake, do it with all your heart and soul."</p>
+          <footer class="blockquote-footer">
+            <cite title="Source Title">Bernard M. Baruch</cite>
+          </footer>
+        </blockquote>
+      </div>
+    </div>
+  </div>
+</section>
 
 <style>
-.highlight-card {
-  background: #f8f9fa;
-  padding: 2rem 1rem;
-  border-radius: 8px;
-  height: 100%;
+/* Introduction Section */
+.intro-section {
+  padding: 2rem 0;
+}
+
+.expertise-highlights {
+  margin: 2rem 0;
+}
+
+.expertise-item {
+  text-align: center;
+  padding: 1rem;
+}
+
+.icon-wrapper {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #007bff, #0056b3);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 1rem;
   transition: transform 0.3s ease;
-  border-top: 3px solid #007bff;
 }
 
-.highlight-card:hover {
-  transform: translateY(-5px);
+.icon-wrapper i {
+  color: white;
+  font-size: 1.5rem;
 }
 
-.cta-buttons {
-  margin-top: 2rem;
+.expertise-item:hover .icon-wrapper {
+  transform: scale(1.1);
 }
 
+.expertise-item h6 {
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+  color: #2c3e50;
+}
+
+.expertise-item p {
+  font-size: 0.9rem;
+  color: #6c757d;
+  margin-bottom: 0;
+}
+
+/* Featured Content Section */
+.content-block {
+  background: #f8f9fa;
+  padding: 2rem;
+  border-radius: 10px;
+  height: 100%;
+  border-left: 4px solid #007bff;
+}
+
+.content-block h3 {
+  margin-bottom: 1.5rem;
+  font-weight: 600;
+}
+
+.post-preview {
+  margin-bottom: 1rem;
+}
+
+.post-title {
+  font-size: 1.1rem;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+}
+
+.post-title:hover {
+  color: #007bff;
+}
+
+.post-meta {
+  font-size: 0.85rem;
+  color: #6c757d;
+  margin-bottom: 0.5rem;
+}
+
+.post-excerpt {
+  font-size: 0.9rem;
+  color: #495057;
+  margin-bottom: 0;
+}
+
+.media-preview {
+  display: flex;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+.media-thumbnail {
+  flex-shrink: 0;
+  margin-right: 1rem;
+}
+
+.media-thumbnail img {
+  width: 60px;
+  height: auto;
+}
+
+.media-content h5, .media-content h6 {
+  margin-bottom: 0.5rem;
+  font-weight: 600;
+}
+
+.media-content p {
+  font-size: 0.9rem;
+  color: #495057;
+  margin-bottom: 0.25rem;
+}
+
+/* Quote Section */
+.quote-section {
+  background: linear-gradient(135deg, #f8f9fa, #e9ecef);
+  margin: 3rem 0;
+}
+
+.quote-container {
+  padding: 2rem;
+}
+
+.blockquote {
+  font-size: 1.25rem;
+  font-style: italic;
+  color: #2c3e50;
+}
+
+.blockquote-footer {
+  font-size: 1rem;
+  font-weight: 600;
+  color: #6c757d;
+}
+
+/* Responsive Design */
 @media (max-width: 768px) {
-  .cta-buttons .btn {
-    display: block;
-    margin: 0.5rem 0;
+  .expertise-item {
+    margin-bottom: 2rem;
+  }
+  
+  .content-block {
+    margin-bottom: 2rem;
+  }
+  
+  .media-preview {
+    flex-direction: column;
+    text-align: center;
+  }
+  
+  .media-thumbnail {
+    margin-right: 0;
+    margin-bottom: 1rem;
+  }
+  
+  .blockquote {
+    font-size: 1.1rem;
   }
 }
 </style>
