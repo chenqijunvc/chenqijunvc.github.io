@@ -71,12 +71,11 @@ background: '/img/bg-about.jpg'
 
         <!-- Featured Media -->
         <section class="featured-media mb-5">
-          <h2 class="section-title mb-4">Featured Coverage</h2>
+          <h2 class="section-title mb-4">All Media Coverage</h2>
           <div class="row">
             {% if site.media and site.media.size > 0 %}
-            {% assign featured_media = site.media | where: "featured", true | sort: "date" | reverse | limit: 2 %}
-            {% if featured_media.size > 0 %}
-            {% for media in featured_media %}
+            {% assign all_media = site.media | sort: "date" | reverse %}
+            {% for media in all_media %}
             <div class="col-md-6 mb-4">
               <div class="featured-media-card">
                 {% if media.image %}
@@ -114,86 +113,8 @@ background: '/img/bg-about.jpg'
             {% else %}
             <div class="col-12">
               <div class="text-center p-4">
-                <p class="text-muted">Featured media coverage will be displayed here once available.</p>
-              </div>
-            </div>
-            {% endif %}
-            {% else %}
-            <div class="col-12">
-              <div class="text-center p-4">
                 <p class="text-muted">Media coverage section is being set up. Check back soon!</p>
               </div>
-            </div>
-            {% endif %}
-          </div>
-        </section>
-
-        <!-- All Media Coverage -->
-        <section class="all-media">
-          <h2 class="section-title mb-4">All Media Coverage</h2>
-          
-          <div class="media-timeline">
-            {% if site.media and site.media.size > 0 %}
-            {% assign all_media = site.media | sort: "date" | reverse %}
-            {% for media in all_media %}
-            <div class="media-item" data-media-type="{{ media.media_type }}" data-year="{{ media.date | date: '%Y' }}">
-              <div class="media-item-card">
-                <div class="row align-items-center">
-                  <div class="col-md-2 col-sm-3">
-                    {% if media.thumbnail %}
-                    <div class="media-thumbnail-small">
-                      <img src="{{ media.thumbnail | prepend: site.baseurl }}" alt="{{ media.title }}" class="img-fluid">
-                    </div>
-                    {% else %}
-                    <div class="media-icon">
-                      {% if media.media_type == 'tv' %}
-                      <i class="fas fa-tv"></i>
-                      {% elsif media.media_type == 'podcast' %}
-                      <i class="fas fa-podcast"></i>
-                      {% elsif media.media_type == 'article' %}
-                      <i class="fas fa-newspaper"></i>
-                      {% elsif media.media_type == 'panel' %}
-                      <i class="fas fa-users"></i>
-                      {% elsif media.media_type == 'conference' %}
-                      <i class="fas fa-presentation"></i>
-                      {% else %}
-                      <i class="fas fa-microphone-alt"></i>
-                      {% endif %}
-                    </div>
-                    {% endif %}
-                  </div>
-                  <div class="col-md-7 col-sm-9">
-                    <h4 class="media-item-title">
-                      <a href="{{ media.url | prepend: site.baseurl }}">{{ media.title }}</a>
-                    </h4>
-                    <div class="media-item-meta">
-                      <span class="outlet">{{ media.outlet }}</span>
-                      <span class="date">{{ media.date | date: "%B %d, %Y" }}</span>
-                      <span class="type-label type-{{ media.media_type }}">{{ media.media_type | capitalize }}</span>
-                    </div>
-                    <p class="media-item-excerpt">{{ media.excerpt | strip_html | truncatewords: 20 }}</p>
-                  </div>
-                  <div class="col-md-3 text-right">
-                    {% if media.external_url %}
-                    <a href="{{ media.external_url }}" class="btn btn-outline-primary btn-sm" target="_blank">
-                      View Coverage <i class="fas fa-external-link-alt"></i>
-                    </a>
-                    {% endif %}
-                    {% if media.video_url %}
-                    <a href="{{ media.video_url }}" class="btn btn-outline-secondary btn-sm" target="_blank">
-                      Watch <i class="fas fa-play"></i>
-                    </a>
-                    {% endif %}
-                  </div>
-                </div>
-              </div>
-            </div>
-            {% endfor %}
-            {% else %}
-            <div class="text-center p-5">
-              <i class="fas fa-newspaper fa-3x text-muted mb-3"></i>
-              <h4>Media Coverage Coming Soon</h4>
-              <p class="text-muted">This section will showcase Vince's TV appearances, interviews, and press coverage.<br>Check back soon for updates!</p>
             </div>
             {% endif %}
           </div>
