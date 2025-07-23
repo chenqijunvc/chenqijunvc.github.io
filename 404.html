@@ -7,23 +7,37 @@ permalink: /404.html
 ---
 
 <script>
-// Automatic redirect for trailing slash URLs
+// Automatic redirect for trailing slash URLs - with safety checks
 (function() {
   var currentPath = window.location.pathname;
+  var hasRedirected = sessionStorage.getItem('trailingSlashRedirect');
   
-  // Check if URL ends with trailing slash (but not root)
-  if (currentPath.length > 1 && currentPath.endsWith('/')) {
-    // Remove trailing slash and redirect
-    var newPath = currentPath.slice(0, -1);
-    var newUrl = window.location.protocol + '//' + window.location.host + newPath + window.location.search + window.location.hash;
+  // Safety check: only run once per session and only for specific trailing slash cases
+  if (!hasRedirected && currentPath.length > 1 && currentPath.endsWith('/')) {
+    // Only redirect for known page patterns
+    var knownPages = ['/about/', '/contact/', '/posts/', '/media/', '/search/'];
+    var shouldRedirect = knownPages.some(function(page) {
+      return currentPath === page;
+    });
     
-    // Redirect to URL without trailing slash
-    window.location.replace(newUrl);
-    return;
+    if (shouldRedirect) {
+      // Mark that we've attempted a redirect
+      sessionStorage.setItem('trailingSlashRedirect', 'true');
+      
+      // Remove trailing slash and redirect
+      var newPath = currentPath.slice(0, -1);
+      var newUrl = window.location.protocol + '//' + window.location.host + newPath + window.location.search + window.location.hash;
+      
+      // Redirect to URL without trailing slash
+      window.location.replace(newUrl);
+      return;
+    }
   }
   
-  // If not a trailing slash issue, show 404 page
-  document.getElementById('404-content').style.display = 'block';
+  // If not a trailing slash issue or redirect already attempted, show 404 page
+  document.addEventListener('DOMContentLoaded', function() {
+    document.getElementById('404-content').style.display = 'block';
+  });
 })();
 </script>
 

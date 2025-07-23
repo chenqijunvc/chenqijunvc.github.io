@@ -1,13 +1,13 @@
-title:              "PortfolioFuture"
+title:              "Vince Qijun Chen"
 email:              chenqijunvc@gmail.com
-description:        "Exploring AI, Data, and Finance - Investment analysis, strategies, and market commentary by Vince Qijun Chen."
+description:        "Portfolio Manager & Quantamental Strategist - Specializing in free cash flow investing, ETF strategy development, and systematic investment approaches."
 author:             Vince Qijun Chen
 # For root domain (chenqijunvc.github.io), baseurl should be empty
 baseurl:            ""
 url:                "https://chenqijunvc.github.io"
 
 # SEO and Social
-keywords:           "quantitative finance, machine learning, AI, investment strategy, portfolio management, data science"
+keywords:           "Vince Qijun Chen, portfolio manager, quantamental investing, free cash flow, FCF-ROIC, ETF strategy, ABFL, ABLS, ABOT, CBOE, investment management"
 lang:               "en"
 locale:             "en_US"
 
@@ -22,9 +22,9 @@ linkedin_username:  vinceqijunchen
 # Author information for structured data
 author_info:
   name:             "Vince Qijun Chen"
-  bio:              "Quantitative analyst and data scientist specializing in AI applications in finance"
+  bio:              "Portfolio manager and quantamental strategist specializing in free cash flow investing and ETF strategy development"
   location:         "Global"
-  expertise:        ["Quantitative Finance", "Machine Learning", "Data Science", "Portfolio Management"]
+  expertise:        ["Free Cash Flow Investing", "ETF Strategy", "Quantamental Analysis", "Portfolio Management", "Financial Media"]
 
 # Build settings
 markdown:           kramdown

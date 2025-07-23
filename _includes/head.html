@@ -15,12 +15,8 @@
   <meta name="robots" content="index, follow">
   <meta name="language" content="{{ site.lang | default: 'en' }}">
 
-  <!-- Canonical URL - prevents duplicate content issues with trailing slashes -->
-  {% capture canonical_url %}{{ page.url | absolute_url }}{% endcapture %}
-  {% unless page.url == '/' %}
-    {% assign canonical_url = canonical_url | remove: '/' %}
-  {% endunless %}
-  <link rel="canonical" href="{{ canonical_url }}">
+  <!-- Canonical URL - prevents duplicate content issues -->
+  <link rel="canonical" href="{{ page.url | absolute_url }}">
 
   <!-- Open Graph / Facebook -->
   <meta property="og:type" content="{% if page.layout == 'post' %}article{% else %}website{% endif %}">

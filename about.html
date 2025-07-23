@@ -1,61 +1,54 @@
 ---
 layout: page
-title: About Vince
-description: Learn more about Vince's journey and the motivation behind his investment blog.
+title: About Vince Qijun Chen
+description: Portfolio manager and quantamental strategist specializing in free cash flow investing and ETF strategy development.
 background: '/img/bg-about.jpg'
 ---
 
 <div class="row">
   <div class="col-lg-8 col-md-10 mx-auto">
     
-    <p class="lead">Hi, I'm Vince Qijun Chen, and welcome to PortfolioFuture! With a deep-rooted passion for understanding market dynamics and a belief in informed decision-making, I've created this space to share my insights into the intersection of AI, data science, and finance.</p>
+    <p class="lead">I'm Vince Qijun Chen, a portfolio manager and quantamental strategist specializing in systematic investing approaches. Through my work developing ETF strategies and appearing on financial media, I focus on bridging institutional-grade analysis with accessible investment solutions.</p>
 
-    <h3>My Background</h3>
-    <p>My journey into quantitative finance began with a fascination for how economic forces shape our lives and how strategic investments can build long-term wealth. Through years of observation, research, and practical experience, I've cultivated expertise in:</p>
-    
-    <ul class="expertise-list">
-      <li><strong>Quantitative Analysis:</strong> Developing mathematical models for investment decision-making</li>
-      <li><strong>Machine Learning in Finance:</strong> Applying AI techniques to market prediction and portfolio optimization</li>
-      <li><strong>Risk Management:</strong> Creating robust frameworks for portfolio protection</li>
-      <li><strong>Data Science:</strong> Extracting actionable insights from complex financial datasets</li>
-    </ul>
-
-    <h3>What You'll Find Here</h3>
-    <p>This blog focuses on the practical application of advanced technologies in finance:</p>
+    <h3>Professional Background</h3>
+    <p>My career centers on developing quantamental investment strategies that combine rigorous quantitative analysis with fundamental research. I specialize in free cash flow analysis and have pioneered systematic approaches to quality investing, small cap selection, and innovation investing through ETF strategies.</p>
     
     <div class="row mt-4">
       <div class="col-md-6">
-        <div class="topic-card">
-          <h5><i class="fas fa-robot text-primary"></i> AI & Machine Learning</h5>
-          <p>Exploring how artificial intelligence is transforming investment strategies and market analysis.</p>
+        <div class="expertise-card">
+          <h5><i class="fas fa-chart-line text-primary"></i> ETF Strategy Development</h5>
+          <p>Designing institutional-grade investment strategies through accessible ETF formats, including ABFL, ABLS, and ABOT.</p>
         </div>
       </div>
       <div class="col-md-6">
-        <div class="topic-card">
-          <h5><i class="fas fa-chart-line text-success"></i> Quantitative Finance</h5>
-          <p>Deep dives into mathematical models, portfolio theory, and systematic trading approaches.</p>
+        <div class="expertise-card">
+          <h5><i class="fas fa-calculator text-success"></i> FCF-ROIC Methodology</h5>
+          <p>Proprietary approach combining Free Cash Flow and Return on Invested Capital for systematic company selection.</p>
         </div>
       </div>
       <div class="col-md-6">
-        <div class="topic-card">
-          <h5><i class="fas fa-database text-info"></i> Data Science</h5>
-          <p>Practical examples of leveraging data to uncover patterns and make informed financial decisions.</p>
+        <div class="expertise-card">
+          <h5><i class="fas fa-microscope text-info"></i> Quantamental Analysis</h5>
+          <p>Systematic frameworks that blend quantitative screening with fundamental business analysis.</p>
         </div>
       </div>
       <div class="col-md-6">
-        <div class="topic-card">
-          <h5><i class="fas fa-comments text-warning"></i> Market Commentary</h5>
-          <p>My perspectives on current market trends, economic shifts, and their implications for investors.</p>
+        <div class="expertise-card">
+          <h5><i class="fas fa-tv text-warning"></i> Financial Media</h5>
+          <p>Regular appearances on CBOE and financial media discussing investment strategies and market analysis.</p>
         </div>
       </div>
     </div>
 
-    <h3>My Mission</h3>
-    <p class="mb-5">The primary motivation behind this blog is to demystify complex financial concepts and provide clear, actionable commentary for both seasoned investors and those just starting their journey. I aim to offer well-researched analysis, explore diverse investment strategies, and share my perspectives on current market events, all with the goal of fostering a more informed and confident investment community.</p>
+    <h3>Investment Philosophy</h3>
+    <p>My approach focuses on identifying companies that generate substantial cash flow and deploy capital efficiently. Whether addressing the quality investing challenge, avoiding zombie companies in small caps, or finding profitable innovation, I believe in systematic, measurable approaches to investment selection.</p>
+
+    <h3>Media & Recognition</h3>
+    <p class="mb-4">I regularly appear on financial media to discuss investment strategies and market insights. Recent appearances include CBOE's "3 Questions in 3 Minutes" series, where I've discussed quality investing methodologies, small cap profitability challenges, and innovation investing approaches.</p>
 
     <div class="connect-section text-center bg-light p-4 rounded">
-      <h4>Let's Connect</h4>
-      <p>Join me as we navigate the exciting and ever-evolving landscape of finance together.</p>
+      <h4>Connect With Me</h4>
+      <p>Follow my investment insights and media appearances.</p>
       <div class="social-links">
         {% if site.linkedin_username %}
         <a href="https://linkedin.com/in/{{ site.linkedin_username }}" class="btn btn-outline-primary mr-2" target="_blank">
@@ -67,8 +60,11 @@ background: '/img/bg-about.jpg'
           <i class="fab fa-github"></i> GitHub
         </a>
         {% endif %}
+        <a href="{{ '/media' | relative_url }}" class="btn btn-success mr-2">
+          <i class="fas fa-tv"></i> Media Appearances
+        </a>
         <a href="{{ '/contact' | relative_url }}" class="btn btn-primary">
-          <i class="fas fa-envelope"></i> Contact Me
+          <i class="fas fa-envelope"></i> Contact
         </a>
       </div>
     </div>
@@ -77,36 +73,26 @@ background: '/img/bg-about.jpg'
 </div>
 
 <style>
-.expertise-list {
-  list-style: none;
-  padding-left: 0;
-}
-
-.expertise-list li {
-  padding: 0.5rem 0;
-  border-left: 3px solid #007bff;
-  padding-left: 1rem;
-  margin-bottom: 0.5rem;
-}
-
-.topic-card {
+.expertise-card {
   background: #f8f9fa;
   padding: 1.5rem;
   border-radius: 8px;
   margin-bottom: 1rem;
   height: 100%;
   transition: transform 0.3s ease;
+  border-left: 4px solid #007bff;
 }
 
-.topic-card:hover {
+.expertise-card:hover {
   transform: translateY(-5px);
 }
 
-.topic-card h5 {
+.expertise-card h5 {
   margin-bottom: 1rem;
+  font-weight: 600;
 }
 
-.topic-card i {
+.expertise-card i {
   margin-right: 0.5rem;
 }
 
@@ -119,8 +105,13 @@ background: '/img/bg-about.jpg'
 }
 
 @media (max-width: 768px) {
-  .topic-card {
+  .expertise-card {
     margin-bottom: 1rem;
+  }
+  
+  .social-links .btn {
+    display: block;
+    margin: 0.5rem 0;
   }
 }
 </style>
