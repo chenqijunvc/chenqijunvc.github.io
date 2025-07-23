@@ -6,6 +6,28 @@ background: '/img/bg-post.jpg'
 permalink: /404.html
 ---
 
+<script>
+// Automatic redirect for trailing slash URLs
+(function() {
+  var currentPath = window.location.pathname;
+  
+  // Check if URL ends with trailing slash (but not root)
+  if (currentPath.length > 1 && currentPath.endsWith('/')) {
+    // Remove trailing slash and redirect
+    var newPath = currentPath.slice(0, -1);
+    var newUrl = window.location.protocol + '//' + window.location.host + newPath + window.location.search + window.location.hash;
+    
+    // Redirect to URL without trailing slash
+    window.location.replace(newUrl);
+    return;
+  }
+  
+  // If not a trailing slash issue, show 404 page
+  document.getElementById('404-content').style.display = 'block';
+})();
+</script>
+
+<div id="404-content" style="display: none;">
 <div class="row">
   <div class="col-lg-8 col-md-10 mx-auto text-center">
     
@@ -141,3 +163,5 @@ permalink: /404.html
   }
 }
 </style>
+
+</div> <!-- End 404-content div -->

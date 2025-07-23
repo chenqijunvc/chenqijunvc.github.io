@@ -30,6 +30,10 @@ author_info:
 markdown:           kramdown
 paginate:           5
 paginate_path:      "/posts/page:num/"
+
+# URL structure - no trailing slashes
+permalink:          /:title/
+
 plugins:
   - jekyll-feed
   - jekyll-paginate

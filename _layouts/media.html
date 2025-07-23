@@ -15,10 +15,10 @@ layout: default
             <h2 class="subheading">{{ page.subtitle }}</h2>
             {% endif %}
             <span class="meta">
-              <span class="media-outlet">{{ page.outlet }}</span> • 
-              <span class="media-date">{{ page.date | date: '%B %d, %Y' }}</span>
+              <a href="#">{{ page.outlet }}</a>
+              on {{ page.date | date: '%B %d, %Y' }}
               {% if page.media_type %}
-              • <span class="media-type">{{ page.media_type | capitalize }}</span>
+              &middot; {{ page.media_type | capitalize }}
               {% endif %}
             </span>
           </div>
