@@ -31,62 +31,28 @@ background: '/img/bg-index.jpg'
 <!-- Latest Posts Section -->
 <section class="latest-posts">
   <div class="text-center mb-4">
-    <h2>Featured Media</h2>
-    <p class="lead">Professional insights and expert commentary on financial markets</p>
+    <h2>Latest Posts</h2>
+    <p class="lead">Stay updated with our most recent insights</p>
   </div>
   
   <div class="row">
     <div class="col-lg-8 mx-auto">
-      <!-- CBOE Interview 1 -->
-      <div class="media-preview mb-4">
-        <div class="row">
-          <div class="col-md-4">
-            <img src="{{ '/assets/img/cboe-logo.png' | relative_url }}" alt="CBOE Global Markets" class="img-fluid rounded">
-          </div>
-          <div class="col-md-8">
-            <h4><a href="{{ '/media' | relative_url }}">CBOE: Quality Investing Challenge</a></h4>
-            <p class="text-muted mb-2">3 Questions in 3 Minutes Series</p>
-            <p>Discussion on systematic approaches to quality investing and how to identify companies that consistently generate superior returns through disciplined fundamental analysis.</p>
-            <small class="text-muted">Financial Commentary</small>
-          </div>
-        </div>
+      {% for post in site.posts limit: 7 %}
+      <div class="post-preview">
+        <a href="{{ post.url | relative_url }}">
+          <h3 class="post-title">{{ post.title }}</h3>
+          {% if post.subtitle %}
+          <h4 class="post-subtitle">{{ post.subtitle }}</h4>
+          {% endif %}
+        </a>
+        <p class="post-meta">Posted on {{ post.date | date: '%B %d, %Y' }}</p>
+        <p>{{ post.excerpt | strip_html | truncatewords: 30 }}</p>
         <hr>
       </div>
-
-      <!-- CBOE Interview 2 -->
-      <div class="media-preview mb-4">
-        <div class="row">
-          <div class="col-md-4">
-            <img src="{{ '/assets/img/cboe-logo.png' | relative_url }}" alt="CBOE Global Markets" class="img-fluid rounded">
-          </div>
-          <div class="col-md-8">
-            <h4><a href="{{ '/media' | relative_url }}">CBOE: Small Cap Profitability</a></h4>
-            <p class="text-muted mb-2">3 Questions in 3 Minutes Series</p>
-            <p>Expert analysis on avoiding zombie companies in small cap investing and identifying profitable growth opportunities through systematic screening methodologies.</p>
-            <small class="text-muted">Investment Strategy</small>
-          </div>
-        </div>
-        <hr>
-      </div>
-
-      <!-- CBOE Interview 3 -->
-      <div class="media-preview mb-4">
-        <div class="row">
-          <div class="col-md-4">
-            <img src="{{ '/assets/img/cboe-logo.png' | relative_url }}" alt="CBOE Global Markets" class="img-fluid rounded">
-          </div>
-          <div class="col-md-8">
-            <h4><a href="{{ '/media' | relative_url }}">CBOE: Innovation Investing</a></h4>
-            <p class="text-muted mb-2">3 Questions in 3 Minutes Series</p>
-            <p>Insights on finding profitable innovation companies and developing systematic approaches to technology investing through quantamental analysis frameworks.</p>
-            <small class="text-muted">Innovation Strategy</small>
-          </div>
-        </div>
-        <hr>
-      </div>
+      {% endfor %}
       
       <div class="text-center">
-        <a href="{{ '/media' | relative_url }}" class="btn btn-success">View All Media Appearances →</a>
+        <a href="{{ '/posts' | relative_url }}" class="btn btn-primary">View All Posts →</a>
       </div>
     </div>
   </div>
