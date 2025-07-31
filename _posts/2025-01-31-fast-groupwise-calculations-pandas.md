@@ -31,6 +31,7 @@ A typical approach involves using `groupby().apply()`, which while readable and 
 
 Let's examine a common financial calculation: computing weighted portfolio returns within different groups. Consider this sample dataset representing portfolio holdings:
 
+**📋 Sample Data Setup**
 ```python
 import pandas as pd
 import numpy as np
@@ -47,6 +48,7 @@ portfolio_df = pd.DataFrame(data)
 
 To calculate the weighted return contribution of each position within its sector-region group, the traditional approach uses:
 
+**⚠️ Traditional Approach (Slow)**
 ```python
 # Traditional groupby().apply() approach
 apply_result = portfolio_df.groupby(['sector', 'region']).apply(
@@ -68,6 +70,7 @@ Here's the optimized approach:
 
 #### Step 1: Calculate Group Statistics with transform()
 
+**🔧 Step 1: Group Aggregation**
 ```python
 # Step 1: Get the sum for each group using transform()
 group_sums = portfolio_df.groupby(['sector', 'region'])['market_value'].transform('sum')
@@ -79,6 +82,7 @@ The `transform('sum')` operation returns a Series with the same length as the or
 
 #### Step 2: Perform Vectorized Calculation
 
+**⚡ Step 2: Vectorized Operation**
 ```python
 # Step 2: Perform the vectorized calculation
 weighted_contributions = (portfolio_df['market_value'] * portfolio_df['return']) / group_sums
@@ -92,6 +96,7 @@ This single line performs the entire calculation across all rows simultaneously,
 
 If you need the result to match the exact format of the `apply()` output:
 
+**🔄 Step 3: Index Formatting**
 ```python
 # Step 3: Create matching MultiIndex
 result_index = pd.MultiIndex.from_arrays([
@@ -105,6 +110,7 @@ weighted_contributions.index = result_index
 
 Here's the complete optimized code that produces identical results to the traditional approach:
 
+**✅ Complete Optimized Solution**
 ```python
 import pandas as pd
 import numpy as np
@@ -145,9 +151,11 @@ print(f"\nResults are identical: {apply_result.equals(weighted_contributions)}")
 
 ---
 
-### Performance Impact and Real-World Applications
+### Performance Impact and Interactive Demo
 
-> 📊 **Interactive Demo Available**: Experience the performance differences firsthand with our [comprehensive Jupyter notebook](/notebooks/pandas-groupby-optimization.ipynb) that includes live benchmarks, memory analysis, and real-world financial examples.
+[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/chenqijunvc/chenqijunvc.github.io/blob/main/notebooks/pandas-groupby-optimization.ipynb)
+
+**🚀 Try it yourself!** Experience the performance differences firsthand with our interactive Jupyter notebook that includes live benchmarks, memory analysis, and real-world financial examples.
 
 Based on comprehensive benchmarking across various dataset sizes, this optimization technique provides **empirically verified performance improvements**:
 
@@ -180,6 +188,8 @@ This optimization is particularly valuable for:
 **Apply() still needed for:** Complex conditional logic, stateful calculations, or operations requiring specific data ordering
 
 **Example where apply() is required:**
+
+**❌ Complex Logic Requiring apply()**
 ```python
 def complex_risk_calculation(group):
     if len(group) < 3:
@@ -199,6 +209,8 @@ def complex_risk_calculation(group):
 The `transform()` approach is more memory-efficient because it avoids creating intermediate DataFrames for each group and uses vectorized operations with better cache locality.
 
 **For very large datasets:**
+
+**🗂️ Memory-Efficient Processing**
 ```python
 # Process in chunks to manage memory
 def process_large_dataset(file_path, chunk_size=100000):
@@ -238,14 +250,6 @@ Next time you find yourself using `groupby().apply()` for calculations involving
 This approach exemplifies a broader principle in quantitative finance: **algorithmic efficiency often matters as much as mathematical sophistication**. In an industry where milliseconds can translate to significant alpha, optimizing your data processing pipeline is not just good practice—it's a competitive advantage.
 
 The combination of Pandas' powerful grouping capabilities with NumPy's vectorized operations provides the foundation for scalable financial data analysis, enabling practitioners to focus on generating insights rather than waiting for computations to complete.
-
----
-
-### Interactive Learning Experience
-
-[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/chenqijunvc/chenqijunvc.github.io/blob/main/notebooks/pandas-groupby-optimization.ipynb)
-
-**🚀 Try it yourself!** Run our [interactive Jupyter notebook](https://colab.research.google.com/github/chenqijunvc/chenqijunvc.github.io/blob/main/notebooks/pandas-groupby-optimization.ipynb) in Google Colab to see live benchmarks, experiment with different dataset sizes, and apply these techniques to your own financial data.
 
 ---
 

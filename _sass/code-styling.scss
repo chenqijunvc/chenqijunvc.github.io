@@ -1,0 +1,163 @@
+/* Stack Overflow-style code block styling */
+
+/* Code block container styling */
+.highlight {
+  position: relative;
+  margin: 1.5em 0;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  border: 1px solid #e1e4e8;
+  background: #f6f8fa;
+  overflow: hidden;
+}
+
+/* Code block with language label */
+.highlight::before {
+  content: "Python";
+  position: absolute;
+  top: 0;
+  right: 0;
+  background: #0366d6;
+  color: white;
+  padding: 4px 12px;
+  font-size: 12px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  border-bottom-left-radius: 4px;
+  z-index: 10;
+}
+
+/* Code content styling */
+.highlight pre {
+  margin: 0;
+  padding: 16px;
+  font-family: 'SF Mono', 'Monaco', 'Inconsolata', 'Roboto Mono', 'Source Code Pro', monospace;
+  font-size: 14px;
+  line-height: 1.45;
+  color: #24292e;
+  background: transparent;
+  border: none;
+  overflow-x: auto;
+}
+
+/* Code styling with description headers */
+h1 + p strong + .highlight,
+h2 + p strong + .highlight,
+h3 + p strong + .highlight,
+h4 + p strong + .highlight,
+p strong + .highlight {
+  margin-top: 0.5em;
+}
+
+/* Special styling for different code block types */
+.highlight.language-python::before {
+  content: "Python";
+  background: #3776ab;
+}
+
+.highlight.language-bash::before {
+  content: "Bash";
+  background: #4EAA25;
+}
+
+.highlight.language-sql::before {
+  content: "SQL";
+  background: #e34c26;
+}
+
+/* Code block with emoji titles */
+p strong:contains("📋")~.highlight::before,
+p strong:contains("⚠️")~.highlight::before,
+p strong:contains("🔧")~.highlight::before,
+p strong:contains("⚡")~.highlight::before,
+p strong:contains("🔄")~.highlight::before,
+p strong:contains("✅")~.highlight::before,
+p strong:contains("❌")~.highlight::before,
+p strong:contains("🗂️")~.highlight::before {
+  background: #28a745;
+}
+
+/* Inline code styling */
+code {
+  background: #f3f4f6;
+  padding: 2px 6px;
+  border-radius: 3px;
+  font-family: 'SF Mono', 'Monaco', 'Inconsolata', 'Roboto Mono', 'Source Code Pro', monospace;
+  font-size: 0.9em;
+  color: #e83e8c;
+  border: 1px solid #e1e4e8;
+}
+
+/* Code inside headers */
+h1 code, h2 code, h3 code, h4 code, h5 code, h6 code {
+  font-size: inherit;
+  color: #0366d6;
+  background: rgba(3, 102, 214, 0.1);
+  border-color: rgba(3, 102, 214, 0.2);
+}
+
+/* Copy button styling (if implemented) */
+.copy-code-button {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  background: rgba(255, 255, 255, 0.9);
+  border: 1px solid #d1d5da;
+  border-radius: 4px;
+  padding: 4px 8px;
+  font-size: 12px;
+  cursor: pointer;
+  opacity: 0;
+  transition: opacity 0.2s;
+}
+
+.highlight:hover .copy-code-button {
+  opacity: 1;
+}
+
+/* Syntax highlighting improvements */
+.highlight .k { color: #d73a49; } /* Keywords */
+.highlight .s { color: #032f62; } /* Strings */
+.highlight .c { color: #6a737d; font-style: italic; } /* Comments */
+.highlight .n { color: #24292e; } /* Names */
+.highlight .nb { color: #005cc5; } /* Built-ins */
+.highlight .nf { color: #6f42c1; } /* Functions */
+
+/* Dark mode support */
+@media (prefers-color-scheme: dark) {
+  .highlight {
+    background: #1e1e1e;
+    border-color: #3d3d3d;
+  }
+  
+  .highlight pre {
+    color: #d4d4d4;
+  }
+  
+  code {
+    background: #2d2d2d;
+    color: #f8f8f2;
+    border-color: #3d3d3d;
+  }
+  
+  .highlight .k { color: #569cd6; }
+  .highlight .s { color: #ce9178; }
+  .highlight .c { color: #6a9955; }
+  .highlight .n { color: #d4d4d4; }
+  .highlight .nb { color: #4ec9b0; }
+  .highlight .nf { color: #dcdcaa; }
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  .highlight pre {
+    font-size: 13px;
+    padding: 12px;
+  }
+  
+  .highlight::before {
+    font-size: 11px;
+    padding: 3px 8px;
+  }
+}
