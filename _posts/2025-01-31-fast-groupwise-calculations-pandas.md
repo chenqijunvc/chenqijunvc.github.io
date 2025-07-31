@@ -7,7 +7,7 @@ tags: [pandas, python, optimization, data-science, performance, vectorization, f
 author: Vince Qijun Chen
 excerpt: Discover a vectorized approach that can make your Pandas group-wise calculations orders of magnitude faster than traditional groupby().apply() methods.
 featured: true
-image: /img/posts/data_analysis_optimization.jpg
+image: /img/posts/Data_Science.jpeg
 ---
 
 **Transform your data analysis performance with a simple vectorization trick that can speed up group-wise calculations by orders of magnitude.** In quantitative finance, we frequently work with massive datasets requiring complex group-wise operations. While Pandas' `groupby().apply()` is intuitive and flexible, it can become a significant bottleneck when processing large financial datasets. This post reveals a powerful optimization technique using `groupby().transform()` that maintains the same results while dramatically improving performance.
