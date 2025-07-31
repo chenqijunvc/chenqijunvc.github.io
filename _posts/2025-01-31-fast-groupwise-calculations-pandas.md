@@ -280,7 +280,10 @@ The combination of Pandas' powerful grouping capabilities with NumPy's vectorize
 
 ### Interactive Learning Experience
 
-**🚀 Try it yourself!** Download and run our comprehensive [Jupyter notebook](/notebooks/pandas-groupby-optimization.ipynb) to:
+[![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/chenqijunvc/chenqijunvc.github.io/HEAD?filepath=notebooks%2Fpandas-groupby-optimization.ipynb)
+[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/chenqijunvc/chenqijunvc.github.io/blob/main/notebooks/pandas-groupby-optimization.ipynb)
+
+**🚀 Try it yourself!** Run our comprehensive [Jupyter notebook](/notebooks/pandas-groupby-optimization.ipynb) directly in your browser using the links above, or download and run locally to:
 
 - **See live benchmarks** on your own hardware
 - **Experiment** with different dataset sizes
