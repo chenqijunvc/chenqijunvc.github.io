@@ -176,59 +176,34 @@ This optimization is particularly valuable for:
 
 ### When This Optimization Doesn't Apply
 
-While `transform()` provides dramatic speedups for many calculations, it's important to understand its limitations:
+**Transform() works for:** Simple aggregations + element-wise operations  
+**Apply() still needed for:** Complex conditional logic, stateful calculations, or operations requiring specific data ordering
 
-**Transform() works when your calculation can be decomposed into:**
-1. Group-level aggregations (sum, mean, count, etc.)
-2. Element-wise operations on the results
-
-**It won't work for:**
-- Complex conditional logic within groups
-- Operations requiring row-by-row state management  
-- Calculations needing access to multiple group statistics simultaneously
-- Stateful operations like moving averages or cumulative calculations
-
-**Example where apply() is still needed:**
+**Example where apply() is required:**
 ```python
 def complex_risk_calculation(group):
-    """Complex calculation requiring apply() - can't be easily vectorized"""
     if len(group) < 3:
         return pd.Series([0] * len(group))
     
-    # Sort by volatility and apply concentration penalties
-    sorted_group = group.sort_values('volatility')
-    top_position_weight = sorted_group['market_value'].iloc[0] / group['market_value'].sum()
+    # Complex logic requiring group-specific processing
+    top_weight = group.nlargest(1, 'market_value')['market_value'].iloc[0] / group['market_value'].sum()
+    penalty = 1.5 if top_weight > 0.3 else 1.0
     
-    # Apply conditional logic based on concentration
-    if top_position_weight > 0.3:
-        penalty_factor = 1.5  # High concentration penalty
-    else:
-        penalty_factor = 1.0
-    
-    # Complex stateful calculation
-    risk_scores = []
-    for i, (idx, row) in enumerate(sorted_group.iterrows()):
-        position_risk = row['return'] * row['volatility'] * penalty_factor
-        risk_scores.append(position_risk)
-    
-    return pd.Series(risk_scores, index=sorted_group.index)
+    return group['return'] * group['volatility'] * penalty
 ```
 
-### Memory Considerations and Alternatives
+**Rule of thumb:** Use `transform()` when possible, `apply()` when necessary. Always benchmark your specific use case!
 
-The `transform()` approach typically uses memory more efficiently by:
+### Memory Efficiency
 
-- **Avoiding intermediate DataFrames**: `apply()` creates separate DataFrame objects for each group
-- **Better cache locality**: Vectorized operations work on contiguous memory blocks
-- **Reduced object overhead**: Fewer Python objects created during computation
+The `transform()` approach is more memory-efficient because it avoids creating intermediate DataFrames for each group and uses vectorized operations with better cache locality.
 
-**For extremely large datasets, consider chunked processing:**
+**For very large datasets:**
 ```python
-def process_large_dataset_chunked(file_path, chunk_size=100000):
-    """Memory-efficient processing for very large datasets"""
+# Process in chunks to manage memory
+def process_large_dataset(file_path, chunk_size=100000):
     results = []
     for chunk in pd.read_csv(file_path, chunksize=chunk_size):
-        # Process each chunk with optimized transform approach
         chunk_result = calculate_weighted_contributions_transform(chunk)
         results.append(chunk_result)
     return pd.concat(results)
@@ -236,35 +211,23 @@ def process_large_dataset_chunked(file_path, chunk_size=100000):
 
 ---
 
-### Frequently Asked Questions
+### Key Takeaways
 
-**Q: When should I use transform() vs apply()?**  
-A: Use `transform()` when your calculation can be decomposed into group aggregations plus element-wise operations. Use `apply()` for complex logic that truly requires processing each group individually.
+**When to use each method:**
+- **Transform()**: Group aggregations + element-wise math, large datasets, performance-critical applications
+- **Apply()**: Complex logic, stateful calculations, fewer than 10 groups
 
-**Q: Does this work with multiple aggregations?**  
-A: Yes! You can use multiple transform operations: 
-```python
-group_stats = df.groupby('sector').agg({
-    'market_value': 'sum',
-    'return': 'mean'
-}).add_suffix('_group')
-```
-
-**Q: What about performance with very few groups?**  
-A: The overhead of `transform()` means `apply()` might be faster with < 10 groups. Always benchmark for your specific use case.
-
-**Q: How does this integrate with common financial libraries?**  
-A: This optimization works well with libraries like `zipline`, `quantlib`, and `pyfolio`. The key is identifying group-wise calculations that can be vectorized.
+**Performance gains:** 5-30x speedup on typical financial datasets  
+**Memory usage:** More efficient due to vectorized operations  
+**Compatibility:** Works with pandas, numpy, and financial libraries like zipline and quantlib
 
 ---
 
-The power of this optimization lies in three key principles:
+### Why This Works
 
-1. **Avoiding Python Loops**: `apply()` executes Python functions on each group sequentially. `transform()` performs aggregations using highly optimized C code.
-
-2. **Leveraging NumPy**: The final calculation operates on Pandas Series (built on NumPy arrays), enabling vectorized operations that are orders of magnitude faster than element-wise Python loops.
-
-3. **Memory Efficiency**: `transform()` avoids creating intermediate DataFrames for each group, reducing memory overhead and improving cache efficiency.
+1. **Avoids Python loops** - `transform()` uses optimized C code vs. Python function calls
+2. **Leverages NumPy** - Vectorized operations on arrays are orders of magnitude faster
+3. **Better memory efficiency** - Fewer intermediate objects and better cache locality
 
 ---
 
@@ -280,18 +243,9 @@ The combination of Pandas' powerful grouping capabilities with NumPy's vectorize
 
 ### Interactive Learning Experience
 
-[![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/chenqijunvc/chenqijunvc.github.io/HEAD?filepath=notebooks%2Fpandas-groupby-optimization.ipynb)
 [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/chenqijunvc/chenqijunvc.github.io/blob/main/notebooks/pandas-groupby-optimization.ipynb)
 
-**🚀 Try it yourself!** Run our comprehensive [Jupyter notebook](/notebooks/pandas-groupby-optimization.ipynb) directly in your browser using the links above, or download and run locally to:
-
-- **See live benchmarks** on your own hardware
-- **Experiment** with different dataset sizes
-- **Analyze memory usage** patterns
-- **Test edge cases** where apply() is still necessary
-- **Apply techniques** to your own financial data
-
-The notebook includes real-world examples from portfolio analytics, risk management, and performance attribution that you can adapt to your specific use cases.
+**🚀 Try it yourself!** Run our [interactive Jupyter notebook](https://colab.research.google.com/github/chenqijunvc/chenqijunvc.github.io/blob/main/notebooks/pandas-groupby-optimization.ipynb) in Google Colab to see live benchmarks, experiment with different dataset sizes, and apply these techniques to your own financial data.
 
 ---
 
