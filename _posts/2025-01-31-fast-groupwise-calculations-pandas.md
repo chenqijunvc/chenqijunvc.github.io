@@ -57,11 +57,18 @@ group_sums = portfolio_df.groupby(['sector', 'region'])['market_value'].transfor
 # Step 2: Vectorized calculation across all rows simultaneously
 fast_result = (portfolio_df['market_value'] * portfolio_df['return']) / group_sums
 
+# Step 3: Create matching MultiIndex to get identical groupby object
+result_index = pd.MultiIndex.from_arrays([
+    portfolio_df['sector'],
+    portfolio_df['region']
+])
+fast_result.index = result_index
+
 # Results are identical, but performance is dramatically better
-print(f"Results match: {slow_result.values.equals(fast_result.values)}")
+print(f"Results match: {slow_result.equals(fast_result)}")
 ```
 
-**Why it's faster:** `transform()` uses optimized C code instead of Python loops, then leverages NumPy's vectorized operations across the entire dataset simultaneously.
+**Why it's faster:** Two key optimizations work together: 1) `transform()` uses optimized C code instead of Python loops, and 2) the vectorized division operation processes all rows simultaneously using NumPy's optimized array operations.
 
 ---
 
