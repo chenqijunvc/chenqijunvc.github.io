@@ -26,14 +26,46 @@ layout: default
 
         {{ content }}
 
+        <!-- AI-Powered Value Proposition -->
+        <section class="ai-value-prop mb-5 py-4 bg-light rounded">
+          <div class="row text-center">
+            <div class="col-md-4 mb-3">
+              <div class="value-prop-item">
+                <i class="fas fa-robot fa-3x text-primary mb-3"></i>
+                <h4>AI-Enhanced Strategies</h4>
+                <p class="text-muted">Machine learning models process alternative data to augment traditional FCF-ROIC analysis</p>
+              </div>
+            </div>
+            <div class="col-md-4 mb-3">
+              <div class="value-prop-item">
+                <i class="fas fa-brain fa-3x text-success mb-3"></i>
+                <h4>Quantamental 2.0</h4>
+                <p class="text-muted">Next-gen framework blending quantitative rigor with AI-driven insights and human expertise</p>
+              </div>
+            </div>
+            <div class="col-md-4 mb-3">
+              <div class="value-prop-item">
+                <i class="fas fa-chart-line fa-3x text-info mb-3"></i>
+                <h4>Modern Active PM</h4>
+                <p class="text-muted">ETF innovation (ABFL, ABLS, ABOT) powered by systematic AI-augmented processes</p>
+              </div>
+            </div>
+          </div>
+          <div class="text-center mt-3">
+            <a href="{{ '/ai-lab' | relative_url }}" class="btn btn-primary">
+              <i class="fas fa-flask"></i> Explore AI Lab
+            </a>
+          </div>
+        </section>
+
         <!-- Featured Posts Section -->
         <section class="featured-posts mb-5">
           <div class="section-header mb-4">
             <h2 class="section-title">
               <i class="fas fa-star text-warning"></i>
-              Featured Posts
+              Featured Insights
             </h2>
-            <p class="section-subtitle text-muted">Deep insights into AI, quantitative finance, and data science</p>
+            <p class="section-subtitle text-muted">AI, quantitative finance, and data science deep dives</p>
           </div>
 
           {% assign featured_posts = site.posts | where: "featured", true | limit: 3 %}

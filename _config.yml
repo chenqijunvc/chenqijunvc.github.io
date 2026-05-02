@@ -1,13 +1,13 @@
-title:              "Vince Qijun Chen"
+title:              "Vince Qijun Chen | AI-Driven Active Portfolio Manager"
 email:              chenqijunvc@gmail.com
-description:        "Investment Excellence Through Quantamental Strategy"
+description:        "Modern active portfolio management powered by AI & quantamental strategies. FCF-ROIC methodology meets machine learning for superior investment outcomes."
 author:             Vince Qijun Chen
 # For root domain (chenqijunvc.github.io), baseurl should be empty
 baseurl:            ""
 url:                "https://chenqijunvc.github.io"
 
 # SEO and Social
-keywords:           "Vince Qijun Chen, portfolio manager, quantamental investing, free cash flow, FCF-ROIC, ETF strategy, ABFL, ABLS, ABOT, CBOE, investment management"
+keywords:           "Vince Qijun Chen, AI-driven investing, modern active management, portfolio manager, machine learning finance, quantamental investing, free cash flow, FCF-ROIC, ETF strategy, NLP sentiment analysis, alternative data, Python TensorFlow, quantitative AI, ABFL, ABLS, ABOT, CBOE, investment management, AI portfolio optimization"
 lang:               "en"
 locale:             "en_US"
 

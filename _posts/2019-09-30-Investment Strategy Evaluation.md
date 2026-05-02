@@ -2,7 +2,7 @@
 layout: post
 title: Investment Strategy Evaluation Metrics
 date: 2019-09-30 10:00:00 -0500
-categories: investment-strategy performance-measurement risk-management quantitative-finance
+categories: [investment-strategy, quantitative-finance]
 tags: [performance-evaluation, backtest-metrics, risk-analysis, sharpe-ratio, strategy-assessment]
 author: Vince Qijun Chen
 excerpt: Master the essential metrics for robust investment strategy evaluation with this comprehensive guide to backtest statistics and performance indicators.

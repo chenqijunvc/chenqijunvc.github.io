@@ -2,7 +2,8 @@
 layout: post
 title: "The Free Cash Flow Indicator: A Key to Post-IPO Returns?"
 date: 2019-05-31 10:00:00 -0500
-categories: investment-research IPOs free-cash-flow equity-analysis
+categories: [investment-strategy, quantitative-finance]
+tags: [IPOs, free-cash-flow, equity-analysis, investment-research, post-ipo-performance]
 author: Vince Qijun Chen
 excerpt: Unlock deeper insights into Initial Public Offering performance through the lens of free cash flow analysis.
 image: /img/posts/Coins.jpg

@@ -2,7 +2,7 @@
 layout: post
 title: Structure of Modern Quantitative Asset Managers
 date: 2022-04-01 10:00:00 -0500
-categories: quantitative-finance organizational-structure
+categories: [quantitative-finance]
 tags: [quantitative-finance, asset-management, organizational-structure, team-structure, quant-teams]
 author: Vince Qijun Chen
 excerpt: Unravel the sophisticated operational structure of a modern quantitative asset management firm.

@@ -2,7 +2,7 @@
 layout: post
 title: "Seven Insights into Active Management"
 date: 2021-03-01 10:00:00 -0500
-categories: investment-strategy portfolio-management
+categories: [investment-strategy, quantitative-finance]
 tags: [active-management, portfolio-management, investment-strategy, alpha-generation, risk-management]
 author: Vince Qijun Chen
 excerpt: The pursuit of superior investment returns through active management demands a disciplined approach and a profound understanding of market dynamics.

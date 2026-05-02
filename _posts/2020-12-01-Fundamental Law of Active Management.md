@@ -2,7 +2,7 @@
 layout: post
 title: Fundamental Law of Active Management
 date: 2020-12-01 10:00:00 -0500
-categories: investment-strategy portfolio-management
+categories: [investment-strategy, quantitative-finance]
 tags: [active-management, fundamental-law, portfolio-theory, information-ratio, skill-analysis]
 author: Vince Qijun Chen
 excerpt: The Fundamental Law of Active Management provides a critical framework for understanding how active managers generate excess returns.

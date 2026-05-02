@@ -2,7 +2,8 @@
 layout: post
 title: "Building a Core Equity Portfolio for Long-Term Appreciation"
 date: 2019-02-15 10:00:00 -0500
-categories: investment-strategy equity-portfolio long-term-investing
+categories: [investment-strategy]
+tags: [equity-portfolio, long-term-investing, portfolio-management, systematic-investing]
 author: Vince Qijun Chen
 excerpt: Construct a robust core equity portfolio designed for long-term capital appreciation through systematic security selection.
 image: /img/posts/Adventure.jpg

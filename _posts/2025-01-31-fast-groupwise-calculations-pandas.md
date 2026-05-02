@@ -2,7 +2,7 @@
 layout: post
 title: "A Simple Trick for Faster Group-Wise Calculations with Pandas"
 date: 2025-01-31 10:00:00 -0500
-categories: data-science python financial-data
+categories: [data-science]
 tags: [pandas, python, optimization, data-science, performance, vectorization, financial-analysis, quantitative-methods]
 author: Vince Qijun Chen
 excerpt: Discover a vectorized approach that can make your Pandas group-wise calculations orders of magnitude faster than traditional groupby().apply() methods.

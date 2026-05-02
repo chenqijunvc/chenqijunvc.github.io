@@ -1,0 +1,67 @@
+# Blog Categories Configuration
+# Unified category system for Vince Qijun Chen's blog
+
+categories:
+  - slug: ai-investing
+    name: "AI Investing"
+    description: "AI and machine learning applications in investment management"
+    icon: "fas fa-robot"
+    
+  - slug: quantitative-finance
+    name: "Quantitative Finance"
+    description: "Quantitative methods, models, and financial engineering"
+    icon: "fas fa-calculator"
+    
+  - slug: investment-strategy
+    name: "Investment Strategy"
+    description: "Portfolio management, asset allocation, and strategy development"
+    icon: "fas fa-chart-line"
+    
+  - slug: data-science
+    name: "Data Science"
+    description: "Data analysis, Python, pandas, and technical tutorials"
+    icon: "fas fa-database"
+    
+  - slug: market-insights
+    name: "Market Insights"
+    description: "Market analysis, trends, and investment commentary"
+    icon: "fas fa-search-dollar"
+    
+  - slug: media-appearances
+    name: "Media & Thought Leadership"
+    description: "TV interviews, podcasts, and professional media coverage"
+    icon: "fas fa-tv"
+    
+  - slug: etf-strategy
+    name: "ETF Strategy"
+    description: "ETF development, structured products, and innovation"
+    icon: "fas fa-layer-group"
+
+# Tag normalization mapping
+tag_mapping:
+  # AI/ML tags
+  "machine-learning": "machine-learning"
+  "ml": "machine-learning"
+  "ai": "artificial-intelligence"
+  "nlp": "nlp"
+  "tensorflow": "tensorflow"
+  "pytorch": "pytorch"
+  
+  # Finance tags
+  "quantitative-finance": "quantitative-finance"
+  "quant": "quantitative-finance"
+  "fcf": "free-cash-flow"
+  "roic": "roic"
+  "fcf-roic": "fcf-roic"
+  
+  # Data science tags
+  "pandas": "pandas"
+  "python": "python"
+  "data-science": "data-science"
+  "optimization": "optimization"
+  
+  # Investment tags
+  "portfolio-management": "portfolio-management"
+  "active-management": "active-management"
+  "risk-management": "risk-management"
+  "backtesting": "backtesting"
