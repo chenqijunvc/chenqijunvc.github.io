@@ -1,13 +1,13 @@
-title:              "Vince Qijun Chen | AI-Driven Active Portfolio Manager"
+title:              "Vince Qijun Chen"
 email:              chenqijunvc@gmail.com
-description:        "Modern active portfolio management powered by AI & quantamental strategies. FCF-ROIC methodology meets machine learning for superior investment outcomes."
+description:        "Modern active portfolio management combining quantamental strategies with AI-driven insights"
 author:             Vince Qijun Chen
 # For root domain (chenqijunvc.github.io), baseurl should be empty
 baseurl:            ""
 url:                "https://chenqijunvc.github.io"
 
 # SEO and Social
-keywords:           "Vince Qijun Chen, AI-driven investing, modern active management, portfolio manager, machine learning finance, quantamental investing, free cash flow, FCF-ROIC, ETF strategy, NLP sentiment analysis, alternative data, Python TensorFlow, quantitative AI, ABFL, ABLS, ABOT, CBOE, investment management, AI portfolio optimization"
+keywords:           "Vince Qijun Chen, portfolio manager, AI-driven investing, quantamental investing, free cash flow, FCF-ROIC, ETF strategy, machine learning finance, investment management"
 lang:               "en"
 locale:             "en_US"
 
@@ -22,9 +22,9 @@ linkedin_username:  vinceqijunchen
 # Author information for structured data
 author_info:
   name:             "Vince Qijun Chen"
-  bio:              "Portfolio manager and quantamental strategist specializing in free cash flow investing and ETF strategy development"
+  bio:              "Portfolio manager specializing in AI-enhanced quantamental strategies and ETF development"
   location:         "Global"
-  expertise:        ["Free Cash Flow Investing", "ETF Strategy", "Quantamental Analysis", "Portfolio Management", "Financial Media"]
+  expertise:        ["AI-Driven Investing", "Quantamental Analysis", "ETF Strategy", "Portfolio Management", "Financial Media"]
 
 # Build settings
 markdown:           kramdown
@@ -37,7 +37,7 @@ permalink:          /:title/
 plugins:
   - jekyll-feed
   - jekyll-paginate
-  - jekyll-sitemap # Uncomment this line to silently generate a sitemaps.org compliant sitemap for your Jekyll site
+  - jekyll-sitemap
 
 # Collections
 collections:
@@ -54,7 +54,7 @@ default_backgrounds:
   search: '/img/bg-post.jpg'
   default: '/img/bg-post.jpg'
 
-# Category-specific backgrounds (will fallback to defaults if these don't exist)
+# Category-specific backgrounds
 category_backgrounds:
   ai: '/img/bg-post.jpg'
   finance: '/img/bg-post.jpg'
