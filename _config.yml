@@ -1,18 +1,18 @@
-title:              "Vince Qijun Chen"
+title:              "Vince Chen"
 email:              chenqijunvc@gmail.com
-description:        "Portfolio Manager and Quantitative Researcher. Over nine years at Abacus FCF Advisors, contributed to building and operating a quantitative asset management platform spanning ETFs (ABFL, ABLD, ABOT, ABLS, ABXB), research, and portfolio management."
-author:             Vince Qijun Chen
+description:        "Investment Architect. Portfolio Manager. Quantitative Researcher. Designing investment research, quantitative methodologies, portfolio processes, and institutional investment infrastructure."
+author:             Vince Chen
 # For root domain (chenqijunvc.github.io), baseurl should be empty
 baseurl:            ""
 url:                "https://chenqijunvc.github.io"
 
 # SEO and Social
-keywords:           "Vince Qijun Chen, portfolio manager, quantitative researcher, ABFL ETF, ABLD ETF, ABOT ETF, ABLS ETF, ABXB ETF, FCF Leaders ETF, Abacus FCF, investment management"
+keywords:           "Vince Chen, investment architect, portfolio manager, quantitative researcher, free cash flow investing, Pure Alpha, investment methodology, quantitative finance"
 lang:               "en"
 locale:             "en_US"
 
 # Social Profiles
-twitter_username:   # Your Twitter username when available
+twitter_username:
 github_username:    chenqijunvc
 linkedin_username:  vinceqijunchen
 
@@ -21,10 +21,10 @@ linkedin_username:  vinceqijunchen
 
 # Author information for structured data
 author_info:
-  name:             "Vince Qijun Chen"
-  bio:              "Portfolio Manager and Quantitative Researcher. Contributed to building and operating Abacus FCF Advisors' quantitative investment platform and ETF suite."
+  name:             "Vince Chen"
+  bio:              "Investment Architect. Portfolio Manager. Quantitative Researcher. My work focuses on designing investment research, quantitative methodologies, portfolio processes, and institutional investment infrastructure."
   location:         "Global"
-  expertise:        ["AI-Driven Investing", "Quantamental Analysis", "ETF Strategy", "Portfolio Management", "Financial Media"]
+  expertise:        ["Investment Architecture", "Quantitative Research", "Portfolio Management", "ETF Strategy", "Investment Methodology"]
 
 # Build settings
 markdown:           kramdown

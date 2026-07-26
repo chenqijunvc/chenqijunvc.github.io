@@ -1,11 +1,12 @@
 ---
 layout: default
-title: "Media & Press"
-description: "TV appearances, interviews, and press coverage featuring Vince Qijun Chen's insights on quantitative finance, AI, and investment strategies."
+title: "Independent Evidence"
+description: "Third-party sources including media appearances, SEC filings, and industry recognition"
 background: '/img/bg-about.jpg'
 ---
 
-<!-- Page Header -->
+<meta http-equiv="refresh" content="0; url={{ '/public-record/media' | relative_url }}">
+
 {% capture background_url %}{% include dynamic_background.html %}{% endcapture %}
 <header class="masthead" style="background-image: url('{{ background_url | strip }}')">
   <div class="overlay"></div>
@@ -26,142 +27,22 @@ background: '/img/bg-about.jpg'
   <div class="container">
     <div class="row">
       <div class="col-lg-10 col-md-11 mx-auto">
+        <p>This page has moved. Please visit the <a href="{{ '/public-record/media' | relative_url }}">Media</a> page.</p>
 
-        <!-- Media Introduction -->
-        <div class="media-intro mb-5">
-          <div class="row align-items-center">
-            <div class="col-md-8">
-              <h2 class="section-title">Industry Recognition</h2>
-              <p class="lead">Vince Qijun Chen regularly shares insights on quantitative finance, AI applications in investment management, and market analysis through various media channels.</p>
-              <p>From television interviews to industry publications, explore Vince's thought leadership and expert commentary on the evolving landscape of financial technology and investment strategies.</p>
-            </div>
-            <div class="col-md-4 text-center">
-              <div class="media-stats">
-                <div class="stat-item">
-                  <h3 class="stat-number">{{ site.data.media.tv_appearances | default: "15+" }}</h3>
-                  <p class="stat-label">TV Appearances</p>
-                </div>
-                <div class="stat-item">
-                  <h3 class="stat-number">{{ site.data.media.publications | default: "25+" }}</h3>
-                  <p class="stat-label">Publications</p>
-                </div>
-              </div>
-            </div>
+        {% assign media_items = site.media | sort: 'date' | reverse %}
+        {% for item in media_items %}
+        <div class="card mb-3">
+          <div class="card-body">
+            <h5 class="card-title">
+              <a href="{{ item.url | relative_url }}">{{ item.title }}</a>
+              {% if item.media_type == 'tv' %}<span class="badge badge-info ml-2">TV Interview</span>{% endif %}
+            </h5>
+            <h6 class="card-subtitle mb-2 text-muted">{{ item.outlet }} — {{ item.date | date: '%B %d, %Y' }}</h6>
+            {% if item.subtitle %}<p class="card-text">{{ item.subtitle }}</p>{% endif %}
+            <p class="small text-muted mb-0">Tier 1 — Recorded interview</p>
           </div>
         </div>
-
-        <!-- Media Filter Section -->
-        <div class="media-filter mb-4">
-          <div class="row">
-            <div class="col-md-6">
-              <select class="form-select" id="mediaTypeFilter">
-                <option value="">All Media Types</option>
-                <option value="tv">TV Interviews</option>
-                <option value="podcast">Podcasts</option>
-                <option value="article">Articles & Features</option>
-                <option value="panel">Panel Discussions</option>
-                <option value="conference">Conference Presentations</option>
-              </select>
-            </div>
-            <div class="col-md-6">
-              <input type="text" class="form-control" id="mediaSearch" placeholder="Search media coverage...">
-            </div>
-          </div>
-        </div>
-
-        <!-- Featured Media -->
-        <section class="featured-media mb-5">
-          <h2 class="section-title mb-4">All Media Coverage</h2>
-          <div class="row">
-            {% if site.media and site.media.size > 0 %}
-            {% assign all_media = site.media | sort: "date" | reverse %}
-            {% for media in all_media %}
-            <div class="col-md-6 mb-4">
-              <div class="featured-media-card">
-                {% if media.image %}
-                <div class="media-thumbnail">
-                  <img src="{{ media.image | prepend: site.baseurl }}" alt="{{ media.title }}" class="img-fluid">
-                  {% if media.media_type == 'tv' %}
-                  <div class="media-type-badge tv-badge">
-                    <i class="fas fa-video"></i> TV Interview
-                  </div>
-                  {% elsif media.media_type == 'podcast' %}
-                  <div class="media-type-badge podcast-badge">
-                    <i class="fas fa-microphone"></i> Podcast
-                  </div>
-                  {% endif %}
-                </div>
-                {% endif %}
-                <div class="featured-media-content">
-                  <h3 class="media-title">
-                    <a href="{{ media.url | prepend: site.baseurl }}">{{ media.title }}</a>
-                  </h3>
-                  <div class="media-meta">
-                    <span class="media-outlet">{{ media.outlet }}</span>
-                    <span class="media-date">{{ media.date | date: "%B %d, %Y" }}</span>
-                  </div>
-                  <p class="media-excerpt">{{ media.excerpt | strip_html | truncatewords: 25 }}</p>
-                  <div class="media-topics">
-                    {% for topic in media.topics %}
-                    <span class="badge badge-outline">{{ topic }}</span>
-                    {% endfor %}
-                  </div>
-                </div>
-              </div>
-            </div>
-            {% endfor %}
-            {% else %}
-            <div class="col-12">
-              <div class="text-center p-4">
-                <p class="text-muted">Media coverage section is being set up. Check back soon!</p>
-              </div>
-            </div>
-            {% endif %}
-          </div>
-        </section>
-
-        <!-- Media Contact -->
-        <section class="media-contact mt-5 pt-5 border-top">
-          <div class="row">
-            <div class="col-md-8 mx-auto text-center">
-              <h3>Media Inquiries</h3>
-              <p class="lead">For interviews, expert commentary, or speaking opportunities</p>
-              <a href="/contact" class="btn btn-primary">Contact for Media</a>
-            </div>
-          </div>
-        </section>
-
+        {% endfor %}
       </div>
     </div>
   </div>
-
-<!-- Media JavaScript -->
-<script>
-document.addEventListener('DOMContentLoaded', function() {
-    const typeFilter = document.getElementById('mediaTypeFilter');
-    const searchInput = document.getElementById('mediaSearch');
-    const mediaItems = document.querySelectorAll('.media-item');
-    
-    function filterMedia() {
-        const typeValue = typeFilter.value.toLowerCase();
-        const searchValue = searchInput.value.toLowerCase();
-        
-        mediaItems.forEach(item => {
-            const itemType = item.dataset.mediaType;
-            const itemText = item.textContent.toLowerCase();
-            
-            const typeMatch = !typeValue || itemType === typeValue;
-            const searchMatch = !searchValue || itemText.includes(searchValue);
-            
-            if (typeMatch && searchMatch) {
-                item.style.display = 'block';
-            } else {
-                item.style.display = 'none';
-            }
-        });
-    }
-    
-    typeFilter.addEventListener('change', filterMedia);
-    searchInput.addEventListener('input', filterMedia);
-});
-</script>

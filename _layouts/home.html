@@ -2,18 +2,17 @@
 layout: default
 ---
 
-<!-- Page Header -->
 {% capture background_url %}{% include dynamic_background.html %}{% endcapture %}
-<header class="masthead" style="background-image: url('{{ background_url | strip }}'); color: white;">
+<header class="masthead" style="background-image: url('{{ background_url | strip }}');">
   <div class="overlay"></div>
     <div class="container">
       <div class="row">
         <div class="col-lg-10 col-md-11 mx-auto">
           <div class="page-heading">
-            <h1 style="color: white !important; text-shadow: 2px 2px 4px rgba(0,0,0,0.8);">{{ site.title }}</h1>
-            {% if site.description %}
-            <span class="subheading" style="color: white !important; text-shadow: 1px 1px 3px rgba(0,0,0,0.8);">{{ site.description }}</span>
-            {% endif %}
+            <h1>{{ site.title }}</h1>
+            <span class="subheading">
+              Investment Architect &bull; Portfolio Manager &bull; Quantitative Researcher
+            </span>
           </div>
         </div>
       </div>
@@ -26,182 +25,61 @@ layout: default
 
         {{ content }}
 
-        <!-- Builder/Operator Section -->
-        <section class="builder-section mb-5 p-4 bg-light rounded">
-          <div class="row align-items-center">
-            <div class="col-md-8">
-              <h2 class="mb-3" style="font-weight: 700;">Portfolio Manager & Quantitative Researcher</h2>
-              <p class="lead mb-2">Over nine years at Abacus FCF Advisors, I helped build and operate a quantitative asset management platform spanning research, portfolio management, and the firm's ETF product suite (ABFL, ABLD, ABOT, ABLS, ABXB). I led quantitative research, portfolio management, and investment technology development.</p>
-              <p class="text-muted mb-3">PSN Top Guns Manager of the Decade (Q4 2025). Featured on CBOE Global Markets; registered portfolio manager on multiple SEC ETF filings; Abacus Investor Day 2025 featured speaker.</p>
-              <a href="{{ '/about' | relative_url }}" class="btn btn-primary">
-                Read the Full Story <i class="fas fa-arrow-right ml-1"></i>
-              </a>
-            </div>
-            <div class="col-md-4 text-center">
-              <div class="d-flex justify-content-around">
-                <div>
-                  <div class="h2 mb-0 text-primary font-weight-bold">9</div>
-                  <small class="text-muted">Years</small>
-                </div>
-                <div>
-                  <div class="h2 mb-0 text-success font-weight-bold">5</div>
-                  <small class="text-muted">ETFs</small>
-                </div>
-                <div>
-                  <div class="h2 mb-0 text-info font-weight-bold">1</div>
-                  <small class="text-muted">Platform</small>
-                </div>
-              </div>
-            </div>
-          </div>
+        <section class="mb-5 p-4 bg-light rounded" style="border-left: 4px solid #1a1a2e;">
+          <p class="lead mb-0" style="font-size: 1.2rem; line-height: 1.7;">
+            My work focuses on designing investment research, quantitative methodologies, portfolio processes, and institutional investment infrastructure. This site is an archive of enduring contributions — frameworks, institutions, and research that outlive any single role or employer.
+          </p>
         </section>
 
-        <!-- Featured Posts Section -->
-        <section class="featured-posts mb-5">
-          <div class="section-header mb-4">
-            <h2 class="section-title">
-              <i class="fas fa-star text-warning"></i>
-              Featured Posts
-            </h2>
-            <p class="section-subtitle text-muted">Deep insights into AI, quantitative finance, and data science</p>
-          </div>
+        <h3 class="mb-4">Selected Contributions</h3>
 
-          {% assign featured_posts = site.posts | where: "featured", true | limit: 3 %}
-          {% if featured_posts.size == 0 %}
-            {% assign featured_posts = site.posts | limit: 3 %}
-          {% endif %}
-
-          {% for post in featured_posts %}
-          <article class="featured-post-card mb-4">
-            <div class="row">
-              <div class="col-md-4">
-                <div class="post-image">
-                  {% capture auto_image %}{% include auto_image.html post=post %}{% endcapture %}
-                  <img src="{{ auto_image | strip | relative_url }}" alt="{{ post.title | escape }}" class="img-fluid rounded">
-                </div>
-              </div>
-              <div class="col-md-8">
-                <div class="post-content">
-                  <div class="post-meta-small mb-2">
-                    <span class="badge badge-primary">{{ post.categories[0] | replace: '-', ' ' | capitalize }}</span>
-                    <span class="text-muted mx-2">•</span>
-                    <small class="text-muted">
-                      <i class="far fa-calendar-alt"></i>
-                      {{ post.date | date: '%B %d, %Y' }}
-                    </small>
-                    <span class="text-muted mx-2">•</span>
-                    <small class="text-muted">
-                      <i class="far fa-clock"></i>
-                      {% include read_time.html content=post.content %}
-                    </small>
-                  </div>
-                  
-                  <h3 class="post-title">
-                    <a href="{{ post.url | relative_url }}" class="text-decoration-none">
-                      {{ post.title }}
-                    </a>
-                  </h3>
-                  
-                  {% if post.subtitle %}
-                  <h5 class="post-subtitle text-muted mb-3">{{ post.subtitle }}</h5>
-                  {% endif %}
-                  
-                  <p class="post-excerpt">
-                    {{ post.excerpt | strip_html | truncatewords: 30 }}
-                  </p>
-                  
-                  {% if post.tags.size > 0 %}
-                  <div class="post-tags mb-3">
-                    {% for tag in post.tags limit:4 %}
-                      <span class="badge badge-light">{{ tag }}</span>
-                    {% endfor %}
-                  </div>
-                  {% endif %}
-                  
-                  <a href="{{ post.url | relative_url }}" class="btn btn-outline-primary btn-sm">
-                    Read More <i class="fas fa-arrow-right ml-1"></i>
-                  </a>
-                </div>
+        <div class="row mb-5">
+          <div class="col-md-6 col-lg-4 mb-4">
+            <div class="card h-100">
+              <div class="card-body">
+                <h5 class="card-title">Building an Institutional Investment Platform</h5>
+                <p class="card-text small text-muted">Designed, built, and operated a quantitative investment platform spanning research, portfolio management, ETF operations, and investment technology (2017–2024).</p>
+                <a href="{{ '/contributions/institutional-platform' | relative_url }}" class="stretched-link"></a>
               </div>
             </div>
-          </article>
-          {% endfor %}
-        </section>
-
-        <!-- Recent Posts Section -->
-        <section class="recent-posts">
-          <div class="section-header mb-4">
-            <h2 class="section-title">
-              <i class="fas fa-tv text-info"></i>
-              Featured Media
-            </h2>
-            <p class="section-subtitle text-muted">Professional insights and expert commentary on financial markets</p>
           </div>
-
-          {% assign featured_media = site.media | where: "featured", true | limit: 4 %}
-          {% if featured_media.size == 0 %}
-            {% assign featured_media = site.media | limit: 4 %}
-          {% endif %}
-
-          <div class="row">
-            {% for media in featured_media %}
-            <div class="col-md-6 mb-4">
-              <div class="featured-media-card">
-                {% if media.image %}
-                <div class="media-thumbnail">
-                  <img src="{{ media.image | relative_url }}" alt="{{ media.title }}" class="img-fluid">
-                  {% if media.media_type == 'tv' %}
-                  <div class="media-type-badge tv-badge">
-                    <i class="fas fa-video"></i> TV Interview
-                  </div>
-                  {% elsif media.media_type == 'podcast' %}
-                  <div class="media-type-badge podcast-badge">
-                    <i class="fas fa-microphone"></i> Podcast
-                  </div>
-                  {% endif %}
-                </div>
-                {% endif %}
-                <div class="featured-media-content">
-                  <h3 class="media-title">
-                    <a href="{{ media.url | relative_url }}">{{ media.title }}</a>
-                  </h3>
-                  <div class="media-meta">
-                    <span class="media-outlet">{{ media.outlet }}</span>
-                    <span class="media-date">{{ media.date | date: "%B %d, %Y" }}</span>
-                  </div>
-                  <p class="media-excerpt">
-                    {% if media.subtitle %}
-                      {{ media.subtitle | truncatewords: 25 }}
-                    {% else %}
-                      {{ media.content | strip_html | truncatewords: 25 }}
-                    {% endif %}
-                  </p>
-                  <div class="media-topics">
-                    {% for topic in media.topics limit:3 %}
-                    <span class="badge badge-outline">{{ topic }}</span>
-                    {% endfor %}
-                  </div>
-                </div>
+          <div class="col-md-6 col-lg-4 mb-4">
+            <div class="card h-100">
+              <div class="card-body">
+                <h5 class="card-title">Pure Alpha Framework</h5>
+                <p class="card-text small text-muted">A systematic framework for evaluating active management — identifying genuine skill versus stylistic tailwinds through holding-based analysis.</p>
+                <a href="{{ '/contributions/pure-alpha' | relative_url }}" class="stretched-link"></a>
               </div>
             </div>
-            {% endfor %}
           </div>
-        </section>
+          <div class="col-md-6 col-lg-4 mb-4">
+            <div class="card h-100">
+              <div class="card-body">
+                <h5 class="card-title">Free Cash Flow Research</h5>
+                <p class="card-text small text-muted">Research into free cash flow as a measure of quality, profitability, and investment performance — spanning factor analysis, portfolio construction, and ETF implementation.</p>
+                <a href="{{ '/contributions/free-cash-flow-research' | relative_url }}" class="stretched-link"></a>
+              </div>
+            </div>
+          </div>
+        </div>
 
-        <!-- Call to Action -->
-        <div class="home-cta text-center mt-5 mb-4">
-          <div class="cta-content p-4 bg-light rounded">
-            <h3>Explore More Content</h3>
-            <p class="text-muted mb-3">Discover our complete collection of insights, analysis, and media appearances.</p>
-            <div class="cta-buttons">
-              <a href="{{ '/posts' | relative_url }}" class="btn btn-primary btn-lg mr-3">
-                <i class="fas fa-list"></i>
-                View All Posts
-              </a>
-              <a href="{{ '/media' | relative_url }}" class="btn btn-success btn-lg">
-                <i class="fas fa-tv"></i>
-                View All Media
-              </a>
+        <div class="row mb-5">
+          <div class="col-md-6 mb-4">
+            <div class="card h-100">
+              <div class="card-body">
+                <h5 class="card-title">Publications</h5>
+                <p class="card-text small text-muted">Authored research articles on quantitative finance, active management, factor investing, and ETF strategy.</p>
+                <a href="{{ '/publications' | relative_url }}" class="stretched-link"></a>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6 mb-4">
+            <div class="card h-100">
+              <div class="card-body">
+                <h5 class="card-title">Public Record</h5>
+                <p class="card-text small text-muted">Timeline, media appearances, SEC filings, evidence index, and attribution statement — independently verifiable career archive.</p>
+                <a href="{{ '/public-record/timeline' | relative_url }}" class="stretched-link"></a>
+              </div>
             </div>
           </div>
         </div>
@@ -209,6 +87,3 @@ layout: default
       </div>
     </div>
   </div>
-
-  <!-- Newsletter Signup -->
-  {% include newsletter.html %}

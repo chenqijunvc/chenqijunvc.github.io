@@ -1,228 +1,210 @@
-// Custom styles for Vince Qijun Chen professional blog
-// Color scheme: Deep Blue (#1a3c8a) + Gold (#d4af37) + Clean White
-
-// Define colors
-$navy-blue: #1a3c8a;
-$gold: #d4af37;
-$light-gray: #f8f9fa;
-$dark-gray: #343a40;
-
-// Navbar customization
-.navbar {
-  padding: 1rem 0;
-  transition: all 0.3s ease;
-  
-  .navbar-brand {
-    font-weight: 700;
-    font-size: 1.5rem;
-    color: $navy-blue !important;
-    
-    &:hover {
-      color: $gold !important;
-    }
-  }
-  
-  .nav-link {
-    font-weight: 500;
-    text-transform: uppercase;
-    font-size: 0.9rem;
-    letter-spacing: 0.5px;
-    
-    &:hover {
-      color: $gold !important;
-    }
-  }
+// Design tokens — single source of truth for all color references
+:root {
+  --color-primary: #1a2a4a;
+  --color-accent: #c4a35a;
+  --color-paper: #ffffff;
+  --color-bg-muted: #f8f9fb;
+  --color-border: #e2e4e8;
+  --color-text: #1f2937;
+  --color-text-muted: #6b7280;
+  --color-overlay: rgba(0, 0, 0, 0.4);
+  --color-focus: #3b82f6;
+  --color-tv: #dc3545;
+  --color-podcast: #7c3aed;
+  --color-article: #2563eb;
+  --font-display: 'Montserrat', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  --font-body: 'Open Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  --font-mono: 'SF Mono', Monaco, 'Roboto Mono', 'Source Code Pro', monospace;
+  --content-max: 820px;
+  --content-wide: 1120px;
 }
 
-// Masthead (header) enhancement
-.masthead {
-  background-color: $navy-blue;
+// Base
+body {
+  font-family: var(--font-body);
+  line-height: 1.7;
+  color: var(--color-text);
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-display);
+  font-weight: 700;
+  color: var(--color-primary);
+}
+
+// Masthead
+header.masthead {
+  margin-bottom: 50px;
+  background: no-repeat center center;
   background-size: cover;
-  background-position: center;
+  background-color: var(--color-primary);
+  position: relative;
   min-height: 400px;
   display: flex;
   align-items: center;
-  
-  .page-heading {
-    h1 {
-      font-family: 'Montserrat', sans-serif;
-      font-weight: 800;
-      font-size: 3rem;
-      color: white;
-      text-shadow: 2px 2px 8px rgba(0,0,0,0.7);
-    }
-    
-    .subheading {
-      font-size: 1.5rem;
-      color: rgba(255,255,255,0.9);
-    }
-  }
-}
 
-// Post cards enhancement
-.featured-post-card {
-  border: none;
-  border-radius: 12px;
-  box-shadow: 0 4px 6px rgba(0,0,0,0.08);
-  transition: all 0.3s ease;
-  overflow: hidden;
-  
-  &:hover {
-    transform: translateY(-8px);
-    box-shadow: 0 12px 24px rgba(0,0,0,0.15);
+  .overlay {
+    position: absolute;
+    top: 0; left: 0; height: 100%; width: 100%;
+    background-color: #000;
+    opacity: 0.35;
   }
-  
-  .post-image img {
-    border-radius: 12px 12px 0 0;
-    transition: transform 0.5s ease;
-  }
-  
-  &:hover .post-image img {
-    transform: scale(1.05);
-  }
-}
 
-// Expertise cards (About page)
-.expertise-card {
-  background: white;
-  border: none;
-  border-left: 4px solid $navy-blue;
-  border-radius: 8px;
-  box-shadow: 0 2px 4px rgba(0,0,0,0.06);
-  transition: all 0.3s ease;
-  padding: 1.5rem;
-  margin-bottom: 1rem;
-  
-  &:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 8px 16px rgba(0,0,0,0.12);
-    border-left-color: $gold;
-  }
-  
-  h5 {
-    color: $navy-blue;
-    font-weight: 600;
-    margin-bottom: 1rem;
-  }
-  
-  i {
-    color: $gold;
-    margin-right: 0.5rem;
-  }
-}
-
-// Buttons customization
-.btn-primary {
-  background-color: $navy-blue;
-  border-color: $navy-blue;
-  border-radius: 6px;
-  font-weight: 500;
-  padding: 0.75rem 1.5rem;
-  transition: all 0.3s ease;
-  
-  &:hover {
-    background-color: darken($navy-blue, 10%);
-    border-color: darken($navy-blue, 10%);
-    transform: translateY(-2px);
-    box-shadow: 0 4px 8px rgba(26,60,138,0.3);
-  }
-}
-
-.btn-success {
-  background-color: $gold;
-  border-color: $gold;
-  color: white;
-  border-radius: 6px;
-  font-weight: 500;
-  
-  &:hover {
-    background-color: darken($gold, 10%);
-    border-color: darken($gold, 10%);
+  .page-heading,
+  .site-heading,
+  .post-heading {
+    padding: 200px 0 150px;
     color: white;
+    text-align: center;
+  }
+
+  .page-heading h1,
+  .site-heading h1 {
+    font-family: var(--font-display);
+    font-size: 3rem;
+    font-weight: 800;
+    margin-top: 0;
+    color: white;
+  }
+
+  .page-heading .subheading,
+  .site-heading .subheading {
+    font-family: var(--font-body);
+    font-size: 1.4rem;
+    font-weight: 300;
+    line-height: 1.1;
+    display: block;
+    margin: 10px 0 0;
+    color: rgba(255, 255, 255, 0.9);
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  header.masthead {
+    .page-heading h1,
+    .site-heading h1 {
+      font-size: 4rem;
+    }
+    .page-heading,
+    .site-heading,
+    .post-heading {
+      padding: 200px 0;
+    }
+  }
+}
+
+// Navbar
+.navbar {
+  padding: 1rem 0;
+
+  .navbar-brand {
+    font-family: var(--font-display);
+    font-weight: 700;
+    font-size: 1.5rem;
+    color: var(--color-primary) !important;
+  }
+
+  .nav-link {
+    font-family: var(--font-display);
+    font-weight: 500;
+    text-transform: uppercase;
+    font-size: 0.85rem;
+    letter-spacing: 0.5px;
   }
 }
 
 // Section headers
 .section-title {
-  color: $navy-blue;
+  font-family: var(--font-display);
   font-weight: 700;
-  border-bottom: 3px solid $gold;
+  color: var(--color-primary);
+  border-bottom: 3px solid var(--color-accent);
   padding-bottom: 10px;
   display: inline-block;
+  margin-bottom: 0.5rem;
 }
 
-// Badge customization
+.section-subtitle {
+  color: var(--color-text-muted);
+  margin-bottom: 0;
+}
+
+// Cards
+.card {
+  border: none;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.08);
+  border-radius: 8px;
+
+  .card-header {
+    background-color: var(--color-primary);
+    color: white;
+    border-radius: 8px 8px 0 0 !important;
+  }
+}
+
+// Buttons
+.btn-primary {
+  background-color: var(--color-primary);
+  border-color: var(--color-primary);
+  border-radius: 6px;
+  font-weight: 500;
+  padding: 0.75rem 1.5rem;
+
+  &:hover {
+    background-color: #111d33;
+    border-color: #111d33;
+    transform: translateY(-1px);
+    box-shadow: 0 4px 8px rgba(26, 42, 74, 0.3);
+  }
+}
+
+.btn-accent {
+  background-color: var(--color-accent);
+  border-color: var(--color-accent);
+  color: white;
+  border-radius: 6px;
+  font-weight: 500;
+  padding: 0.75rem 1.5rem;
+
+  &:hover {
+    background-color: #a88a3e;
+    border-color: #a88a3e;
+    color: white;
+    transform: translateY(-1px);
+  }
+}
+
+// Badges
 .badge-primary {
-  background-color: $navy-blue;
+  background-color: var(--color-primary);
 }
 
 .badge-light {
-  background-color: $light-gray;
-  color: $dark-gray;
-  border: 1px solid #dee2e6;
+  background-color: var(--color-bg-muted);
+  color: var(--color-text-muted);
+  border: 1px solid var(--color-border);
 }
 
-// Footer enhancement
+// Footer
 footer {
-  background-color: $navy-blue;
+  background-color: var(--color-primary);
   color: white;
   padding: 3rem 0;
-  
+
   a {
-    color: $gold;
-    
-    &:hover {
-      color: lighten($gold, 15%);
-    }
+    color: var(--color-accent);
   }
 }
 
-// Typography improvements
-body {
-  font-family: 'Open Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
-  line-height: 1.7;
-  color: #444;
-}
-
-h1, h2, h3, h4, h5, h6 {
-  font-family: 'Montserrat', sans-serif;
-  font-weight: 700;
-  color: $navy-blue;
-}
-
-// Card enhancements
-.card {
-  border: none;
-  box-shadow: 0 2px 4px rgba(0,0,0,0.08);
-  border-radius: 8px;
-  
-  .card-header {
-    background-color: $navy-blue;
-    color: white;
-    border-radius: 8px 8px 0 0 !important;
-    font-weight: 600;
-  }
-}
-
-// Smooth scroll behavior
+// Smooth scroll
 html {
   scroll-behavior: smooth;
 }
 
 // Custom scrollbar (webkit)
-::-webkit-scrollbar {
-  width: 10px;
-}
-
-::-webkit-scrollbar-track {
-  background: $light-gray;
-}
-
+::-webkit-scrollbar { width: 10px; }
+::-webkit-scrollbar-track { background: var(--color-bg-muted); }
 ::-webkit-scrollbar-thumb {
-  background: $navy-blue;
+  background: var(--color-primary);
   border-radius: 5px;
-  
-  &:hover {
-    background: darken($navy-blue, 10%);
-  }
 }
