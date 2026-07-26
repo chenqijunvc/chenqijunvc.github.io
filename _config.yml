@@ -1,13 +1,13 @@
 title:              "Vince Qijun Chen"
 email:              chenqijunvc@gmail.com
-description:        "Modern active portfolio management combining quantamental strategies with AI-driven insights"
+description:        "Portfolio Manager and Quantitative Researcher. Over nine years at Abacus FCF Advisors, contributed to building and operating a quantitative asset management platform spanning ETFs (ABFL, ABLD, ABOT, ABLS, ABXB), research, and portfolio management."
 author:             Vince Qijun Chen
 # For root domain (chenqijunvc.github.io), baseurl should be empty
 baseurl:            ""
 url:                "https://chenqijunvc.github.io"
 
 # SEO and Social
-keywords:           "Vince Qijun Chen, portfolio manager, AI-driven investing, quantamental investing, free cash flow, FCF-ROIC, ETF strategy, machine learning finance, investment management"
+keywords:           "Vince Qijun Chen, portfolio manager, quantitative researcher, ABFL ETF, ABLD ETF, ABOT ETF, ABLS ETF, ABXB ETF, FCF Leaders ETF, Abacus FCF, investment management"
 lang:               "en"
 locale:             "en_US"
 
@@ -22,7 +22,7 @@ linkedin_username:  vinceqijunchen
 # Author information for structured data
 author_info:
   name:             "Vince Qijun Chen"
-  bio:              "Portfolio manager specializing in AI-enhanced quantamental strategies and ETF development"
+  bio:              "Portfolio Manager and Quantitative Researcher. Contributed to building and operating Abacus FCF Advisors' quantitative investment platform and ETF suite."
   location:         "Global"
   expertise:        ["AI-Driven Investing", "Quantamental Analysis", "ETF Strategy", "Portfolio Management", "Financial Media"]
 

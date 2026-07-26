@@ -1,0 +1,228 @@
+// Custom styles for Vince Qijun Chen professional blog
+// Color scheme: Deep Blue (#1a3c8a) + Gold (#d4af37) + Clean White
+
+// Define colors
+$navy-blue: #1a3c8a;
+$gold: #d4af37;
+$light-gray: #f8f9fa;
+$dark-gray: #343a40;
+
+// Navbar customization
+.navbar {
+  padding: 1rem 0;
+  transition: all 0.3s ease;
+  
+  .navbar-brand {
+    font-weight: 700;
+    font-size: 1.5rem;
+    color: $navy-blue !important;
+    
+    &:hover {
+      color: $gold !important;
+    }
+  }
+  
+  .nav-link {
+    font-weight: 500;
+    text-transform: uppercase;
+    font-size: 0.9rem;
+    letter-spacing: 0.5px;
+    
+    &:hover {
+      color: $gold !important;
+    }
+  }
+}
+
+// Masthead (header) enhancement
+.masthead {
+  background-color: $navy-blue;
+  background-size: cover;
+  background-position: center;
+  min-height: 400px;
+  display: flex;
+  align-items: center;
+  
+  .page-heading {
+    h1 {
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 800;
+      font-size: 3rem;
+      color: white;
+      text-shadow: 2px 2px 8px rgba(0,0,0,0.7);
+    }
+    
+    .subheading {
+      font-size: 1.5rem;
+      color: rgba(255,255,255,0.9);
+    }
+  }
+}
+
+// Post cards enhancement
+.featured-post-card {
+  border: none;
+  border-radius: 12px;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.08);
+  transition: all 0.3s ease;
+  overflow: hidden;
+  
+  &:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 12px 24px rgba(0,0,0,0.15);
+  }
+  
+  .post-image img {
+    border-radius: 12px 12px 0 0;
+    transition: transform 0.5s ease;
+  }
+  
+  &:hover .post-image img {
+    transform: scale(1.05);
+  }
+}
+
+// Expertise cards (About page)
+.expertise-card {
+  background: white;
+  border: none;
+  border-left: 4px solid $navy-blue;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.06);
+  transition: all 0.3s ease;
+  padding: 1.5rem;
+  margin-bottom: 1rem;
+  
+  &:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0,0,0,0.12);
+    border-left-color: $gold;
+  }
+  
+  h5 {
+    color: $navy-blue;
+    font-weight: 600;
+    margin-bottom: 1rem;
+  }
+  
+  i {
+    color: $gold;
+    margin-right: 0.5rem;
+  }
+}
+
+// Buttons customization
+.btn-primary {
+  background-color: $navy-blue;
+  border-color: $navy-blue;
+  border-radius: 6px;
+  font-weight: 500;
+  padding: 0.75rem 1.5rem;
+  transition: all 0.3s ease;
+  
+  &:hover {
+    background-color: darken($navy-blue, 10%);
+    border-color: darken($navy-blue, 10%);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(26,60,138,0.3);
+  }
+}
+
+.btn-success {
+  background-color: $gold;
+  border-color: $gold;
+  color: white;
+  border-radius: 6px;
+  font-weight: 500;
+  
+  &:hover {
+    background-color: darken($gold, 10%);
+    border-color: darken($gold, 10%);
+    color: white;
+  }
+}
+
+// Section headers
+.section-title {
+  color: $navy-blue;
+  font-weight: 700;
+  border-bottom: 3px solid $gold;
+  padding-bottom: 10px;
+  display: inline-block;
+}
+
+// Badge customization
+.badge-primary {
+  background-color: $navy-blue;
+}
+
+.badge-light {
+  background-color: $light-gray;
+  color: $dark-gray;
+  border: 1px solid #dee2e6;
+}
+
+// Footer enhancement
+footer {
+  background-color: $navy-blue;
+  color: white;
+  padding: 3rem 0;
+  
+  a {
+    color: $gold;
+    
+    &:hover {
+      color: lighten($gold, 15%);
+    }
+  }
+}
+
+// Typography improvements
+body {
+  font-family: 'Open Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  line-height: 1.7;
+  color: #444;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 700;
+  color: $navy-blue;
+}
+
+// Card enhancements
+.card {
+  border: none;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.08);
+  border-radius: 8px;
+  
+  .card-header {
+    background-color: $navy-blue;
+    color: white;
+    border-radius: 8px 8px 0 0 !important;
+    font-weight: 600;
+  }
+}
+
+// Smooth scroll behavior
+html {
+  scroll-behavior: smooth;
+}
+
+// Custom scrollbar (webkit)
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: $light-gray;
+}
+
+::-webkit-scrollbar-thumb {
+  background: $navy-blue;
+  border-radius: 5px;
+  
+  &:hover {
+    background: darken($navy-blue, 10%);
+  }
+}
