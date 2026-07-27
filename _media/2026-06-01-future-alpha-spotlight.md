@@ -1,8 +1,8 @@
 ---
 layout: media
-title: "Future Alpha 2027 — Spotlight Interview: Beyond the Backtest"
+title: "Future Alpha 2026 — Spotlight Interview: Beyond the Backtest"
 subtitle: "Vince Chen on building durable multi-factor portfolios"
-date: 2027-01-01
+date: 2026-06-01
 outlet: "Future Alpha"
 media_type: "speaking"
 featured: true
