@@ -1,6 +1,6 @@
-title:              "Vince Chen"
+title:              "Vince Chen — Quant Portfolio Manager"
 email:              chenqijunvc@gmail.com
-description:        "Quant Portfolio Manager · Building with AI. Built a quantitative investment platform from scratch — now pursuing CS & AI at Georgia Tech. SEC-registered PM, CFA, 5 ETFs."
+description:        "Quant Portfolio Manager. Built a quantitative investment platform from scratch — now pursuing Computer Science at Georgia Tech. CFA."
 author:             Vince Chen
 # For root domain (chenqijunvc.github.io), baseurl should be empty
 baseurl:            ""
@@ -22,7 +22,7 @@ linkedin_username:  vinceqijunchen
 # Author information for structured data
 author_info:
   name:             "Vince Chen"
-  bio:              "Active Portfolio Manager and Quantitative Researcher. Built a quant investment platform through eight years at FCF Advisors / Abacus FCF Advisors. SEC-registered Portfolio Manager. Now pursuing MS in CS & AI at Georgia Tech."
+  bio:              "Active Portfolio Manager and Quantitative Researcher. Built a quant investment platform through eight years at FCF Advisors / Abacus FCF Advisors. Now pursuing MS in Computer Science at Georgia Tech."
   location:         "New York, NY"
   expertise:        ["Active Portfolio Management", "Quantitative Research", "ETF Strategy", "Factor Investing", "AI in Finance"]
 

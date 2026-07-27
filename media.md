@@ -8,7 +8,7 @@ background: '/img/bg-about.jpg'
 <div class="row">
   <div class="col-lg-10 col-md-12 mx-auto">
 
-    <p class="lead">Recorded television interviews, press coverage, and industry recognition — independently verifiable evidence.</p>
+    <p class="lead">Television interviews, press coverage, and industry recognition.</p>
 
     {% assign media_items = site.media | sort: 'date' | reverse %}
     {% for item in media_items %}
@@ -30,7 +30,7 @@ background: '/img/bg-about.jpg'
         <h5 class="card-title">PSN Top Guns Manager of the Decade</h5>
         <h6 class="card-subtitle mb-2 text-muted">Q4 2025</h6>
         <p class="card-text">Long-term risk-adjusted performance recognition for the strategies I designed and operated.</p>
-        <p class="small text-muted mb-0">Tier 1 — Independently calculated ranking data</p>
+        <p class="small text-muted mb-0">Independently calculated ranking data</p>
       </div>
     </div>
 

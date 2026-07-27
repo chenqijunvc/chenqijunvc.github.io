@@ -2,14 +2,14 @@
 layout: page
 wide: true
 title: Investment Systems
-description: The quantitative infrastructure behind five active ETF strategies
+description: The quantitative infrastructure behind the FCF Leaders ETF suite
 background: '/img/bg-post.jpg'
 ---
 
 <div class="row">
   <div class="col-lg-10 col-md-12 mx-auto">
 
-    <p class="lead">From 2017 to 2025, I designed, built, and operated the quantitative investment platform that turned research into five investable ETF strategies.</p>
+    <p class="lead">From 2017 to 2025, I designed, built, and operated the quantitative investment platform that turned research into a suite of investable ETF strategies spanning U.S. large cap, international, real assets, innovation, small cap, and fixed income.</p>
 
     <hr class="my-4">
 
@@ -26,7 +26,7 @@ background: '/img/bg-post.jpg'
     <hr class="my-4">
 
     <h3>Portfolio Management System</h3>
-    <p>I designed the portfolio construction process and operated it daily across all five ETFs:</p>
+    <p>I designed the portfolio construction process that powered the entire ETF suite:</p>
     <ul>
       <li><strong>Signal review</strong> — monitoring factor signals and composite scores</li>
       <li><strong>Portfolio construction</strong> — translating signals into target weights within risk parameters</li>
@@ -41,7 +41,7 @@ background: '/img/bg-post.jpg'
     <h3>Index &amp; ETF Operations</h3>
     <p>Beyond the core investment process, I managed the full operational lifecycle:</p>
     <ul>
-      <li>Authored SEC N-1A filings and regulatory documentation</li>
+      <li>Authored regulatory filings and fund documentation</li>
       <li>Designed index methodologies for the proprietary indices</li>
       <li>Operated the creation-redemption process with authorized participants</li>
       <li>Managed index reconstitutions and corporate action adjustments</li>
@@ -53,6 +53,7 @@ background: '/img/bg-post.jpg'
     <h3>Strategies</h3>
     <div class="row">
       <div class="col-md-4 mb-3"><strong>ABFL</strong><br><small class="text-muted">U.S. Large Cap — FCF Leaders</small></div>
+      <div class="col-md-4 mb-3"><strong>ABLG</strong><br><small class="text-muted">International — FCF International Leaders</small></div>
       <div class="col-md-4 mb-3"><strong>ABLD</strong><br><small class="text-muted">Real Assets — FCF Enhanced Real Asset</small></div>
       <div class="col-md-4 mb-3"><strong>ABOT</strong><br><small class="text-muted">Innovation — FCF Innovation Leaders</small></div>
       <div class="col-md-4 mb-3"><strong>ABLS</strong><br><small class="text-muted">Small Cap — FCF Small Cap Leaders</small></div>

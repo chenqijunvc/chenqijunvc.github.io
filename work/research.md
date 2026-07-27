@@ -20,7 +20,7 @@ background: '/img/bg-post.jpg'
       <li>Evaluate whether active returns are persistent or episodic</li>
       <li>Distinguish stock-picking skill from factor timing</li>
     </ul>
-    <p><a href="{{ '/contributions/pure-alpha' | relative_url }}">Full framework &rarr;</a></p>
+    <p><a href="{{ '/work/pure-alpha' | relative_url }}">Full framework &rarr;</a></p>
 
     <hr class="my-4">
 
@@ -31,12 +31,12 @@ background: '/img/bg-post.jpg'
       <li>Four-signal quality model: FCF Margin, FCF ROIC, Accruals Ratio, Capital Allocation Discipline</li>
       <li>Applications across U.S. large cap, small cap, innovation, and fixed income</li>
     </ul>
-    <p><a href="{{ '/contributions/free-cash-flow-research' | relative_url }}">Full research &rarr;</a></p>
+    <p><a href="{{ '/work/free-cash-flow-research' | relative_url }}">Full research &rarr;</a></p>
 
     <hr class="my-4">
 
     <h3>Publications</h3>
-    <p>Research articles on the <a href="{{ '/work/publications' | relative_url }}">Publications page</a>.</p>
+    <p>Research articles on the <a href="{{ '/writing' | relative_url }}">Writing page</a>.</p>
 
   </div>
 </div>

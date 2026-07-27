@@ -11,7 +11,7 @@ layout: default
           <div class="page-heading">
             <h1>{{ site.title }}</h1>
             <p class="lead" style="color: rgba(255,255,255,0.9); font-size: 1.6rem; font-weight: 300; margin-top: 0.5rem;">
-              Quant Portfolio Manager &bull; Building with AI
+              Quant Portfolio Manager
             </p>
           </div>
         </div>
@@ -31,15 +31,15 @@ layout: default
             &ldquo;I build the engines that power modern active management.&rdquo;
           </p>
           <p class="text-muted mt-3 mb-0" style="font-size: 1rem; max-width: 600px; margin-left: auto; margin-right: auto;">
-            From Quant Analyst to SEC-registered Portfolio Manager. Now pursuing CS &amp; AI at Georgia Tech to build active management for the AI era.
+            From Quant Analyst to Portfolio Manager. Now pursuing a Master's in Computer Science at Georgia Tech.
           </p>
           <div class="mt-3">
-            <a href="{{ '/about' | relative_url }}" class="btn btn-primary btn-sm">Full Story <i class="fas fa-arrow-right ml-1"></i></a>
+            <a href="{{ '/about' | relative_url }}" class="btn btn-primary btn-sm">About <i class="fas fa-arrow-right ml-1"></i></a>
             <a href="{{ '/track-record' | relative_url }}" class="btn btn-outline-primary btn-sm ml-2">Track Record <i class="fas fa-arrow-right ml-1"></i></a>
           </div>
         </section>
 
-        <!-- Three Pillars: Past - Present - Future -->
+        <!-- Three Pillars -->
         <div class="row mb-5">
           <div class="col-md-4 mb-4">
             <div class="card h-100 text-center p-3">
@@ -47,7 +47,7 @@ layout: default
                 <div class="mb-3" style="font-size: 2rem; color: var(--color-primary);"><i class="fas fa-chart-bar"></i></div>
                 <span class="badge badge-secondary mb-2">Track Record</span>
                 <h4 class="card-title">Built the Platform</h4>
-                <p class="card-text small text-muted">Designed and operated a quant investment platform from scratch. Five active ETFs. SEC-registered Portfolio Manager. PSN-recognized performance.</p>
+                <p class="card-text small text-muted">Designed and operated a quant investment platform from scratch. PM of ABFL &amp; ABLG since 2021. PSN-recognized.</p>
                 <a href="{{ '/track-record' | relative_url }}" class="stretched-link"></a>
               </div>
             </div>
@@ -58,7 +58,7 @@ layout: default
                 <div class="mb-3" style="font-size: 2rem; color: var(--color-primary);"><i class="fas fa-graduation-cap"></i></div>
                 <span class="badge badge-secondary mb-2">In Progress</span>
                 <h4 class="card-title">Going Deeper</h4>
-                <p class="card-text small text-muted">Georgia Tech MS in CS &amp; AI. CFA Charterholder. Speaking at Future Alpha on signal fusion and multi-factor investing.</p>
+                <p class="card-text small text-muted">Georgia Tech MS in CS. CFA Charterholder. Speaking at Future Alpha.</p>
                 <a href="{{ '/about' | relative_url }}" class="stretched-link"></a>
               </div>
             </div>
@@ -66,10 +66,10 @@ layout: default
           <div class="col-md-4 mb-4">
             <div class="card h-100 text-center p-3">
               <div class="card-body">
-                <div class="mb-3" style="font-size: 2rem; color: var(--color-primary);"><i class="fas fa-brain"></i></div>
-                <span class="badge badge-secondary mb-2">The Mission</span>
-                <h4 class="card-title">Active Management in the AI Era</h4>
-                <p class="card-text small text-muted">Fusing quantitative discipline with machine intelligence to build the next generation of active portfolio management.</p>
+                <div class="mb-3" style="font-size: 2rem; color: var(--color-primary);"><i class="fas fa-chart-line"></i></div>
+                <span class="badge badge-secondary mb-2">Approach</span>
+                <h4 class="card-title">Quantitative Active Management</h4>
+                <p class="card-text small text-muted">Systematic, research-driven portfolio management that scales beyond what intuition alone can deliver.</p>
                 <a href="{{ '/about' | relative_url }}" class="stretched-link"></a>
               </div>
             </div>
@@ -80,25 +80,25 @@ layout: default
 
         <!-- Career at a Glance -->
         <section class="mb-5">
-          <h3 class="mb-4">Career Arc</h3>
+          <h3 class="mb-4">Career at a Glance</h3>
           <div class="row">
             <div class="col-md-6">
               <ul class="list-unstyled">
                 <li class="mb-3"><strong>2017</strong> &mdash; Joined FCF Advisors as Quantitative Analyst</li>
-                <li class="mb-3"><strong>2019&ndash;2021</strong> &mdash; Senior Quant &rarr; Portfolio Manager</li>
-                <li class="mb-3"><strong>2022&ndash;2024</strong> &mdash; Director of Research, Portfolio Manager</li>
+                <li class="mb-3"><strong>2021</strong> &mdash; Portfolio Manager of ABFL &amp; ABLG</li>
+                <li class="mb-3"><strong>2022</strong> &mdash; Director of Research</li>
               </ul>
             </div>
             <div class="col-md-6">
               <ul class="list-unstyled">
-                <li class="mb-3"><strong>2024</strong> &mdash; SEC-Registered PM &bull; CFA Charterholder</li>
+                <li class="mb-3"><strong>2024</strong> &mdash; CFA Charterholder</li>
                 <li class="mb-3"><strong>2025</strong> &mdash; VP, Public Equity &amp; Portfolio Management (Abacus)</li>
-                <li class="mb-3"><strong>Now</strong> &mdash; GaTech MS CS &amp; AI &bull; Future Alpha Speaker</li>
+                <li class="mb-3"><strong>Now</strong> &mdash; GaTech MS CS &bull; Future Alpha Speaker</li>
               </ul>
             </div>
           </div>
           <div class="text-center mt-3">
-            <a href="{{ '/record/timeline' | relative_url }}" class="btn btn-outline-primary btn-sm">Full Timeline <i class="fas fa-arrow-right ml-1"></i></a>
+            <a href="{{ '/about' | relative_url }}" class="btn btn-outline-primary btn-sm">Full Story <i class="fas fa-arrow-right ml-1"></i></a>
           </div>
         </section>
 
@@ -118,7 +118,7 @@ layout: default
             {% if post.subtitle %}<p class="small">{{ post.subtitle }}</p>{% endif %}
           </article>
           {% endfor %}
-          <a href="{{ '/work/publications' | relative_url }}" class="btn btn-outline-primary btn-sm">All Writing <i class="fas fa-arrow-right ml-1"></i></a>
+          <a href="{{ '/writing' | relative_url }}" class="btn btn-outline-primary btn-sm">All Writing <i class="fas fa-arrow-right ml-1"></i></a>
         </section>
 
       </div>
