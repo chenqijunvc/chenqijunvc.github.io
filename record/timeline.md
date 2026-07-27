@@ -2,7 +2,7 @@
 layout: page
 wide: true
 title: Timeline
-description: Chronological account of roles and milestones (2017–2024)
+description: Chronological account of roles and milestones (2017–2025)
 background: '/img/bg-about.jpg'
 ---
 
@@ -15,16 +15,16 @@ background: '/img/bg-about.jpg'
       <div class="timeline-item mb-4">
         <div class="timeline-marker bg-primary"></div>
         <div class="timeline-content">
-          <h5 class="text-primary">2017 — Joined FCF Advisors</h5>
-          <p>Joined before the ETF platform existed and before the Abacus acquisition.</p>
-          <p class="small text-muted">Tier 4</p>
+          <h5 class="text-primary">2017 — Joined FCF Advisors as Quantitative Analyst</h5>
+          <p>Joined FCF Advisors to build the quantitative research infrastructure. ABFL (then TTAC) was already operating since September 2016.</p>
+          <p class="small text-muted">Tier 1 — SEC EDGAR filings</p>
         </div>
       </div>
       <div class="timeline-item mb-4">
         <div class="timeline-marker bg-success"></div>
         <div class="timeline-content">
           <h5 class="text-success">2018–2019 — Built the Research Engine</h5>
-          <p>Designed and implemented the quantitative research infrastructure.</p>
+          <p>Designed and implemented the quantitative research infrastructure. Promoted to Senior Quantitative Analyst in June 2019.</p>
           <p class="small text-muted">Tier 4</p>
         </div>
       </div>
@@ -32,40 +32,48 @@ background: '/img/bg-about.jpg'
         <div class="timeline-marker bg-info"></div>
         <div class="timeline-content">
           <h5 class="text-info">2019–2020 — Product Development</h5>
-          <p>Authored N-1A filings for the initial ETF suite. Designed portfolio construction for ABFL.</p>
+          <p>Authored N-1A filings for the ETF suite expansion. Designed portfolio construction methodologies for new strategies.</p>
           <p class="small text-muted">Tier 1 — SEC filings</p>
         </div>
       </div>
       <div class="timeline-item mb-4">
         <div class="timeline-marker bg-warning"></div>
         <div class="timeline-content">
-          <h5 class="text-warning">2020 — ABFL Launch</h5>
-          <p>Day-to-day portfolio management, index reconstitution, trade execution from inception.</p>
-          <p class="small text-muted">Tier 1 — Fund documents</p>
+          <h5 class="text-warning">2020 — ABOT & ABXB Launch</h5>
+          <p>ABOT (Innovation) and ABXB (Fixed Income) launched December 7, 2020. Authored prospectuses and began day-to-day portfolio management of both alongside ABFL.</p>
+          <p class="small text-muted">Tier 1 — SEC EDGAR filings</p>
         </div>
       </div>
       <div class="timeline-item mb-4">
         <div class="timeline-marker bg-primary"></div>
         <div class="timeline-content">
-          <h5 class="text-primary">2021 — ETF Suite Expansion</h5>
-          <p>Led development of ABLD, ABOT, ABLS. Authored prospectuses, operated all three alongside ABFL.</p>
-          <p class="small text-muted">Tier 1 — SEC filings</p>
+          <h5 class="text-primary">2021 — Portfolio Manager & ABLD Launch</h5>
+          <p>ABLD (Real Assets) launched December 13, 2021. Held dual title of Senior Quantitative Analyst, Portfolio Manager. Managed all four ETFs (ABFL, ABOT, ABXB, ABLD).</p>
+          <p class="small text-muted">Tier 1 — SEC EDGAR filings</p>
         </div>
       </div>
       <div class="timeline-item mb-4">
         <div class="timeline-marker bg-success"></div>
         <div class="timeline-content">
-          <h5 class="text-success">2022 — ABXB Launch (Fixed Income)</h5>
-          <p>Led development of ABXB, designed the fixed income portfolio construction framework.</p>
-          <p class="small text-muted">Tier 1 — SEC filings</p>
+          <h5 class="text-success">2022 — Director of Research</h5>
+          <p>Promoted to Director of Research. Continued day-to-day PM duties across all funds while overseeing research agenda and methodology development.</p>
+          <p class="small text-muted">Tier 1 — SEC EDGAR filings</p>
         </div>
       </div>
       <div class="timeline-item mb-4">
         <div class="timeline-marker bg-danger"></div>
         <div class="timeline-content">
-          <h5 class="text-danger">2024 — Abacus Acquisition & Transition</h5>
-          <p>Continued as PM through acquisition. Integrated platform, trained incoming team, maintained operations. Featured speaker at Abacus Investor Day 2025.</p>
-          <p class="small text-muted">Tier 3</p>
+          <h5 class="text-danger">2024 — SEC-Registered Portfolio Manager & Acquisition</h5>
+          <p>Named as SEC-registered portfolio manager in fund prospectus (December 2024, alongside Fei Xue and Tom MacDonald). Continued as PM through Abacus Life acquisition. Integrated platform, trained incoming team, maintained operations.</p>
+          <p class="small text-muted">Tier 1 — SEC N-1A filings</p>
+        </div>
+      </div>
+      <div class="timeline-item mb-4">
+        <div class="timeline-marker bg-info"></div>
+        <div class="timeline-content">
+          <h5 class="text-info">2025 — ABLS Launch</h5>
+          <p>ABLS (Small Cap) launched February 18, 2025. Fifth and final ETF in the FCF Leaders suite. Represented the firm at Abacus Investor Day 2025.</p>
+          <p class="small text-muted">Tier 1 — SEC EDGAR filings; recorded interviews</p>
         </div>
       </div>
     </div>
@@ -76,9 +84,10 @@ background: '/img/bg-about.jpg'
         <tr><th>Period</th><th>Role</th><th>Scope</th></tr>
       </thead>
       <tbody>
-        <tr><td>2017–2019</td><td>Quantitative Researcher</td><td>Built research infrastructure, factor models, backtesting</td></tr>
-        <tr><td>2019–2021</td><td>Senior Quantitative Researcher</td><td>Product development, portfolio construction, SEC filings</td></tr>
-        <tr><td>2021–2024</td><td>Portfolio Manager</td><td>Day-to-day management of all ETFs, index reconstitution, trade execution</td></tr>
+        <tr><td>2017–2019</td><td>Quantitative Analyst</td><td>Built research infrastructure, factor models, backtesting</td></tr>
+        <tr><td>2019–2021</td><td>Senior Quantitative Analyst</td><td>Product development, portfolio construction, SEC filings</td></tr>
+        <tr><td>2021–2022</td><td>Senior Quantitative Analyst, Portfolio Manager</td><td>Day-to-day management of all ETFs, index reconstitution, trade execution</td></tr>
+        <tr><td>2022–2024</td><td>Director of Research, Portfolio Manager</td><td>Research agenda, methodology oversight, PM duties</td></tr>
         <tr><td>2024–2026</td><td>Portfolio Manager (Abacus)</td><td>Post-acquisition continuity, platform integration, team training</td></tr>
       </tbody>
     </table>

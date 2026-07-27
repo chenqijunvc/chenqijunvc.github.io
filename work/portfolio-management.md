@@ -8,7 +8,7 @@ background: '/img/bg-post.jpg'
 <div class="row">
   <div class="col-lg-10 col-md-12 mx-auto">
 
-    <p class="lead">Portfolio management is where research meets decision. I operated the day-to-day portfolio management process for five ETFs across U.S. large cap, real assets, innovation, small cap, and fixed income — from each fund's inception through 2024.</p>
+    <p class="lead">Portfolio management is where research meets decision. I operated the day-to-day portfolio management process for five ETFs across U.S. large cap, real assets, innovation, small cap, and fixed income — from my appointment through 2024.</p>
 
     <hr class="my-4">
 
@@ -28,11 +28,11 @@ background: '/img/bg-post.jpg'
     <h3>Product Scope</h3>
     <p>I was the day-to-day portfolio manager for all five ETFs in the FCF Leaders suite:</p>
     <div class="row">
-      <div class="col-md-6 mb-2"><strong>ABFL</strong> — U.S. Large Cap (2020–2024)</div>
+      <div class="col-md-6 mb-2"><strong>ABFL</strong> — U.S. Large Cap (2017–2024)</div>
       <div class="col-md-6 mb-2"><strong>ABLD</strong> — Real Assets (2021–2024)</div>
-      <div class="col-md-6 mb-2"><strong>ABOT</strong> — Innovation (2021–2024)</div>
-      <div class="col-md-6 mb-2"><strong>ABLS</strong> — Small Cap (2021–2024)</div>
-      <div class="col-md-6 mb-2"><strong>ABXB</strong> — Fixed Income (2022–2024)</div>
+      <div class="col-md-6 mb-2"><strong>ABOT</strong> — Innovation (2020–2024)</div>
+      <div class="col-md-6 mb-2"><strong>ABLS</strong> — Small Cap (2025)</div>
+      <div class="col-md-6 mb-2"><strong>ABXB</strong> — Fixed Income (2020–2024)</div>
     </div>
 
     <hr class="my-4">

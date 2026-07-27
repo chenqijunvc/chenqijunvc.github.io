@@ -64,7 +64,7 @@ background: '/img/bg-post.jpg'
 
     <p>I was the person who designed, built, and operated the quantitative investment platform that became the firm's core investment capability. I originated the research framework, designed the portfolio construction methodology, built the investment technology infrastructure, and operated the end-to-end investment process day to day.</p>
 
-    <p>I was the day-to-day portfolio manager for all five ETFs — ABFL, ABLD, ABOT, ABLS, and ABXB — from inception through my departure.</p>
+    <p>I was the day-to-day portfolio manager for all five ETFs — ABFL, ABLD, ABOT, ABLS, and ABXB — from my appointment through my departure.</p>
 
     <p>I authored the investment strategy sections of all SEC filings (N-1A, N-CSR, prospectuses) for these funds and designed the index methodologies.</p>
 

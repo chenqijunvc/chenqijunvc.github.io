@@ -9,7 +9,7 @@ background: '/img/bg-post.jpg'
 <div class="row">
   <div class="col-lg-10 col-md-12 mx-auto">
 
-    <p class="lead">From 2017 to 2024, I designed, built, and operated a quantitative investment platform that turned research into five investable ETF strategies. This page documents the systems, the work, and the evidence behind them.</p>
+    <p class="lead">From 2017 to 2025, I designed, built, and operated a quantitative investment platform that turned research into five investable ETF strategies. This page documents the systems, the work, and the evidence behind them.</p>
 
     <hr class="my-4">
 
@@ -56,7 +56,7 @@ background: '/img/bg-post.jpg'
         <div class="card h-100">
           <div class="card-body">
             <h5 class="card-title">ABFL — FCF Leaders ETF</h5>
-            <p class="card-subtitle mb-2 text-muted">U.S. Large Cap | 2020</p>
+            <p class="card-subtitle mb-2 text-muted">U.S. Large Cap | Inception 2016</p>
             <p class="small">Flagship strategy. ~50 U.S. large and mid-cap companies selected through systematic FCF quality screen.</p>
           </div>
         </div>
@@ -74,7 +74,7 @@ background: '/img/bg-post.jpg'
         <div class="card h-100">
           <div class="card-body">
             <h5 class="card-title">ABOT — FCF Leaders Innovation ETF</h5>
-            <p class="card-subtitle mb-2 text-muted">Innovation / Growth | 2021</p>
+            <p class="card-subtitle mb-2 text-muted">Innovation / Growth | 2020</p>
             <p class="small">R&D intensity screening combined with FCF profitability filters.</p>
           </div>
         </div>
@@ -83,7 +83,7 @@ background: '/img/bg-post.jpg'
         <div class="card h-100">
           <div class="card-body">
             <h5 class="card-title">ABLS — FCF Leaders Small Cap ETF</h5>
-            <p class="card-subtitle mb-2 text-muted">Small Cap | 2021</p>
+            <p class="card-subtitle mb-2 text-muted">Small Cap | 2025</p>
             <p class="small">Profitable small-cap exposure avoiding unprofitable and distressed companies.</p>
           </div>
         </div>
@@ -92,7 +92,7 @@ background: '/img/bg-post.jpg'
         <div class="card h-100">
           <div class="card-body">
             <h5 class="card-title">ABXB — FCF Leaders Flexible Fixed Income ETF</h5>
-            <p class="card-subtitle mb-2 text-muted">Fixed Income | 2022</p>
+            <p class="card-subtitle mb-2 text-muted">Fixed Income | 2020</p>
             <p class="small">Flexible fixed income strategy with FCF quality analysis for credit selection.</p>
           </div>
         </div>
