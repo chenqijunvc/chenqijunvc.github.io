@@ -25,6 +25,14 @@ background: '/img/bg-about.jpg'
         </h5>
         <h6 class="card-subtitle mb-2 text-muted">{{ item.outlet }} — {{ item.date | date: '%B %Y' }}</h6>
         {% if item.subtitle %}<p class="card-text">{{ item.subtitle }}</p>{% endif %}
+        {% if item.content %}<div class="media-summary">{{ item.content }}</div>{% endif %}
+        {% if item.video_url %}
+        <div class="mt-2">
+          <video width="100%" max-width="640" controls preload="metadata">
+            <source src="{{ item.video_url | relative_url }}" type="video/mp4">
+          </video>
+        </div>
+        {% endif %}
       </div>
     </div>
     {% endfor %}

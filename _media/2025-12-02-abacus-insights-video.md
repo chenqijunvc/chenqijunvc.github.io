@@ -9,4 +9,4 @@ featured: true
 external_url: "https://vimeo.com/1142463140"
 ---
 
-In this episode of Abacus Insights, Vince Chen explains the proprietary FCF Leaders Model and how the firm transforms decades of research into scalable investment strategies across the ETF suite.
+In this 40-second Abacus Insights video, Vince Chen explains how Abacus FCF Advisors leverages decades of research to deliver differentiated, scalable investment strategies. He describes the proprietary FCF Leaders Model, which rigorously prioritizes prudent capital expenditure, low accruals, high cash flow margins, and strong asset turnover — the fundamental drivers of sustainable value creation. The firm translates this research across the full ETF suite including active and index-based strategies.
