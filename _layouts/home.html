@@ -104,21 +104,18 @@ layout: default
 
         <hr class="my-5">
 
-        <!-- Featured Publications -->
+        <!-- Featured Media -->
         <section class="mb-5">
-          <h3 class="mb-4">Selected Writing</h3>
-          {% assign featured_posts = site.posts | where: "featured", true | limit: 3 %}
-          {% if featured_posts.size == 0 %}
-            {% assign featured_posts = site.posts | limit: 3 %}
-          {% endif %}
-          {% for post in featured_posts %}
+          <h3 class="mb-4">Recent Media</h3>
+          {% assign featured_media = site.media | where: "featured", true | sort: 'date' | reverse | limit: 4 %}
+          {% for item in featured_media %}
           <article class="mb-3">
-            <h5><a href="{{ post.url | relative_url }}">{{ post.title }}</a></h5>
-            <p class="small text-muted mb-1">{{ post.date | date: '%B %Y' }}</p>
-            {% if post.subtitle %}<p class="small">{{ post.subtitle }}</p>{% endif %}
+            <h5><a href="{{ item.external_url | default: item.url | relative_url }}" target="_blank" rel="noopener">{{ item.title }}</a></h5>
+            <p class="small text-muted mb-1">{{ item.outlet }} — {{ item.date | date: '%B %Y' }}</p>
+            {% if item.subtitle %}<p class="small">{{ item.subtitle }}</p>{% endif %}
           </article>
           {% endfor %}
-          <a href="{{ '/writing' | relative_url }}" class="btn btn-outline-primary btn-sm">All Writing <i class="fas fa-arrow-right ml-1"></i></a>
+          <a href="{{ '/media' | relative_url }}" class="btn btn-outline-primary btn-sm">All Media <i class="fas fa-arrow-right ml-1"></i></a>
         </section>
 
       </div>

@@ -15,7 +15,7 @@ permalink: /404.html
   // Safety check: only run once per session and only for specific trailing slash cases
   if (!hasRedirected && currentPath.length > 1 && currentPath.endsWith('/')) {
     // Only redirect for known page patterns
-    var knownPages = ['/about/', '/contact/', '/writing/', '/media/', '/search/'];
+    var knownPages = ['/about/', '/contact/', '/media/', '/search/'];
     var shouldRedirect = knownPages.some(function(page) {
       return currentPath === page;
     });
