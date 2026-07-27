@@ -1,19 +1,18 @@
 ---
 layout: page
 title: Portfolio Management
-description: The craft of translating research into portfolios — rebalancing, risk management, and execution
+description: Translating research into portfolios — the daily discipline of active management
 background: '/img/bg-post.jpg'
 ---
 
 <div class="row">
   <div class="col-lg-10 col-md-12 mx-auto">
 
-    <p class="lead">Portfolio management is where research meets decision. I operated the day-to-day portfolio management process for five ETFs across U.S. large cap, real assets, innovation, small cap, and fixed income — from my appointment through 2024.</p>
+    <p class="lead">Portfolio management is where research meets decision. I operated the day-to-day portfolio management process for five ETFs, from my appointment as Portfolio Manager through 2024.</p>
 
     <hr class="my-4">
 
     <h3>The Daily Process</h3>
-    <p>The portfolio management cycle I operated included:</p>
     <ul>
       <li><strong>Signal review</strong> — monitoring factor signals and composite scores for the universe</li>
       <li><strong>Portfolio construction</strong> — translating signals into target weights within risk parameters</li>
@@ -26,25 +25,19 @@ background: '/img/bg-post.jpg'
     <hr class="my-4">
 
     <h3>Product Scope</h3>
-    <p>I was the day-to-day portfolio manager for all five ETFs in the FCF Leaders suite:</p>
+    <p>Day-to-day portfolio manager for the full FCF Leaders ETF suite:</p>
     <div class="row">
-      <div class="col-md-6 mb-2"><strong>ABFL</strong> — U.S. Large Cap (2017–2024)</div>
-      <div class="col-md-6 mb-2"><strong>ABLD</strong> — Real Assets (2021–2024)</div>
-      <div class="col-md-6 mb-2"><strong>ABOT</strong> — Innovation (2020–2024)</div>
-      <div class="col-md-6 mb-2"><strong>ABLS</strong> — Small Cap (2025)</div>
-      <div class="col-md-6 mb-2"><strong>ABXB</strong> — Fixed Income (2020–2024)</div>
+      <div class="col-md-4 mb-2"><strong>ABFL</strong> — U.S. Large Cap</div>
+      <div class="col-md-4 mb-2"><strong>ABLD</strong> — Real Assets</div>
+      <div class="col-md-4 mb-2"><strong>ABOT</strong> — Innovation</div>
+      <div class="col-md-4 mb-2"><strong>ABLS</strong> — Small Cap</div>
+      <div class="col-md-4 mb-2"><strong>ABXB</strong> — Fixed Income</div>
     </div>
 
     <hr class="my-4">
 
-    <h3>Operational Context</h3>
-    <p>In a small team environment, I owned the end-to-end investment process — from data ingestion through portfolio construction, trade execution, index reconstitution, regulatory filing, and client reporting. This required deep integration across research, trading, operations, and compliance functions.</p>
-    <p>After the Abacus Life acquisition (2024), I led the technical integration of the platform, trained incoming team members, and maintained uninterrupted investment operations throughout the transition — including representing the firm at Abacus Investor Day 2025.</p>
-
-    <hr class="my-4">
-
-    <h3>Evidence</h3>
-    <p class="small text-muted">Tier 1 — Registered as portfolio manager in SEC N-1A filings for each fund. Tier 1 — CBOE interviews describing methodology and portfolio construction. Tier 1 — PSN Top Guns Manager of the Decade (Q4 2025).</p>
+    <h3>Context</h3>
+    <p>In a small team, I owned the end-to-end investment process — from data ingestion through portfolio construction, trade execution, index reconstitution, regulatory filing, and client reporting. After the Abacus Life acquisition (2024), I led the technical integration, trained incoming team members, and maintained uninterrupted operations throughout the transition.</p>
 
   </div>
 </div>

@@ -2,19 +2,19 @@
 layout: page
 wide: true
 title: Investment Systems
-description: Designing and operating the infrastructure, methodologies, and processes that turn research into portfolios
+description: The quantitative infrastructure behind five active ETF strategies
 background: '/img/bg-post.jpg'
 ---
 
 <div class="row">
   <div class="col-lg-10 col-md-12 mx-auto">
 
-    <p class="lead">From 2017 to 2025, I designed, built, and operated a quantitative investment platform that turned research into five investable ETF strategies. This page documents the systems, the work, and the evidence behind them.</p>
+    <p class="lead">From 2017 to 2025, I designed, built, and operated the quantitative investment platform that turned research into five investable ETF strategies.</p>
 
     <hr class="my-4">
 
     <h3>Research Infrastructure</h3>
-    <p>I designed and implemented the quantitative research platform from the ground up — the analytical core of everything that followed:</p>
+    <p>I designed and implemented the quantitative research platform from the ground up:</p>
     <ul>
       <li><strong>Data pipeline</strong> — ingesting, cleaning, and normalizing financial data from multiple sources</li>
       <li><strong>Factor library</strong> — implementing and maintaining the proprietary factor set</li>
@@ -22,89 +22,42 @@ background: '/img/bg-post.jpg'
       <li><strong>Backtesting framework</strong> — simulating strategy performance with realistic assumptions</li>
       <li><strong>Automation</strong> — eliminating manual research workflows through automated collection, computation, and report generation</li>
     </ul>
-    <p class="small text-muted">Tier 4 (methodology proprietary — implementation detail not disclosed)</p>
 
     <hr class="my-4">
 
     <h3>Portfolio Management System</h3>
     <p>I designed the portfolio construction process and operated it daily across all five ETFs:</p>
     <ul>
-      <li>Portfolio construction methodology — translating signals into portfolio weights</li>
-      <li>Risk management framework — position limits, sector constraints, turnover controls</li>
-      <li>Rebalancing engine — systematic reconstitution on scheduled cycles</li>
-      <li>Trade execution workflow — from signal to executed trade with compliance checks</li>
-      <li>Cash management — handling inflows, outflows, and dividend reinvestment</li>
+      <li><strong>Signal review</strong> — monitoring factor signals and composite scores</li>
+      <li><strong>Portfolio construction</strong> — translating signals into target weights within risk parameters</li>
+      <li><strong>Rebalancing</strong> — quarterly reconstitutions with drift monitoring between cycles</li>
+      <li><strong>Trade execution</strong> — implementing changes with attention to market impact and cost</li>
+      <li><strong>Risk monitoring</strong> — tracking position limits, sector exposures, turnover, and tracking error</li>
+      <li><strong>Performance attribution</strong> — decomposing returns into allocation, selection, and interaction effects</li>
     </ul>
-    <p class="small text-muted">Tier 1 — Methodology referenced in SEC prospectuses</p>
 
     <hr class="my-4">
 
-    <h3>Index & ETF Operations</h3>
+    <h3>Index &amp; ETF Operations</h3>
+    <p>Beyond the core investment process, I managed the full operational lifecycle:</p>
     <ul>
-      <li>Authored index methodologies and administered quarterly reconstitutions</li>
-      <li>Managed NAV oversight, creation/redemption workflows with market makers</li>
-      <li>Authored investment strategy sections of SEC filings (N-1A, N-CSR)</li>
-      <li>Coordinated with fund administrator, custodian, and counsel</li>
+      <li>Authored SEC N-1A filings and regulatory documentation</li>
+      <li>Designed index methodologies for the proprietary indices</li>
+      <li>Operated the creation-redemption process with authorized participants</li>
+      <li>Managed index reconstitutions and corporate action adjustments</li>
+      <li>Produced institutional reporting and client communications</li>
     </ul>
-    <p class="small text-muted">Tier 1 — SEC EDGAR filings</p>
 
     <hr class="my-4">
 
-    <h3>Strategies Built on This Platform</h3>
+    <h3>Strategies</h3>
     <div class="row">
-      <div class="col-md-6 mb-3">
-        <div class="card h-100">
-          <div class="card-body">
-            <h5 class="card-title">ABFL — FCF Leaders ETF</h5>
-            <p class="card-subtitle mb-2 text-muted">U.S. Large Cap | Inception 2016</p>
-            <p class="small">Flagship strategy. ~50 U.S. large and mid-cap companies selected through systematic FCF quality screen.</p>
-          </div>
-        </div>
-      </div>
-      <div class="col-md-6 mb-3">
-        <div class="card h-100">
-          <div class="card-body">
-            <h5 class="card-title">ABLD — FCF Leaders Real Assets ETF</h5>
-            <p class="card-subtitle mb-2 text-muted">Real Assets | 2021</p>
-            <p class="small">FCF quality framework applied to energy, materials, and real estate.</p>
-          </div>
-        </div>
-      </div>
-      <div class="col-md-6 mb-3">
-        <div class="card h-100">
-          <div class="card-body">
-            <h5 class="card-title">ABOT — FCF Leaders Innovation ETF</h5>
-            <p class="card-subtitle mb-2 text-muted">Innovation / Growth | 2020</p>
-            <p class="small">R&D intensity screening combined with FCF profitability filters.</p>
-          </div>
-        </div>
-      </div>
-      <div class="col-md-6 mb-3">
-        <div class="card h-100">
-          <div class="card-body">
-            <h5 class="card-title">ABLS — FCF Leaders Small Cap ETF</h5>
-            <p class="card-subtitle mb-2 text-muted">Small Cap | 2025</p>
-            <p class="small">Profitable small-cap exposure avoiding unprofitable and distressed companies.</p>
-          </div>
-        </div>
-      </div>
-      <div class="col-md-6 mb-3">
-        <div class="card h-100">
-          <div class="card-body">
-            <h5 class="card-title">ABXB — FCF Leaders Flexible Fixed Income ETF</h5>
-            <p class="card-subtitle mb-2 text-muted">Fixed Income | 2020</p>
-            <p class="small">Flexible fixed income strategy with FCF quality analysis for credit selection.</p>
-          </div>
-        </div>
-      </div>
+      <div class="col-md-4 mb-3"><strong>ABFL</strong><br><small class="text-muted">U.S. Large Cap — FCF Leaders</small></div>
+      <div class="col-md-4 mb-3"><strong>ABLD</strong><br><small class="text-muted">Real Assets — FCF Enhanced Real Asset</small></div>
+      <div class="col-md-4 mb-3"><strong>ABOT</strong><br><small class="text-muted">Innovation — FCF Innovation Leaders</small></div>
+      <div class="col-md-4 mb-3"><strong>ABLS</strong><br><small class="text-muted">Small Cap — FCF Small Cap Leaders</small></div>
+      <div class="col-md-4 mb-3"><strong>ABXB</strong><br><small class="text-muted">Fixed Income — FCF Enhanced Fixed Income</small></div>
     </div>
-
-    <hr class="my-4">
-
-    <h3>Recognition</h3>
-    <p><strong>PSN Top Guns Manager of the Decade</strong> (Q4 2025) — long-term risk-adjusted performance recognition for the strategies built on this platform.</p>
-    <p>Featured on <strong>CBOE Global Markets</strong> in a three-part interview series covering the methodology.</p>
-    <p class="small text-muted">Tier 1 — PSN ranking data, recorded interviews</p>
 
   </div>
 </div>

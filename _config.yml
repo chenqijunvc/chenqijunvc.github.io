@@ -1,13 +1,13 @@
 title:              "Vince Chen"
 email:              chenqijunvc@gmail.com
-description:        "Investment Architect. Portfolio Manager. Quantitative Researcher. Designing investment research, quantitative methodologies, portfolio processes, and institutional investment infrastructure."
+description:        "Quant Portfolio Manager · Building with AI. Built a quantitative investment platform from scratch — now pursuing CS & AI at Georgia Tech. SEC-registered PM, CFA, 5 ETFs."
 author:             Vince Chen
 # For root domain (chenqijunvc.github.io), baseurl should be empty
 baseurl:            ""
 url:                "https://chenqijunvc.github.io"
 
 # SEO and Social
-keywords:           "Vince Chen, investment architect, portfolio manager, quantitative researcher, free cash flow investing, Pure Alpha, investment methodology, quantitative finance"
+keywords:           "Vince Chen, portfolio manager, quantitative researcher, active portfolio management, AI investing, free cash flow, Georgia Tech, CFA, quantitative finance, factor investing"
 lang:               "en"
 locale:             "en_US"
 
@@ -22,9 +22,9 @@ linkedin_username:  vinceqijunchen
 # Author information for structured data
 author_info:
   name:             "Vince Chen"
-  bio:              "Investment Architect. Portfolio Manager. Quantitative Researcher. My work focuses on designing investment research, quantitative methodologies, portfolio processes, and institutional investment infrastructure."
-  location:         "Global"
-  expertise:        ["Investment Architecture", "Quantitative Research", "Portfolio Management", "ETF Strategy", "Investment Methodology"]
+  bio:              "Active Portfolio Manager and Quantitative Researcher. Built a quant investment platform through eight years at FCF Advisors / Abacus FCF Advisors. SEC-registered Portfolio Manager. Now pursuing MS in CS & AI at Georgia Tech."
+  location:         "New York, NY"
+  expertise:        ["Active Portfolio Management", "Quantitative Research", "ETF Strategy", "Factor Investing", "AI in Finance"]
 
 # Build settings
 markdown:           kramdown
