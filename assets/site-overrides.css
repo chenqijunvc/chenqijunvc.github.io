@@ -2,7 +2,6 @@
    site-overrides.css
    Single source of truth for all component and layout styles.
    Loaded after compiled main.css (Bootstrap + theme base).
-   No !important except where overriding Bootstrap internals.
    ============================================================================= */
 
 /* ── 1. NAVBAR ──────────────────────────────────────────────────────────────── */
@@ -12,102 +11,124 @@
   transition: background var(--t-base), box-shadow var(--t-base);
   backdrop-filter: blur(12px);
   -webkit-backdrop-filter: blur(12px);
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1030;
 }
 
-/* Default (interior pages) — transparent over masthead photo */
+/* Base states: clean light nav by default */
+#mainNav,
 #mainNav:not(.is-fixed) {
-  background: rgba(10, 20, 40, .18);
-  box-shadow: none;
-  border-bottom: 1px solid rgba(255,255,255,.12);
-}
-
-/* Fixed state (scrolled down) — white glass */
-#mainNav.is-fixed {
-  background: rgba(255, 255, 255, .97);
-  box-shadow: 0 1px 0 var(--line), 0 2px 16px rgba(16,33,59,.06);
-}
-
-#mainNav .navbar-brand {
-  font-family: var(--font-display);
-  font-size: 1.1rem;
-  font-weight: 800;
-  letter-spacing: -.03em;
-  color: #fff;
-  transition: color var(--t-fast);
-}
-
-#mainNav.is-fixed .navbar-brand {
-  color: var(--ink);
-}
-
-#mainNav .nav-link {
-  font-family: var(--font-display);
-  font-size: .72rem;
-  font-weight: 600;
-  letter-spacing: .09em;
-  text-transform: uppercase;
-  color: rgba(255,255,255,.88);
-  padding: .45rem .85rem;
-  transition: color var(--t-fast);
-}
-
-#mainNav .nav-link:hover,
-#mainNav .nav-link.active {
-  color: #fff;
-}
-
-#mainNav.is-fixed .nav-link {
-  color: var(--muted);
-}
-
-#mainNav.is-fixed .nav-link:hover,
-#mainNav.is-fixed .nav-link.active {
-  color: var(--ink);
-}
-
-/* Home page — always light nav (white hero) */
-body.layout-home #mainNav {
   background: rgba(255, 255, 255, .97);
   box-shadow: 0 1px 0 var(--line);
   border-bottom: none;
 }
 
-body.layout-home #mainNav .navbar-brand,
+#mainNav.is-fixed {
+  background: rgba(255, 255, 255, .98);
+  box-shadow: 0 1px 0 var(--line), 0 4px 20px rgba(16,33,59,.06);
+}
+
+/* Ensure navbar brand has crisp contrast across all pages */
+#mainNav .navbar-brand,
+#mainNav.is-fixed .navbar-brand,
+body #mainNav .navbar-brand,
+body.layout-home #mainNav .navbar-brand {
+  font-family: var(--font-display);
+  font-size: 1.1rem;
+  font-weight: 800;
+  letter-spacing: -.03em;
+  color: var(--ink) !important;
+  transition: color var(--t-fast);
+}
+
+#mainNav .navbar-brand:hover,
+body #mainNav .navbar-brand:hover {
+  color: var(--blue) !important;
+}
+
+/* Nav links styling - always visible with proper contrast */
+#mainNav .navbar-nav > li.nav-item > a,
+#mainNav .nav-link,
+#mainNav.is-fixed .nav-link,
+body #mainNav .nav-link,
 body.layout-home #mainNav .nav-link {
-  color: var(--ink);
+  font-family: var(--font-display);
+  font-size: .76rem;
+  font-weight: 600;
+  letter-spacing: .08em;
+  text-transform: uppercase;
+  color: var(--muted) !important;
+  padding: .45rem .85rem;
+  transition: color var(--t-fast);
 }
 
+#mainNav .navbar-nav > li.nav-item > a:hover,
+#mainNav .nav-link:hover,
+#mainNav.is-fixed .nav-link:hover,
+body #mainNav .nav-link:hover,
 body.layout-home #mainNav .nav-link:hover {
-  color: var(--blue);
+  color: var(--blue) !important;
 }
 
+#mainNav .navbar-nav > li.nav-item > a.active,
+#mainNav .nav-link.active,
+#mainNav.is-fixed .nav-link.active,
+body #mainNav .nav-link.active,
 body.layout-home #mainNav .nav-link.active {
-  color: var(--blue);
-}
-
-/* PortfolioFuture pill */
-#mainNav .portfoliofuture-nav {
-  color: var(--blue);
+  color: var(--blue) !important;
   font-weight: 700;
 }
 
+/* PortfolioFuture pill button in navbar */
+#mainNav .portfoliofuture-nav,
+body #mainNav .portfoliofuture-nav,
 body.layout-home #mainNav .portfoliofuture-nav {
-  color: var(--blue);
+  color: var(--blue) !important;
+  font-weight: 700 !important;
 }
 
 @media (min-width: 992px) {
-  #mainNav .portfoliofuture-nav {
-    border: 1.5px solid currentColor;
+  #mainNav .portfoliofuture-nav,
+  body #mainNav .portfoliofuture-nav {
+    border: 1.5px solid rgba(34, 100, 234, 0.4);
     border-radius: 999px;
-    padding-left: 1rem;
-    padding-right: 1rem;
-    margin-left: .4rem;
-    opacity: .85;
-    transition: opacity var(--t-fast), background var(--t-fast);
+    padding-left: 1.1rem !important;
+    padding-right: 1.1rem !important;
+    margin-left: .5rem;
+    transition: all var(--t-fast);
   }
-  #mainNav .portfoliofuture-nav:hover {
-    opacity: 1;
+  #mainNav .portfoliofuture-nav:hover,
+  body #mainNav .portfoliofuture-nav:hover {
     background: var(--surface-blue);
+    border-color: var(--blue);
+  }
+}
+
+/* Mobile toggler */
+#mainNav .navbar-toggler {
+  font-size: .8rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: var(--ink);
+  border: 1px solid var(--line);
+  border-radius: var(--r-sm);
+  padding: .4rem .75rem;
+}
+
+@media (max-width: 991px) {
+  #navbarResponsive {
+    background: #ffffff;
+    border-radius: var(--r-md);
+    box-shadow: var(--shadow-lg);
+    padding: 1rem;
+    margin-top: .75rem;
+    border: 1px solid var(--line);
+  }
+  #navbarResponsive .nav-link {
+    padding: .6rem 1rem !important;
   }
 }
 
@@ -115,7 +136,7 @@ body.layout-home #mainNav .portfoliofuture-nav {
 
 .personal-hero {
   position: relative;
-  padding: 200px 0 120px;
+  padding: 190px 0 110px;
   overflow: hidden;
   background: #fff;
 }
@@ -229,7 +250,7 @@ body.layout-home #mainNav .portfoliofuture-nav {
   flex-direction: column;
   align-items: center;
   gap: .35rem;
-  color: var(--line);
+  color: var(--muted);
   font-family: var(--font-display);
   font-size: .65rem;
   font-weight: 600;
@@ -244,7 +265,7 @@ body.layout-home #mainNav .portfoliofuture-nav {
 .scroll-cue svg {
   width: 18px;
   height: 18px;
-  stroke: var(--line);
+  stroke: var(--blue);
   fill: none;
   stroke-width: 2;
   stroke-linecap: round;
@@ -528,19 +549,19 @@ body.layout-home #mainNav .portfoliofuture-nav {
 .btn-primary {
   background: var(--blue);
   border-color: var(--blue);
-  color: #fff;
+  color: #fff !important;
 }
 
 .btn-primary:hover {
   background: var(--blue-dark);
   border-color: var(--blue-dark);
-  color: #fff;
+  color: #fff !important;
   transform: translateY(-1px);
   box-shadow: 0 4px 14px rgba(34,100,234,.35);
 }
 
 .btn-outline-primary {
-  color: var(--blue);
+  color: var(--blue) !important;
   border-color: var(--blue);
   background: transparent;
 }
@@ -548,7 +569,7 @@ body.layout-home #mainNav .portfoliofuture-nav {
 .btn-outline-primary:hover {
   background: var(--blue);
   border-color: var(--blue);
-  color: #fff;
+  color: #fff !important;
   transform: translateY(-1px);
   box-shadow: 0 4px 14px rgba(34,100,234,.25);
 }

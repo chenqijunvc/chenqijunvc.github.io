@@ -67,47 +67,36 @@
   }
 
   /* ── Count-up animation for proof-grid numbers ──────────────────────────── */
-  function parseNum(str) {
-    return parseFloat(str.replace(/[^0-9.]/g, '')) || null;
-  }
-
-  function animateCount(el, from, to, suffix, prefix, duration) {
+  /* ── Count-up animation for stat numbers with explicit data-count-target ── */
+  function animateCount(el, from, to, duration) {
     const start = performance.now();
     function step(now) {
       const progress = Math.min((now - start) / duration, 1);
-      // ease-out-cubic
       const ease = 1 - Math.pow(1 - progress, 3);
       const value = from + (to - from) * ease;
-      el.textContent = prefix + Math.round(value) + suffix;
+      el.textContent = Math.round(value);
       if (progress < 1) requestAnimationFrame(step);
     }
     requestAnimationFrame(step);
   }
 
-  const proofValues = document.querySelectorAll('.proof-value, .record-summary strong, .strategy-grid strong');
-  if (proofValues.length && 'IntersectionObserver' in window) {
+  const countTargets = document.querySelectorAll('[data-count-target]');
+  if (countTargets.length && 'IntersectionObserver' in window) {
     const countObserver = new IntersectionObserver(function (entries) {
       entries.forEach(function (entry) {
         if (!entry.isIntersecting) return;
         const el = entry.target;
-        const original = el.textContent.trim();
-        const numericVal = parseNum(original);
+        const rawTarget = el.dataset.countTarget;
+        const numericVal = parseInt(rawTarget, 10);
 
-        if (numericVal !== null && numericVal > 5) {
-          // Detect suffix (e.g. " ETFs", " AUM") and prefix
-          const prefixMatch = original.match(/^(\D+)/);
-          const suffixMatch = original.match(/[\d.]+(.*)$/);
-          const prefix = prefixMatch ? prefixMatch[1] : '';
-          const suffix = suffixMatch ? suffixMatch[1] : '';
-
-          el.dataset.finalText = original;
-          animateCount(el, 0, numericVal, suffix, prefix, 1200);
+        if (!isNaN(numericVal) && String(numericVal) === rawTarget.trim()) {
+          animateCount(el, 0, numericVal, 1000);
         }
         countObserver.unobserve(el);
       });
     }, { threshold: 0.5 });
 
-    proofValues.forEach(function (el) { countObserver.observe(el); });
+    countTargets.forEach(function (el) { countObserver.observe(el); });
   }
 
   /* ── Reading progress bar ───────────────────────────────────────────────── */
