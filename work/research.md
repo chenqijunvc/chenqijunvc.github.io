@@ -1,42 +1,23 @@
 ---
 layout: page
-title: Research
-description: Quantitative frameworks for active management evaluation, quality factor analysis, and portfolio construction
+title: Investment Research
+description: "Prior quantitative research on active-manager evaluation, free cash flow, quality investing, and portfolio construction."
 background: '/img/bg-post.jpg'
 ---
 
 <div class="row">
   <div class="col-lg-10 col-md-12 mx-auto">
+    <p class="lead">My investment research has focused on understanding what drives portfolio outcomes: separating skill from systematic exposures, improving the measurement of business quality, and translating research into implementable investment processes.</p>
 
-    <p class="lead">My research focuses on quantitative methods for evaluating investment decisions — distinguishing skill from style, measuring quality through cash generation rather than earnings, and building systems that make research actionable.</p>
+    <h2>Pure Alpha</h2>
+    <p>The Pure Alpha work developed a framework for evaluating active management by decomposing what can be explained by systematic exposures and what remains as differentiated active return.</p>
+    <p><a href="{{ '/work/pure-alpha/' | relative_url }}">Pure Alpha framework →</a></p>
 
-    <hr class="my-4">
+    <h2>Free cash flow and quality</h2>
+    <p>A second research stream examined free cash flow as a measure of profitability and quality, including how it compares with earnings-based metrics and how it can be used in quantitative portfolio construction.</p>
+    <p><a href="{{ '/work/free-cash-flow-research/' | relative_url }}">Free cash flow research →</a></p>
 
-    <h3>Pure Alpha Framework</h3>
-    <p>A systematic method for evaluating active management through holdings-based factor decomposition:</p>
-    <ul>
-      <li>Map every position to its factor exposures</li>
-      <li>Separate factor returns from active bets</li>
-      <li>Evaluate whether active returns are persistent or episodic</li>
-      <li>Distinguish stock-picking skill from factor timing</li>
-    </ul>
-    <p><a href="{{ '/work/pure-alpha' | relative_url }}">Full framework &rarr;</a></p>
-
-    <hr class="my-4">
-
-    <h3>Free Cash Flow Research</h3>
-    <p>Core thesis: earnings are an opinion, cash flow is a fact. The research redefines quality factor construction around cash generation:</p>
-    <ul>
-      <li>FCF-ROIC framework for identifying genuinely high-quality companies</li>
-      <li>Four-signal quality model: FCF Margin, FCF ROIC, Accruals Ratio, Capital Allocation Discipline</li>
-      <li>Applications across U.S. large cap, small cap, innovation, and fixed income</li>
-    </ul>
-    <p><a href="{{ '/work/free-cash-flow-research' | relative_url }}">Full research &rarr;</a></p>
-
-    <hr class="my-4">
-
-    <h3>Publications</h3>
-    <p>Research articles on the <a href="{{ '/writing' | relative_url }}">Writing page</a>.</p>
-
+    <h2>Published work</h2>
+    <p>The complete archive is on the <a href="{{ '/writing/' | relative_url }}">Writing page</a>.</p>
   </div>
 </div>

@@ -1,5 +1,11 @@
-_site
-.sass-cache
-node_modules
+_site/
+.sass-cache/
+.jekyll-cache/
+.jekyll-metadata
+node_modules/
+vendor/bundle/
+.bundle/
 Gemfile.lock
+.DS_Store
 *.gem
+.playwright-mcp/

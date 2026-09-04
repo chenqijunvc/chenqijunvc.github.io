@@ -1,45 +1,37 @@
 ---
 layout: page
 title: Portfolio Management
-description: Translating research into portfolios — the daily discipline of active management
+description: "Prior institutional portfolio-management responsibilities across the FCF / Abacus ETF suite."
 background: '/img/bg-post.jpg'
 ---
 
 <div class="row">
   <div class="col-lg-10 col-md-12 mx-auto">
+    <p class="lead">I was appointed portfolio manager of the U.S. and international strategies effective January 2021 and later served as a named portfolio manager across the six-fund Abacus FCF ETF suite.</p>
 
-    <p class="lead">Portfolio management is where research meets decision. I was appointed Portfolio Manager of ABFL and ABLG effective January 1, 2021, and assumed PM responsibility for the remaining ETFs in the suite over time as they launched.</p>
-
-    <hr class="my-4">
-
-    <h3>The Daily Process</h3>
+    <h2>Investment process</h2>
     <ul>
-      <li><strong>Signal review</strong> — monitoring factor signals and composite scores for the universe</li>
-      <li><strong>Portfolio construction</strong> — translating signals into target weights within risk parameters</li>
-      <li><strong>Rebalancing</strong> — executing quarterly reconstitutions and monitoring drift between cycles</li>
-      <li><strong>Trade execution</strong> — implementing portfolio changes with attention to market impact and cost</li>
-      <li><strong>Risk monitoring</strong> — tracking position limits, sector exposures, turnover, and tracking error</li>
-      <li><strong>Performance attribution</strong> — decomposing returns into allocation, selection, and interaction effects</li>
+      <li><strong>Signal review</strong> — monitoring factor inputs, composite scores, and changes in the investable universe</li>
+      <li><strong>Portfolio construction</strong> — translating research into target weights within strategy constraints</li>
+      <li><strong>Rebalancing</strong> — implementing scheduled reconstitutions and monitoring portfolio drift</li>
+      <li><strong>Execution</strong> — coordinating portfolio changes with attention to liquidity, market impact, and implementation cost</li>
+      <li><strong>Risk monitoring</strong> — tracking exposures, concentration, turnover, and tracking behavior</li>
+      <li><strong>Attribution</strong> — decomposing results to understand sources of return and risk</li>
     </ul>
 
-    <hr class="my-4">
-
-    <h3>Product Scope</h3>
-    <p>Portfolio manager for the FCF Leaders ETF suite. PM of ABFL and ABLG since January 2021; additional funds added as they launched:</p>
-    <div class="row">
-      <div class="col-md-4 mb-2"><strong>ABFL</strong> — U.S. Large Cap</div>
-      <div class="col-md-4 mb-2"><strong>ABLG</strong> — International Leaders</div>
-      <div class="col-md-4 mb-2"><strong>ABOT</strong> — Innovation</div>
-      <div class="col-md-4 mb-2"><strong>ABLD</strong> — Real Assets</div>
-      <div class="col-md-4 mb-2"><strong>ABLS</strong> — Small Cap</div>
-      <div class="col-md-4 mb-2"><strong>ABXB</strong> — Fixed Income</div>
+    <h2>Fund scope</h2>
+    <div class="strategy-grid">
+      <div><strong>ABFL</strong><span>U.S. Large Cap</span></div>
+      <div><strong>ABLG</strong><span>International</span></div>
+      <div><strong>ABOT</strong><span>Innovation</span></div>
+      <div><strong>ABLD</strong><span>Real Assets</span></div>
+      <div><strong>ABXB</strong><span>Fixed Income</span></div>
+      <div><strong>ABLS</strong><span>Small Cap</span></div>
     </div>
-    <p class="small text-muted">I designed and built the index methodologies and portfolio construction process for all strategies before they launched.</p>
 
-    <hr class="my-4">
+    <h2>Context</h2>
+    <p>The work sat inside a relatively compact investment organization, so portfolio management and investment-system development were tightly connected. Research definitions, portfolio construction, operational workflows, and monitoring all had to function as one repeatable system.</p>
 
-    <h3>Context</h3>
-    <p>In a small team, I owned the end-to-end investment process — from data ingestion through portfolio construction, trade execution, index reconstitution, regulatory filing, and client reporting — across all strategies. After the Abacus Life acquisition (2024), I led the technical integration and maintained uninterrupted operations throughout the transition.</p>
-
+    <p class="small text-muted mt-5">Public SEC filings document the historical portfolio-manager appointments. An August 2026 supplement records the subsequent change in portfolio managers. See <a href="{{ '/track-record/' | relative_url }}">Prior Investment Track Record</a>.</p>
   </div>
 </div>

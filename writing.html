@@ -1,0 +1,50 @@
+---
+layout: page
+title: Writing
+seo_title: "Investment Research & Writing | Vince Chen"
+description: "Research and writing on active management, free cash flow, factor investing, ETFs, portfolio construction, and technology."
+background: '/img/bg-post.jpg'
+---
+
+<div class="row">
+  <div class="col-lg-10 col-md-12 mx-auto">
+    <p class="lead">Research and writing on active management, factor investing, free cash flow, ETFs, portfolio construction, and the technology shaping investment work.</p>
+
+    {% assign featured_posts = site.posts | where: "home_featured", true | sort: "date" | reverse %}
+    {% if featured_posts.size > 0 %}
+    <section class="writing-featured my-5">
+      <h2>Featured research</h2>
+      <div class="row">
+        {% for post in featured_posts %}
+        <div class="col-md-4 mb-4">
+          <article class="editorial-card h-100">
+            <p class="editorial-meta">{{ post.date | date: '%B %Y' }}</p>
+            <h3><a href="{{ post.url | relative_url }}">{{ post.title }}</a></h3>
+            <p>{{ post.excerpt | strip_html | truncatewords: 26 }}</p>
+            <a class="card-link" href="{{ post.url | relative_url }}">Read →</a>
+          </article>
+        </div>
+        {% endfor %}
+      </div>
+    </section>
+    {% endif %}
+
+    <hr class="my-5">
+
+    <section aria-labelledby="all-writing">
+      <h2 id="all-writing">All writing</h2>
+      <div class="writing-list">
+        {% for post in site.posts %}
+        <article class="writing-row">
+          <div class="writing-date">{{ post.date | date: '%Y' }}</div>
+          <div class="writing-copy">
+            <h3><a href="{{ post.url | relative_url }}">{{ post.title }}</a></h3>
+            <p>{{ post.excerpt | strip_html | truncatewords: 30 }}</p>
+            {% if post.tags %}<p class="writing-tags">{{ post.tags | join: ' · ' }}</p>{% endif %}
+          </div>
+        </article>
+        {% endfor %}
+      </div>
+    </section>
+  </div>
+</div>

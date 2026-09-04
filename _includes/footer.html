@@ -1,137 +1,29 @@
-<!-- Footer -->
-
-<hr>
-
 <footer class="footer-enhanced">
   <div class="container">
     <div class="row">
-      <div class="col-lg-10 col-md-11 mx-auto">
-        
-        <!-- Quick Links -->
-        <div class="footer-links text-center mb-4">
-          <h6 class="footer-heading">Quick Links</h6>
-          <div class="row justify-content-center">
-            <div class="col-4 col-md">
-              <a href="{{ '/' | relative_url }}" class="footer-link">Home</a>
-            </div>
-            <div class="col-4 col-md">
-              <a href="{{ '/about' | relative_url }}" class="footer-link">About</a>
-            </div>
-            <div class="col-4 col-md">
-              <a href="{{ '/track-record' | relative_url }}" class="footer-link">Track Record</a>
-            </div>
-            <div class="col-4 col-md">
-              <a href="{{ '/media' | relative_url }}" class="footer-link">Media</a>
-            </div>
-            <div class="col-4 col-md">
-              <a href="{{ '/contact' | relative_url }}" class="footer-link">Contact</a>
-            </div>
+      <div class="col-lg-10 mx-auto">
+        <div class="footer-primary">
+          <div>
+            <a class="footer-name" href="{{ '/' | relative_url }}">Vince (Qijun) Chen, CFA</a>
+            <p>Founder, <a href="{{ site.portfoliofuture_url }}" target="_blank" rel="noopener noreferrer">PortfolioFuture ↗</a></p>
+          </div>
+          <nav class="footer-nav" aria-label="Footer navigation">
+            <a href="{{ '/about/' | relative_url }}">About</a>
+            <a href="{{ '/track-record/' | relative_url }}">Track Record</a>
+            <a href="{{ '/writing/' | relative_url }}">Writing</a>
+            <a href="{{ '/media/' | relative_url }}">Media</a>
+            <a href="{{ '/contact/' | relative_url }}">Contact</a>
+          </nav>
+        </div>
+        <div class="footer-secondary">
+          <p>© {{ 'now' | date: "%Y" }} {{ site.author }}</p>
+          <div class="footer-social">
+            <a href="mailto:{{ site.email }}">Email</a>
+            <a href="https://www.linkedin.com/in/{{ site.linkedin_username }}" target="_blank" rel="noopener noreferrer">LinkedIn ↗</a>
+            <a href="https://github.com/{{ site.github_username }}" target="_blank" rel="noopener noreferrer">GitHub ↗</a>
           </div>
         </div>
-
-        <!-- Social Links -->
-        <ul class="list-inline text-center social-links">
-          {% if site.email %}
-          <li class="list-inline-item">
-            <a href="mailto:{{ site.email | encode_email }}" title="Email" aria-label="Email">
-              <span class="fa-stack fa-lg">
-                <i class="fas fa-circle fa-stack-2x"></i>
-                <i class="far fa-envelope fa-stack-1x fa-inverse"></i>
-              </span>
-            </a>
-          </li>
-          {% endif %}
-          {% if site.linkedin_username %}
-          <li class="list-inline-item">
-            <a href="https://www.linkedin.com/in/{{ site.linkedin_username }}" title="LinkedIn" aria-label="LinkedIn" target="_blank" rel="noopener">
-              <span class="fa-stack fa-lg">
-                <i class="fas fa-circle fa-stack-2x"></i>
-                <i class="fab fa-linkedin fa-stack-1x fa-inverse"></i>
-              </span>
-            </a>
-          </li>
-          <li class="list-inline-item">
-            <a href="https://github.com/{{ site.github_username }}" title="GitHub" aria-label="GitHub" target="_blank" rel="noopener">
-              <span class="fa-stack fa-lg">
-                <i class="fas fa-circle fa-stack-2x"></i>
-                <i class="fab fa-github fa-stack-1x fa-inverse"></i>
-              </span>
-            </a>
-          </li>
-          {% endif %}
-          {% if site.twitter_username %}
-          <li class="list-inline-item">
-            <a href="https://twitter.com/{{ site.twitter_username }}" title="Twitter" aria-label="Twitter" target="_blank" rel="noopener">
-              <span class="fa-stack fa-lg">
-                <i class="fas fa-circle fa-stack-2x"></i>
-                <i class="fab fa-twitter fa-stack-1x fa-inverse"></i>
-              </span>
-            </a>
-          </li>
-          {% endif %}
-          <li class="list-inline-item">
-            <a href="{{ '/feed.xml' | relative_url }}" title="RSS Feed" aria-label="RSS Feed">
-              <span class="fa-stack fa-lg">
-                <i class="fas fa-circle fa-stack-2x"></i>
-                <i class="fas fa-rss fa-stack-1x fa-inverse"></i>
-              </span>
-            </a>
-          </li>
-        </ul>
-        
-        <!-- Copyright and additional info -->
-        <div class="text-center mt-4">
-          <p class="copyright text-muted mb-2">
-            Copyright &copy; {{ site.author }} {{ 'now' | date: "%Y" }}
-          </p>
-          <p class="footer-tagline text-muted small">
-            <i class="fas fa-chart-line"></i>
-            Quant Portfolio Manager
-            <span class="mx-2">&bull;</span>
-            <a href="{{ '/contact' | relative_url }}" class="text-muted">Contact</a>
-          </p>
-        </div>
-        
       </div>
     </div>
   </div>
 </footer>
-
-<style>
-.footer-enhanced {
-  background-color: #f8f9fa;
-  padding: 2rem 0 1rem;
-  margin-top: 3rem;
-}
-
-.footer-heading {
-  color: #495057;
-  margin-bottom: 1rem;
-  font-weight: 600;
-}
-
-.footer-link {
-  color: #6c757d;
-  text-decoration: none;
-  font-size: 0.9rem;
-  transition: color 0.3s ease;
-}
-
-.footer-link:hover {
-  color: #007bff;
-  text-decoration: none;
-}
-
-.social-links .fa-stack:hover {
-  transform: translateY(-2px);
-  transition: transform 0.3s ease;
-}
-
-.footer-tagline a {
-  text-decoration: none;
-}
-
-.footer-tagline a:hover {
-  color: #007bff !important;
-}
-</style>

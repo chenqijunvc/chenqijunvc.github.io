@@ -2,50 +2,31 @@
 layout: default
 ---
 
-<!-- Page Header -->
 {% capture background_url %}{% include dynamic_background.html %}{% endcapture %}
 <header class="masthead" style="background-image: url('{{ background_url | strip }}');">
   <div class="overlay"></div>
-    <div class="container">
-      <div class="row">
-        <div class="col-lg-10 col-md-11 mx-auto">
-          <div class="post-heading">
-            <h1>{{ page.title }}</h1>
-            {% if page.subtitle %}
-            <h2 class="subheading">{{ page.subtitle }}</h2>
-            {% endif %}
-            <span class="meta">Posted by
-              <a href="#">{% if page.author %}{{ page.author }}{% else %}{{ site.author }}{% endif %}</a>
-              on {{ page.date | date: '%B %d, %Y' }} &middot; {% include read_time.html
-              content=page.content %}
-            </span>
-          </div>
-        </div>
-      </div>
-    </div>
-  </header>
-
   <div class="container">
     <div class="row">
       <div class="col-lg-10 col-md-11 mx-auto">
-
-        {{ content }}
-
-        <hr>
-
-        <div class="clearfix">
-
-          {% if page.previous.url %}
-          <a class="btn btn-primary float-left" href="{{ page.previous.url | prepend: site.baseurl | replace: '//', '/' }}" data-toggle="tooltip" data-placement="top" title="{{ page.previous.title }}">&larr; Previous<span class="d-none d-md-inline">
-              Post</span></a>
-          {% endif %}
-          {% if page.next.url %}
-          <a class="btn btn-primary float-right" href="{{ page.next.url | prepend: site.baseurl | replace: '//', '/' }}" data-toggle="tooltip" data-placement="top" title="{{ page.next.title }}">Next<span class="d-none d-md-inline">
-              Post</span> &rarr;</a>
-          {% endif %}
-
+        <div class="post-heading">
+          <h1>{{ page.title }}</h1>
+          {% if page.subtitle %}<h2 class="subheading">{{ page.subtitle }}</h2>{% endif %}
+          <span class="meta">By <a href="{{ '/about/' | relative_url }}">{{ page.author | default: site.author }}</a> · {{ page.date | date: '%B %d, %Y' }} · {% include read_time.html content=page.content %}</span>
         </div>
-
       </div>
     </div>
   </div>
+</header>
+
+<article class="container">
+  <div class="row">
+    <div class="col-lg-9 col-md-11 mx-auto">
+      {{ content }}
+      <hr class="my-5">
+      <div class="post-footer-nav d-flex flex-wrap justify-content-between align-items-center">
+        <a href="{{ '/writing/' | relative_url }}">← All writing</a>
+        <a href="{{ '/about/' | relative_url }}">About Vince →</a>
+      </div>
+    </div>
+  </div>
+</article>

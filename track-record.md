@@ -1,81 +1,59 @@
 ---
 layout: page
-title: Track Record
-description: Eight years of building, managing, and delivering — from quant analyst to portfolio manager
+title: Prior Investment Track Record
+seo_title: "Prior Investment Track Record | Vince Chen"
+description: "Quantitative investment systems, research, and portfolio management from 2017 through 2026."
 background: '/img/bg-post.jpg'
 ---
 
 <div class="row">
   <div class="col-lg-10 col-md-12 mx-auto">
 
-    <p class="lead">I joined FCF Advisors in 2017 as a Quantitative Analyst and over eight years built the quantitative investment platform that powered the FCF Leaders ETF suite — architecting every index methodology and portfolio construction process before any fund launched. The platform earned PSN recognition and now manages capital as part of Abacus Global Management.</p>
+    <p class="lead">From 2017 through 2026, I worked across quantitative research, investment-system development, and portfolio management at FCF Advisors / Abacus FCF Advisors. This page documents that prior institutional work.</p>
 
-    <hr class="my-4">
-
-    <h3>What I Built</h3>
-
-    <div class="row mb-4">
-      <div class="col-md-6 mb-3">
-        <div class="card h-100">
-          <div class="card-body">
-            <h5 class="card-title">Quant Research Infrastructure</h5>
-            <p class="card-text small text-muted">Data pipelines, factor library, signal generation, backtesting framework, automated reporting — the analytical engine behind every strategy.</p>
-            <a href="{{ '/work/investment-systems' | relative_url }}" class="small">Details &rarr;</a>
-          </div>
-        </div>
-      </div>
-      <div class="col-md-6 mb-3">
-        <div class="card h-100">
-          <div class="card-body">
-            <h5 class="card-title">Portfolio Construction Process</h5>
-            <p class="card-text small text-muted">Signal review, target weighting, rebalancing, trade execution, risk monitoring, and performance attribution — powering the full ETF suite.</p>
-            <a href="{{ '/work/portfolio-management' | relative_url }}" class="small">Details &rarr;</a>
-          </div>
-        </div>
-      </div>
-      <div class="col-md-6 mb-3">
-        <div class="card h-100">
-          <div class="card-body">
-            <h5 class="card-title">Pure Alpha Framework</h5>
-            <p class="card-text small text-muted">A systematic method for evaluating active management — separating genuine skill from style through holdings-based factor decomposition.</p>
-            <a href="{{ '/work/research' | relative_url }}" class="small">Details &rarr;</a>
-          </div>
-        </div>
-      </div>
-      <div class="col-md-6 mb-3">
-        <div class="card h-100">
-          <div class="card-body">
-            <h5 class="card-title">Free Cash Flow Research</h5>
-            <p class="card-text small text-muted">Redefining quality factor construction around cash generation rather than earnings. Four-signal model applied across U.S. large cap, small cap, innovation, and fixed income.</p>
-            <a href="{{ '/work/research' | relative_url }}" class="small">Details &rarr;</a>
-          </div>
-        </div>
-      </div>
+    <div class="record-summary my-5">
+      <div><strong>2017–2026</strong><span>Quantitative investing</span></div>
+      <div><strong>6 ETFs</strong><span>Fund suite documented in SEC filings</span></div>
+      <div><strong>2021</strong><span>Initial portfolio-manager appointment</span></div>
     </div>
 
-    <hr class="my-4">
+    <hr class="my-5">
 
-    <h3>ETF Suite</h3>
-    <p>Six active ETFs built on the platform I designed and operated:</p>
-    <div class="row text-center mb-4">
-      <div class="col mb-2"><span class="badge badge-primary p-2">ABFL</span><br><small class="text-muted">U.S. Large Cap</small></div>
-      <div class="col mb-2"><span class="badge badge-primary p-2">ABLG</span><br><small class="text-muted">International</small></div>
-      <div class="col mb-2"><span class="badge badge-primary p-2">ABOT</span><br><small class="text-muted">Innovation</small></div>
-      <div class="col mb-2"><span class="badge badge-primary p-2">ABLD</span><br><small class="text-muted">Real Assets</small></div>
-      <div class="col mb-2"><span class="badge badge-primary p-2">ABXB</span><br><small class="text-muted">Fixed Income</small></div>
-      <div class="col mb-2"><span class="badge badge-primary p-2">ABLS</span><br><small class="text-muted">Small Cap</small></div>
+    <h2>Investment systems</h2>
+    <p>I built and operated quantitative infrastructure that connected research to live portfolios: financial-data pipelines, factor libraries, signal generation, backtesting, portfolio construction, rebalancing workflows, risk monitoring, performance attribution, and automated reporting.</p>
+    <p><a href="{{ '/work/investment-systems/' | relative_url }}">Investment systems details →</a></p>
+
+    <h2>Portfolio management</h2>
+    <p>I was appointed portfolio manager of the U.S. and international strategies effective January 2021 and later served as a named portfolio manager across the six-fund Abacus FCF ETF suite as additional strategies launched or transitioned.</p>
+    <p><a href="{{ '/work/portfolio-management/' | relative_url }}">Portfolio management details →</a></p>
+
+    <h2>Investment research</h2>
+    <p>My published research focused on active-manager evaluation, factor decomposition, free-cash-flow profitability, quality investing, and ETF implementation. The work includes the Pure Alpha framework and a series of papers on free cash flow as an investment signal.</p>
+    <p><a href="{{ '/work/research/' | relative_url }}">Research frameworks →</a> &nbsp; <a href="{{ '/writing/' | relative_url }}">Published writing →</a></p>
+
+    <hr class="my-5">
+
+    <h2>ETF strategies</h2>
+    <p>The six funds in the suite are documented in SEC filings:</p>
+    <div class="strategy-grid">
+      <div><strong>ABFL</strong><span>U.S. Large Cap</span></div>
+      <div><strong>ABLG</strong><span>International</span></div>
+      <div><strong>ABOT</strong><span>Innovation</span></div>
+      <div><strong>ABLD</strong><span>Real Assets</span></div>
+      <div><strong>ABXB</strong><span>Fixed Income</span></div>
+      <div><strong>ABLS</strong><span>Small Cap</span></div>
     </div>
 
-    <hr class="my-4">
+    <hr class="my-5">
 
-    <h3>Recognition</h3>
-    <ul>
-      <li><strong>PSN Top Guns Manager of the Decade</strong> (Q4 2025) &mdash; Informa PSN database ranking</li>
-      <li><strong>CBOE Opening Bell</strong> (Feb 2025) &mdash; Represented Abacus FCF Advisors at the market open</li>
-      <li><strong>Future Alpha Speaker</strong> (2026&ndash;2027) &mdash; Panelist and spotlight interview on signal fusion and multi-factor investing</li>
+    <h2>Public evidence</h2>
+    <p>Historical and current SEC filings provide an external record of the fund suite and portfolio-manager appointments. A November 2025 prospectus named me as portfolio manager for ABFL, and an August 2026 supplement documents the subsequent portfolio-manager change across the six funds.</p>
+    <ul class="evidence-links">
+      <li><a href="https://www.sec.gov/Archives/edgar/data/1604813/000089418925016278/abacusfcfleadersetf.htm" target="_blank" rel="noopener noreferrer">SEC — ABFL Summary Prospectus, Nov. 2025 <span aria-hidden="true">↗</span></a></li>
+      <li><a href="https://www.sec.gov/Archives/edgar/data/1604813/000089418926022367/abacusetfs497kpmchangessup.htm" target="_blank" rel="noopener noreferrer">SEC — Six-fund Portfolio Manager Supplement, Aug. 2026 <span aria-hidden="true">↗</span></a></li>
     </ul>
 
-    <p class="text-muted small mt-4">Public filings on <a href="https://www.sec.gov/edgar" target="_blank">SEC EDGAR</a> document the funds and roles described on this site.</p>
+    <p class="small text-muted mt-4">This page describes prior professional responsibilities and published public records. It is not a presentation of current fund management responsibility or an offer of investment advisory services.</p>
 
   </div>
 </div>

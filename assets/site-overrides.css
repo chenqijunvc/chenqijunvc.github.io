@@ -1,0 +1,603 @@
+/* Site architecture + identity refresh, September 2026 */
+:root {
+  --site-ink: #10213b;
+  --site-text: #28364a;
+  --site-muted: #687386;
+  --site-blue: #2264ea;
+  --site-blue-dark: #1549b4;
+  --site-line: #e4e9f0;
+  --site-surface: #f7f9fc;
+  --site-surface-blue: #f1f5ff;
+  --site-radius: 16px;
+}
+
+body {
+  color: var(--site-text);
+  background: #fff;
+}
+
+#mainNav {
+  box-shadow: 0 1px 0 rgba(16, 33, 59, .06);
+}
+
+#mainNav .navbar-brand {
+  font-size: 1.15rem;
+  letter-spacing: -.02em;
+}
+
+#mainNav .nav-link.active {
+  color: var(--site-blue) !important;
+}
+
+@media (min-width: 992px) {
+  body:not(.layout-home) #mainNav:not(.is-fixed) .nav-link.active {
+    color: #fff !important;
+    box-shadow: inset 0 -2px rgba(255, 255, 255, .9);
+  }
+
+  #mainNav.is-fixed .nav-link.active {
+    color: var(--site-blue) !important;
+    box-shadow: none;
+  }
+}
+
+#mainNav .portfoliofuture-nav {
+  color: var(--site-blue) !important;
+  font-weight: 700;
+}
+
+@media (min-width: 992px) {
+  #mainNav .portfoliofuture-nav {
+    border: 1px solid rgba(34, 100, 234, .28);
+    border-radius: 999px;
+    padding-left: 1rem !important;
+    padding-right: 1rem !important;
+    margin-left: .35rem;
+  }
+  #mainNav .portfoliofuture-nav:hover {
+    background: var(--site-surface-blue);
+    border-color: rgba(34, 100, 234, .5);
+  }
+}
+
+/* Personal homepage: deliberately distinct from the PortfolioFuture company visual. */
+.personal-hero {
+  padding: 190px 0 105px;
+  border-bottom: 1px solid var(--site-line);
+  background:
+    radial-gradient(circle at 82% 18%, rgba(34,100,234,.10), transparent 31%),
+    linear-gradient(180deg, #fff 0%, #fbfcff 100%);
+}
+
+.hero-eyebrow,
+.section-kicker {
+  margin: 0 0 .75rem;
+  font-family: 'Montserrat', sans-serif;
+  font-size: .77rem;
+  font-weight: 700;
+  letter-spacing: .13em;
+  text-transform: uppercase;
+  color: var(--site-blue);
+}
+
+.hero-eyebrow a {
+  color: inherit;
+}
+
+.personal-hero h1 {
+  margin: 0;
+  max-width: 900px;
+  color: var(--site-ink);
+  font-family: 'Montserrat', sans-serif;
+  font-size: clamp(2.75rem, 6vw, 5.35rem);
+  line-height: 1.02;
+  letter-spacing: -.055em;
+}
+
+.hero-role {
+  margin: 1.45rem 0 .8rem;
+  color: var(--site-ink);
+  font-family: 'Montserrat', sans-serif;
+  font-size: clamp(1.25rem, 2.3vw, 1.75rem);
+  font-weight: 600;
+  letter-spacing: -.025em;
+}
+
+.hero-summary {
+  max-width: 790px;
+  margin-bottom: 0;
+  font-size: 1.14rem;
+  line-height: 1.85;
+  color: var(--site-muted);
+}
+
+.hero-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: .8rem;
+  margin-top: 2rem;
+}
+
+.home-section {
+  padding: 92px 0;
+  border-bottom: 1px solid var(--site-line);
+}
+
+.home-current {
+  background: #fff;
+}
+
+.home-foundation,
+.home-media {
+  background: var(--site-surface);
+}
+
+.home-section h2,
+.writing-featured h2 {
+  margin: 0 0 1rem;
+  color: var(--site-ink);
+  font-size: clamp(1.75rem, 3.1vw, 2.55rem);
+  letter-spacing: -.035em;
+}
+
+.section-lead {
+  color: var(--site-text);
+  font-size: 1.15rem;
+  line-height: 1.78;
+}
+
+.max-copy {
+  max-width: 800px;
+}
+
+.text-link-strong,
+.section-all-link,
+.card-link {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.portfoliofuture-visual {
+  display: block;
+  overflow: hidden;
+  border-radius: var(--site-radius);
+  box-shadow: 0 18px 52px rgba(3, 16, 42, .16);
+  background: #030a1a;
+  transition: transform .2s ease, box-shadow .2s ease;
+}
+
+.portfoliofuture-visual:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 22px 60px rgba(3, 16, 42, .22);
+}
+
+.portfoliofuture-visual img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.proof-grid,
+.record-summary,
+.strategy-grid {
+  display: grid;
+  gap: 1px;
+  overflow: hidden;
+  margin: 2.25rem 0;
+  border: 1px solid var(--site-line);
+  border-radius: var(--site-radius);
+  background: var(--site-line);
+}
+
+.proof-grid,
+.record-summary {
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.strategy-grid {
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.proof-item,
+.record-summary > div,
+.strategy-grid > div {
+  background: #fff;
+  padding: 1.5rem;
+}
+
+.proof-value,
+.record-summary strong,
+.strategy-grid strong {
+  display: block;
+  color: var(--site-ink);
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 700;
+}
+
+.proof-value {
+  margin-bottom: .3rem;
+  font-size: 1.45rem;
+}
+
+.proof-label,
+.record-summary span,
+.strategy-grid span {
+  display: block;
+  color: var(--site-muted);
+  font-size: .9rem;
+  line-height: 1.5;
+}
+
+.section-heading-row {
+  display: flex;
+  align-items: end;
+  justify-content: space-between;
+  gap: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+.editorial-card {
+  position: relative;
+  padding: 1.45rem;
+  border: 1px solid var(--site-line);
+  border-radius: 14px;
+  background: #fff;
+  box-shadow: none;
+}
+
+.editorial-card:hover {
+  border-color: #cdd8e8;
+  box-shadow: 0 8px 26px rgba(16, 33, 59, .06);
+}
+
+.editorial-card h3 {
+  margin: .2rem 0 .8rem;
+  font-size: 1.08rem;
+  line-height: 1.45;
+}
+
+.editorial-card h3 a {
+  color: var(--site-ink);
+  text-decoration: none;
+}
+
+.editorial-card p {
+  color: var(--site-muted);
+  font-size: .9rem;
+  line-height: 1.65;
+}
+
+.editorial-meta,
+.writing-tags {
+  color: var(--site-muted) !important;
+  font-size: .73rem !important;
+  font-family: 'Montserrat', sans-serif;
+  letter-spacing: .08em;
+  text-transform: uppercase;
+}
+
+.media-list-compact,
+.writing-list {
+  border-top: 1px solid var(--site-line);
+}
+
+.media-row,
+.writing-row {
+  display: grid;
+  grid-template-columns: 125px 1fr;
+  gap: 1.5rem;
+  padding: 1.35rem 0;
+  border-bottom: 1px solid var(--site-line);
+}
+
+.media-date,
+.writing-date {
+  padding-top: .14rem;
+  color: var(--site-muted);
+  font-family: 'Montserrat', sans-serif;
+  font-size: .78rem;
+  font-weight: 600;
+  letter-spacing: .04em;
+  text-transform: uppercase;
+}
+
+.media-copy h3,
+.writing-copy h3 {
+  margin: 0 0 .25rem;
+  font-size: 1.05rem;
+  line-height: 1.45;
+}
+
+.media-copy h3 a,
+.writing-copy h3 a {
+  color: var(--site-ink);
+  text-decoration: none;
+}
+
+.media-copy p,
+.writing-copy p {
+  margin: 0;
+  color: var(--site-muted);
+  font-size: .9rem;
+  line-height: 1.6;
+}
+
+.media-list-page .media-row {
+  padding: 1.55rem 0;
+}
+
+.about-links-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+}
+
+.about-links-grid > a {
+  display: block;
+  padding: 1.25rem 1.35rem;
+  border: 1px solid var(--site-line);
+  border-radius: 12px;
+  text-decoration: none;
+  background: var(--site-surface);
+}
+
+.about-links-grid strong,
+.about-links-grid span {
+  display: block;
+}
+
+.about-links-grid strong {
+  margin-bottom: .3rem;
+  color: var(--site-ink);
+}
+
+.about-links-grid span {
+  color: var(--site-muted);
+  font-size: .88rem;
+  line-height: 1.5;
+}
+
+.evidence-links a {
+  word-break: break-word;
+}
+
+.contact-options {
+  overflow: hidden;
+  border: 1px solid var(--site-line);
+  border-radius: var(--site-radius);
+}
+
+.contact-option {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  padding: 1.25rem 1.4rem;
+  border-bottom: 1px solid var(--site-line);
+  color: var(--site-ink);
+  text-decoration: none;
+}
+
+.contact-option:last-child {
+  border-bottom: 0;
+}
+
+.contact-option:hover {
+  background: var(--site-surface);
+  text-decoration: none;
+}
+
+.contact-label {
+  color: var(--site-muted);
+  font-size: .82rem;
+  font-family: 'Montserrat', sans-serif;
+  text-transform: uppercase;
+  letter-spacing: .06em;
+}
+
+/* Interior page mastheads: shorter and less résumé-like. */
+header.masthead {
+  min-height: 340px !important;
+  margin-bottom: 58px !important;
+}
+
+header.masthead .page-heading,
+header.masthead .site-heading,
+header.masthead .post-heading {
+  padding: 155px 0 80px !important;
+}
+
+header.masthead .page-heading h1,
+header.masthead .site-heading h1 {
+  font-size: clamp(2.35rem, 5vw, 3.7rem) !important;
+}
+
+header.masthead .page-heading .subheading,
+header.masthead .site-heading .subheading {
+  max-width: 760px;
+  font-size: 1.12rem !important;
+  line-height: 1.6;
+}
+
+/* Footer */
+.footer-enhanced {
+  margin-top: 0 !important;
+  padding: 3.25rem 0 2rem !important;
+  border-top: 1px solid var(--site-line);
+  background: #fff !important;
+  color: var(--site-text) !important;
+}
+
+.footer-primary,
+.footer-secondary {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 2rem;
+}
+
+.footer-primary {
+  padding-bottom: 2rem;
+}
+
+.footer-name {
+  display: inline-block;
+  margin-bottom: .25rem;
+  color: var(--site-ink) !important;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.footer-primary p,
+.footer-secondary p {
+  margin: 0;
+  color: var(--site-muted);
+  font-size: .88rem;
+}
+
+.footer-nav,
+.footer-social {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.15rem;
+}
+
+.footer-nav a,
+.footer-social a,
+.footer-primary p a {
+  color: var(--site-muted) !important;
+  font-size: .86rem;
+  text-decoration: none;
+}
+
+.footer-nav a:hover,
+.footer-social a:hover,
+.footer-primary p a:hover {
+  color: var(--site-blue) !important;
+}
+
+.footer-secondary {
+  padding-top: 1.5rem;
+  border-top: 1px solid var(--site-line);
+}
+
+@media (max-width: 991px) {
+  .personal-hero {
+    padding: 145px 0 78px;
+  }
+  .home-section {
+    padding: 72px 0;
+  }
+  .portfoliofuture-visual {
+    margin-top: .5rem;
+  }
+}
+
+@media (max-width: 767px) {
+  .personal-hero {
+    padding: 122px 0 64px;
+  }
+  .personal-hero h1 {
+    font-size: 2.55rem;
+  }
+  .hero-role {
+    font-size: 1.18rem;
+  }
+  .hero-summary,
+  .section-lead {
+    font-size: 1rem;
+  }
+  .home-section {
+    padding: 58px 0;
+  }
+  .proof-grid,
+  .record-summary,
+  .strategy-grid {
+    grid-template-columns: 1fr;
+  }
+  .section-heading-row {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: .25rem;
+  }
+  .media-row,
+  .writing-row {
+    grid-template-columns: 1fr;
+    gap: .35rem;
+  }
+  .about-links-grid {
+    grid-template-columns: 1fr;
+  }
+  .contact-option {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: .25rem;
+  }
+  .contact-option strong {
+    overflow-wrap: anywhere;
+  }
+  header.masthead {
+    min-height: 275px !important;
+    margin-bottom: 42px !important;
+  }
+  header.masthead .page-heading,
+  header.masthead .site-heading,
+  header.masthead .post-heading {
+    padding: 120px 0 58px !important;
+  }
+  .footer-primary,
+  .footer-secondary {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 1.1rem;
+  }
+}
+
+header.masthead .post-heading h1 {
+  color: #fff;
+  font-size: clamp(2rem, 4.5vw, 3.35rem);
+  line-height: 1.12;
+  letter-spacing: -.035em;
+}
+
+header.masthead .post-heading .subheading {
+  color: rgba(255,255,255,.88);
+  font-size: 1.05rem;
+  line-height: 1.55;
+}
+
+header.masthead .post-heading .meta,
+header.masthead .post-heading .meta a {
+  color: rgba(255,255,255,.78);
+}
+
+.post-footer-nav {
+  gap: 1rem;
+  margin-bottom: 3rem;
+}
+
+/* The personal homepage sits on a light hero, so its desktop navigation uses ink rather than the theme's masthead-white treatment. */
+@media (min-width: 992px) {
+  body.layout-home #mainNav {
+    border-bottom: 1px solid var(--site-line);
+    background: rgba(255, 255, 255, .96);
+  }
+
+  body.layout-home #mainNav .navbar-brand,
+  body.layout-home #mainNav .navbar-nav > li.nav-item > a {
+    color: var(--site-ink);
+  }
+
+  body.layout-home #mainNav .navbar-brand:hover,
+  body.layout-home #mainNav .navbar-brand:focus,
+  body.layout-home #mainNav .navbar-nav > li.nav-item > a:hover,
+  body.layout-home #mainNav .navbar-nav > li.nav-item > a:focus {
+    color: var(--site-blue);
+  }
+
+  body.layout-home #mainNav .navbar-nav > li.nav-item > a.portfoliofuture-nav {
+    color: var(--site-blue);
+  }
+}

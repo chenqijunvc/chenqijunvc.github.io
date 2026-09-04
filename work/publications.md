@@ -1,10 +1,10 @@
 ---
 layout: page
 title: Publications
-description: Authored research
+seo_title: "Publications | Vince Chen"
+description: "Published investment research by Vince Chen."
 background: '/img/bg-post.jpg'
 ---
-
-<meta http-equiv="refresh" content="0; url={{ '/media' | relative_url }}">
-
-<p>This page has moved to <a href="{{ '/media' | relative_url }}">Media</a>.</p>
+<meta http-equiv="refresh" content="0; url={{ '/writing/' | relative_url }}">
+<link rel="canonical" href="{{ '/writing/' | absolute_url }}">
+<p>This page has moved to <a href="{{ '/writing/' | relative_url }}">Writing</a>.</p>

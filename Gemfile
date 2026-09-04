@@ -1,16 +1,10 @@
 source "https://rubygems.org"
 
-gem "jekyll", "~> 4.2"
-gem "jekyll-sass-converter", "~> 2.0"
+# Match the dependency set used by GitHub Pages branch builds.
+gem "github-pages", "~> 232", group: :jekyll_plugins
 
-group :jekyll_plugins do
-  gem "jekyll-feed", "~> 0.6"
-  gem "jekyll-paginate", "~> 1.1.0"
-  gem "jekyll-sitemap"
-end
+# Required for `jekyll serve` on modern Ruby versions.
+gem "webrick", "~> 1.9"
 
-# Windows does not include zoneinfo files, so bundle the tzinfo-data gem
+# Windows does not ship the IANA zoneinfo database.
 gem "tzinfo-data", platforms: [:mingw, :mswin, :x64_mingw, :jruby]
-
-# Performance-booster for watching directories on Windows
-# gem "wdm", "~> 0.1.0" if Gem.win_platform?  # Commented out due to compilation issues

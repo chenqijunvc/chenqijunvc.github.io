@@ -1,51 +1,43 @@
-title:              "Vince Chen — Quant Portfolio Manager"
+title:              "Vince (Qijun) Chen, CFA"
+brand_name:         "Vince Chen"
 email:              chenqijunvc@gmail.com
-description:        "Quant Portfolio Manager. Built a quantitative investment platform from scratch — now pursuing Computer Science at Georgia Tech. CFA."
-author:             Vince Chen
-# For root domain (chenqijunvc.github.io), baseurl should be empty
+description:        "Founder of PortfolioFuture and quantitative investor with a background in investment systems, research, and institutional portfolio management."
+author:             "Vince (Qijun) Chen, CFA"
 baseurl:            ""
 url:                "https://chenqijunvc.github.io"
+portfoliofuture_url: "https://portfoliofuture.com"
 
-# SEO and Social
-keywords:           "Vince Chen, portfolio manager, quantitative researcher, active portfolio management, AI investing, free cash flow, Georgia Tech, CFA, quantitative finance, factor investing"
+# SEO and social
+keywords:           "Vince Chen, Qijun Chen, PortfolioFuture, quantitative investing, portfolio management, investment research, investment systems, fund analysis, CFA, Georgia Tech"
 lang:               "en"
 locale:             "en_US"
+default_og_image:   "/img/bg-index.jpg"
 
-# Social Profiles
-twitter_username:
 github_username:    chenqijunvc
 linkedin_username:  vinceqijunchen
 
-# Analytics - Replace with your actual Google Analytics 4 ID
-# google_analytics:   G-XXXXXXXXXX
-
-# Author information for structured data
+# Author information used across the site
 author_info:
-  name:             "Vince Chen"
-  bio:              "Active Portfolio Manager and Quantitative Researcher. Built a quant investment platform through eight years at FCF Advisors / Abacus FCF Advisors. Now pursuing MS in Computer Science at Georgia Tech."
+  name:             "Vince (Qijun) Chen, CFA"
+  short_name:       "Vince Chen"
+  role:             "Founder, PortfolioFuture"
   location:         "New York, NY"
-  expertise:        ["Active Portfolio Management", "Quantitative Research", "ETF Strategy", "Factor Investing", "AI in Finance"]
+  bio:              "Founder of PortfolioFuture and quantitative investor with prior experience building investment systems, conducting research, and managing institutional ETF strategies."
+  expertise:        ["Quantitative Investing", "Portfolio Management", "Investment Research", "Investment Systems", "Fund Analysis"]
 
 # Build settings
 markdown:           kramdown
-paginate:           5
-paginate_path:      "/posts/page:num/"
-
-# URL structure - no trailing slashes
 permalink:          /:title/
 
 plugins:
   - jekyll-feed
-  - jekyll-paginate
   - jekyll-sitemap
 
-# Collections
 collections:
   media:
     output: true
     permalink: /media/:title/
 
-# Dynamic background images
 default_backgrounds:
   home: '/img/bg-index.jpg'
   about: '/img/bg-about.jpg'
@@ -54,9 +46,19 @@ default_backgrounds:
   search: '/img/bg-post.jpg'
   default: '/img/bg-post.jpg'
 
-# Category-specific backgrounds
 category_backgrounds:
   ai: '/img/bg-post.jpg'
   finance: '/img/bg-post.jpg'
   data-science: '/img/bg-post.jpg'
   investment-strategy: '/img/bg-post.jpg'
+
+exclude:
+  - README.md
+  - LICENSE
+  - Gemfile
+  - Gemfile.lock
+  - package.json
+  - package-lock.json
+  - bin
+  - notebooks
+  - jekyll-theme-clean-blog.gemspec

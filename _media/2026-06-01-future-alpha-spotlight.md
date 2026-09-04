@@ -7,9 +7,10 @@ outlet: "Future Alpha"
 media_type: "speaking"
 featured: true
 external_url: "https://www.alphaevents.com/events-futurealphaglobal/blog/beyond-the-backtest-vince-chen-on-building-durable-multi-factor-portfolios"
+home_featured: true
 ---
 
-Future Alpha published a spotlight Q&A with Vince (Qijun) Chen, CFA, VP of Public Equity & Portfolio Management at Abacus Global Management. Key insights from the interview:
+Future Alpha published a spotlight Q&A with Vince (Qijun) Chen, CFA. At the time of the interview, he was VP of Public Equity & Portfolio Management at Abacus Global Management. Key insights from the interview:
 
 **On signal de-correlation**: Chen argues the most durable filter is economic — "if Signal B pushes you away from a name that Signal A likes, can you articulate why in fundamental terms?" He warns that many "multi-factor" portfolios are really one bet expressed multiple ways.
 

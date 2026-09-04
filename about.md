@@ -1,63 +1,56 @@
 ---
 layout: page
-title: Vince Chen — Quant Portfolio Manager
-description: From building a quant platform as an analyst through portfolio management
+title: About Vince Chen
+seo_title: "About Vince Chen | Founder of PortfolioFuture"
+description: "Founder of PortfolioFuture, with a background in quantitative investment systems, research, and institutional portfolio management."
 background: '/img/bg-about.jpg'
 ---
 
 <div class="row">
   <div class="col-lg-10 col-md-12 mx-auto">
 
-    <p class="lead">I build the engines that power modern active management.</p>
+    <p class="lead">I’m the founder of <a href="{{ site.portfoliofuture_url }}" target="_blank" rel="noopener noreferrer"><strong>PortfolioFuture</strong></a> and a quantitative investor by background.</p>
 
-    <p>I joined FCF Advisors in 2017 as a Quantitative Analyst and over eight years built the quantitative investment platform behind the FCF Leaders ETF suite — from data pipelines and factor models through portfolio construction and index methodologies. I served as Portfolio Manager of ABFL and ABLG since January 2021 and designed the investment process for every strategy in the suite before it launched.</p>
+    <p>I spent nearly a decade working across quantitative research, investment systems, and portfolio management. That experience shaped the problem I am now pursuing: before a portfolio can be built well, an investor needs to understand what each investment actually delivers, what can be explained or replicated, what differentiated value remains, and what alternatives may achieve a similar objective more efficiently.</p>
 
-    <p>The platform I built now manages capital as part of Abacus Global Management, following the firm's acquisition by Abacus Life. I serve as VP of Public Equity &amp; Portfolio Management, ensuring continuity of the investment process I built.</p>
+    <hr class="my-5">
 
-    <hr class="my-4">
+    <h2>Building PortfolioFuture</h2>
 
-    <h3>What I Built</h3>
+    <p>PortfolioFuture is building toward a broader investment intelligence platform for better portfolios. The current product starts at the first portfolio decision: <strong>what should I invest in?</strong></p>
 
-    <ul>
-      <li><strong>Quant research infrastructure</strong> — data pipelines, factor library, signal generation, backtesting frameworks, and automated reporting <a href="{{ '/work/investment-systems' | relative_url }}" class="small">details &rarr;</a></li>
-      <li><strong>Index methodologies and investment processes</strong> for six active ETFs spanning U.S. large cap, international, real assets, innovation, small cap, and fixed income <a href="{{ '/work/portfolio-management' | relative_url }}" class="small">details &rarr;</a></li>
-      <li><strong>Pure Alpha framework</strong> for active manager evaluation, and <strong>free cash flow research</strong> that redefined quality factor construction <a href="{{ '/work/research' | relative_url }}" class="small">details &rarr;</a></li>
-    </ul>
+    <p>The first product is an investment-discovery layer: a better way to understand what an investment really delivers, what can be replicated, what differentiated value remains, and whether there may be a better alternative. That discovery layer is the starting point for a broader system spanning portfolio construction, monitoring, and continuous improvement.</p>
 
-    <hr class="my-4">
+    <p><a class="btn btn-primary btn-sm" href="{{ site.portfoliofuture_url }}" target="_blank" rel="noopener noreferrer">Visit PortfolioFuture <span aria-hidden="true">↗</span></a></p>
 
-    <h3>Now</h3>
+    <hr class="my-5">
 
-    <p>I'm pursuing a <strong>Master of Science in Computer Science at Georgia Tech</strong>. I speak at <strong>Future Alpha</strong> on signal fusion and multi-factor investing. I continue to build at the intersection of quantitative finance and modern technology.</p>
+    <h2>Before PortfolioFuture</h2>
 
-    <hr class="my-4">
+    <p>From 2017 through 2026, I worked at FCF Advisors / Abacus FCF Advisors and its parent organization across quantitative research and portfolio management. I joined as a Quantitative Analyst, built research and portfolio infrastructure, became Director of Research, and later served as Vice President of Public Equity &amp; Portfolio Management.</p>
+
+    <p>My work covered data pipelines, factor research, signal generation, backtesting, portfolio construction, index methodologies, ETF operations, rebalancing, risk monitoring, and performance attribution. I served as a named portfolio manager on the FCF / Abacus ETF suite; public SEC filings document those historical roles.</p>
+
+    <div class="about-links-grid my-4">
+      <a href="{{ '/track-record/' | relative_url }}"><strong>Prior Track Record</strong><span>Investment systems, portfolio management, strategies, and evidence →</span></a>
+      <a href="{{ '/writing/' | relative_url }}"><strong>Research &amp; Writing</strong><span>Published work on active management, free cash flow, and ETFs →</span></a>
+    </div>
+
+    <hr class="my-5">
+
+    <h2>Technical foundation</h2>
+
+    <p>I am pursuing a <strong>Master of Science in Computer Science at Georgia Tech</strong>. Computer science and AI expand the tools I can apply to investment research, product development, and the systems behind PortfolioFuture. They are part of the toolkit for building the company, alongside quantitative finance and portfolio management.</p>
 
     <h3>Credentials</h3>
     <ul>
       <li>MS, Computer Science — Georgia Institute of Technology (in progress)</li>
       <li>MS, Quantitative Methods &amp; Modeling — Baruch College</li>
       <li>BEc, Economics — Guangdong University of Foreign Studies</li>
-      <li>CFA Charterholder &bull; CQF Institute Member</li>
+      <li>CFA Charterholder</li>
     </ul>
 
-    <div class="mt-4 pt-3 border-top">
-      <div class="row text-center">
-        <div class="col-md-4 mb-3">
-          <span class="badge badge-primary p-2 mb-1">6 ETFs</span>
-          <p class="small text-muted mb-0">Built the full FCF Leaders suite; PM since 2021</p>
-        </div>
-        <div class="col-md-4 mb-3">
-          <span class="badge badge-primary p-2 mb-1">PSN Top Guns</span>
-          <p class="small text-muted mb-0">Manager of the Decade (Q4 2025)</p>
-        </div>
-        <div class="col-md-4 mb-3">
-          <span class="badge badge-primary p-2 mb-1">GaTech MS CS</span>
-          <p class="small text-muted mb-0">Pursuing computer science at Georgia Tech</p>
-        </div>
-      </div>
-    </div>
-
-    <p class="text-muted small mt-4">For professional inquiries: <a href="{{ '/contact' | relative_url }}">Contact</a></p>
+    <p class="text-muted small mt-5">For professional inquiries, see <a href="{{ '/contact/' | relative_url }}">Contact</a>.</p>
 
   </div>
 </div>
