@@ -2,48 +2,58 @@
 layout: default
 ---
 
-{% capture background_url %}{% include dynamic_background.html %}{% endcapture %}
-<header class="masthead" style="background-image: url('{{ background_url | strip }}');">
-  <div class="overlay"></div>
+<a href="#main-content" class="skip-nav">Skip to content</a>
+
+<header class="post-header-clean">
   <div class="container">
     <div class="row">
-      <div class="col-lg-10 col-md-11 mx-auto">
-        <div class="post-heading">
-          <h1>{{ page.title }}</h1>
-          {% if page.subtitle %}<h2 class="subheading">{{ page.subtitle }}</h2>{% endif %}
-          <span class="meta">{{ page.outlet }} · {{ page.date | date: '%B %Y' }}</span>
-        </div>
+      <div class="col-lg-9 col-md-11 mx-auto">
+        {% if page.type %}<p class="post-kicker">{{ page.type | upcase }}</p>{% elsif page.outlet %}<p class="post-kicker">{{ page.outlet }}</p>{% endif %}
+        <h1>{{ page.title }}</h1>
+        {% if page.subtitle %}<p class="post-subhead">{{ page.subtitle }}</p>{% endif %}
+        <p class="post-meta">{{ page.outlet }} · {{ page.date | date: '%B %Y' }}</p>
       </div>
     </div>
   </div>
 </header>
 
-<div class="container">
-  <div class="row">
-    <div class="col-lg-9 col-md-11 mx-auto">
-      {% if page.external_url or page.video_url %}
-      <div class="media-actions mb-4">
-        {% if page.external_url %}<a href="{{ page.external_url }}" class="btn btn-primary btn-sm mr-2 mb-2" target="_blank" rel="noopener noreferrer">View original <span aria-hidden="true">↗</span></a>{% endif %}
-        {% if page.video_url %}<a href="{{ page.video_url | relative_url }}" class="btn btn-outline-primary btn-sm mb-2" target="_blank" rel="noopener noreferrer">Watch video <span aria-hidden="true">↗</span></a>{% endif %}
+<main id="main-content">
+  <div class="article-body">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-9 col-md-11 mx-auto">
+
+          {% if page.external_url or page.video_url %}
+          <div class="media-actions mb-4">
+            {% if page.external_url %}<a href="{{ page.external_url }}" class="btn btn-primary btn-sm" target="_blank" rel="noopener noreferrer">View original <span aria-hidden="true">↗</span></a>{% endif %}
+            {% if page.video_url %}<a href="{{ page.video_url | relative_url }}" class="btn btn-outline-primary btn-sm" target="_blank" rel="noopener noreferrer">Watch video <span aria-hidden="true">↗</span></a>{% endif %}
+          </div>
+          {% endif %}
+
+          {% if page.video_embed %}
+          <div class="media-embed mb-4">
+            <div class="embed-responsive embed-responsive-16by9">{{ page.video_embed }}</div>
+          </div>
+          {% endif %}
+          {% if page.audio_embed %}
+          <div class="media-embed mb-4">{{ page.audio_embed }}</div>
+          {% endif %}
+
+          {{ content }}
+
+          {% if page.key_quotes %}
+          <div class="key-quotes my-4">
+            <h3>Key excerpts</h3>
+            {% for quote in page.key_quotes %}
+            <blockquote class="blockquote media-quote"><p class="mb-0">"{{ quote.text }}"</p>{% if quote.context %}<footer class="blockquote-footer">{{ quote.context }}</footer>{% endif %}</blockquote>
+            {% endfor %}
+          </div>
+          {% endif %}
+
+          <hr>
+          <a href="{{ '/media/' | relative_url }}">← All media</a>
+        </div>
       </div>
-      {% endif %}
-
-      {% if page.video_embed %}<div class="media-embed mb-4"><div class="embed-responsive embed-responsive-16by9">{{ page.video_embed }}</div></div>{% endif %}
-      {% if page.audio_embed %}<div class="media-embed mb-4">{{ page.audio_embed }}</div>{% endif %}
-
-      {{ content }}
-
-      {% if page.key_quotes %}
-      <div class="key-quotes my-4">
-        <h3>Key excerpts</h3>
-        {% for quote in page.key_quotes %}
-        <blockquote class="blockquote media-quote"><p class="mb-0">“{{ quote.text }}”</p>{% if quote.context %}<footer class="blockquote-footer">{{ quote.context }}</footer>{% endif %}</blockquote>
-        {% endfor %}
-      </div>
-      {% endif %}
-
-      <hr class="my-5">
-      <a href="{{ '/media/' | relative_url }}">← All media</a>
     </div>
   </div>
-</div>
+</main>

@@ -2,31 +2,35 @@
 layout: default
 ---
 
-{% capture background_url %}{% include dynamic_background.html %}{% endcapture %}
-<header class="masthead" style="background-image: url('{{ background_url | strip }}');">
-  <div class="overlay"></div>
+<div class="reading-progress" id="readingProgress" role="progressbar" aria-label="Reading progress"></div>
+
+<a href="#main-content" class="skip-nav">Skip to content</a>
+
+<header class="post-header-clean">
   <div class="container">
     <div class="row">
-      <div class="col-lg-10 col-md-11 mx-auto">
-        <div class="post-heading">
-          <h1>{{ page.title }}</h1>
-          {% if page.subtitle %}<h2 class="subheading">{{ page.subtitle }}</h2>{% endif %}
-          <span class="meta">By <a href="{{ '/about/' | relative_url }}">{{ page.author | default: site.author }}</a> · {{ page.date | date: '%B %d, %Y' }} · {% include read_time.html content=page.content %}</span>
-        </div>
+      <div class="col-lg-9 col-md-11 mx-auto">
+        {% if page.tags %}<p class="post-kicker">{{ page.tags | first | upcase }}</p>{% endif %}
+        <h1>{{ page.title }}</h1>
+        {% if page.subtitle %}<p class="post-subhead">{{ page.subtitle }}</p>{% endif %}
+        <p class="post-meta">By <a href="{{ '/about/' | relative_url }}">{{ page.author | default: site.author }}</a> · {{ page.date | date: '%B %d, %Y' }} · {% include read_time.html content=page.content %}</p>
       </div>
     </div>
   </div>
 </header>
 
-<article class="container">
-  <div class="row">
-    <div class="col-lg-9 col-md-11 mx-auto">
-      {{ content }}
-      <hr class="my-5">
-      <div class="post-footer-nav d-flex flex-wrap justify-content-between align-items-center">
-        <a href="{{ '/writing/' | relative_url }}">← All writing</a>
-        <a href="{{ '/about/' | relative_url }}">About Vince →</a>
+<main id="main-content">
+  <article class="article-body">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-9 col-md-11 mx-auto">
+          {{ content }}
+          <div class="post-footer-nav">
+            <a href="{{ '/writing/' | relative_url }}">← All writing</a>
+            <a href="{{ '/about/' | relative_url }}">About Vince →</a>
+          </div>
+        </div>
       </div>
     </div>
-  </div>
-</article>
+  </article>
+</main>

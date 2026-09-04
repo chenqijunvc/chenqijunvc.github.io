@@ -2,25 +2,24 @@
 layout: default
 ---
 
-<!-- Page Header -->
-{% capture background_url %}{% include dynamic_background.html %}{% endcapture %}
-<header class="masthead" style="background-image: url('{{ background_url | strip }}');">
-  <div class="overlay"></div>
-    <div class="container">
-      <div class="row">
-        <div class="col-lg-10 col-md-11 mx-auto">
-          <div class="page-heading">
-            <h1>{{ page.title }}</h1>
-            {% if page.description %}
-            <span class="subheading">{{ page.description }}</span>
-            {% endif %}
-          </div>
-        </div>
+<a href="#main-content" class="skip-nav">Skip to content</a>
+
+<header class="page-header-clean">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-10 col-md-11 mx-auto">
+        {% if page.kicker %}<p class="page-kicker">{{ page.kicker }}</p>{% endif %}
+        <h1>{{ page.title }}</h1>
+        {% if page.description %}
+        <p class="page-subhead">{{ page.description }}</p>
+        {% endif %}
       </div>
     </div>
-  </header>
+  </div>
+</header>
 
-  <div class="container{% if page.wide %} content-wide{% endif %}">
+<main id="main-content">
+  <div class="container{% if page.wide %} content-wide{% endif %}" style="padding-top: 3.5rem; padding-bottom: 5rem;">
     <div class="row">
       <div class="col-lg-10 col-md-11 mx-auto{% if page.wide %} col-content{% endif %}">
 
@@ -29,3 +28,4 @@ layout: default
       </div>
     </div>
   </div>
+</main>

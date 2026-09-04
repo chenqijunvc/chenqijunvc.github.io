@@ -75,14 +75,21 @@
   </script>
   {% endif %}
 
+  <!-- Preconnect for performance -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link rel="preconnect" href="https://use.fontawesome.com">
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700&display=swap" rel="stylesheet">
-  <script src="https://use.fontawesome.com/releases/v5.15.4/js/all.js" crossorigin="anonymous"></script>
+  <link rel="preconnect" href="https://cdnjs.cloudflare.com">
 
+  <!-- Single combined Google Fonts request with display=swap -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Montserrat:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <!-- FontAwesome via CSS (no JS overhead, no icon flash) -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha512-1ycn6IcaQQ40/MKBW37GKE4y5G6kaE2jQ8bPVdLSOwzrjgIkINNXVJH2VNg5mSNaOQEL/fAq3MBh30lFz0kA==" crossorigin="anonymous" referrerpolicy="no-referrer">
+
+  <!-- Compiled theme CSS -->
   <link rel="stylesheet" href="{{ '/assets/main.css' | relative_url }}">
+  <!-- Component + design overrides -->
   <link rel="stylesheet" href="{{ '/assets/site-overrides.css' | relative_url }}">
+
   <link rel="alternate" type="application/rss+xml" title="{{ site.title | escape }}" href="{{ '/feed.xml' | relative_url }}">
 </head>

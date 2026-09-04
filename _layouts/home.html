@@ -2,7 +2,9 @@
 layout: default
 ---
 
-<main class="home-page">
+<a href="#main-content" class="skip-nav">Skip to content</a>
+
+<main class="home-page" id="main-content">
   <section class="personal-hero">
     <div class="container">
       <div class="row">
@@ -18,19 +20,22 @@ layout: default
         </div>
       </div>
     </div>
+    <a class="scroll-cue" href="#section-current" aria-label="Scroll down">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg>
+    </a>
   </section>
 
-  <section class="home-section home-current" aria-labelledby="building-portfoliofuture">
+  <section class="home-section home-current" id="section-current" aria-labelledby="building-portfoliofuture">
     <div class="container">
       <div class="row align-items-center">
-        <div class="col-lg-5 mb-4 mb-lg-0">
+        <div class="col-lg-5 mb-4 mb-lg-0 reveal">
           <p class="section-kicker">Current</p>
           <h2 id="building-portfoliofuture">Building PortfolioFuture</h2>
           <p class="section-lead">PortfolioFuture is building an investment intelligence platform for better portfolio decisions. It starts with the first portfolio question: <strong>what should I invest in?</strong></p>
           <p>The current product focuses on investment discovery: helping investors understand what a fund actually delivers and whether a better alternative may exist. That discovery layer is the first step toward a broader system for building, monitoring, and improving portfolios.</p>
           <p class="mb-0"><a class="text-link-strong" href="{{ site.portfoliofuture_url }}" target="_blank" rel="noopener noreferrer">Explore PortfolioFuture <span aria-hidden="true">↗</span></a></p>
         </div>
-        <div class="col-lg-7">
+        <div class="col-lg-7 reveal" style="transition-delay:.1s">
           <a class="portfoliofuture-visual" href="{{ site.portfoliofuture_url }}" target="_blank" rel="noopener noreferrer" aria-label="Visit PortfolioFuture">
             <picture>
               <source media="(max-width: 767px)" srcset="{{ '/img/portfoliofuture-hero-mobile.webp' | relative_url }}" width="1183" height="793">
@@ -46,24 +51,24 @@ layout: default
     <div class="container">
       <div class="row">
         <div class="col-lg-10 mx-auto">
-          <p class="section-kicker">Foundation</p>
-          <h2 id="foundation-title">Built from quantitative investing experience</h2>
-          <p class="section-lead max-copy">Before PortfolioFuture, my work spanned the full investment stack—from research infrastructure and factor models to portfolio construction, ETF operations, and day-to-day portfolio management.</p>
-          <div class="proof-grid">
-            <div class="proof-item">
-              <div class="proof-value">2017–2026</div>
+          <p class="section-kicker reveal">Foundation</p>
+          <h2 id="foundation-title" class="reveal">Built from quantitative investing experience</h2>
+          <p class="section-lead max-copy reveal">Before PortfolioFuture, my work spanned the full investment stack—from research infrastructure and factor models to portfolio construction, ETF operations, and day-to-day portfolio management.</p>
+          <div class="proof-grid stagger-children">
+            <div class="proof-item reveal">
+              <div class="proof-value" data-count-target="2017–2026">2017–2026</div>
               <div class="proof-label">Quantitative research &amp; portfolio management</div>
             </div>
-            <div class="proof-item">
+            <div class="proof-item reveal">
               <div class="proof-value">6 ETFs</div>
               <div class="proof-label">Named PM roles documented in SEC filings</div>
             </div>
-            <div class="proof-item">
+            <div class="proof-item reveal">
               <div class="proof-value">CFA + CS/AI</div>
               <div class="proof-label">CFA charterholder; Georgia Tech MSCS in progress</div>
             </div>
           </div>
-          <a class="btn btn-outline-primary" href="{{ '/track-record/' | relative_url }}">View prior track record</a>
+          <a class="btn btn-outline-primary reveal" href="{{ '/track-record/' | relative_url }}">View prior track record</a>
         </div>
       </div>
     </div>
@@ -73,18 +78,18 @@ layout: default
     <div class="container">
       <div class="row">
         <div class="col-lg-10 mx-auto">
-          <div class="section-heading-row">
+          <div class="section-heading-row reveal">
             <div>
               <p class="section-kicker">Research</p>
               <h2 id="thinking-title">Selected research &amp; writing</h2>
             </div>
             <a href="{{ '/writing/' | relative_url }}" class="section-all-link">All writing →</a>
           </div>
-          <div class="row">
+          <div class="row stagger-children">
             {% assign home_posts = site.posts | where: "home_featured", true | sort: "date" | reverse %}
             {% for post in home_posts limit:3 %}
             <div class="col-md-4 mb-4">
-              <article class="editorial-card h-100">
+              <article class="editorial-card h-100 reveal">
                 <p class="editorial-meta">{{ post.date | date: '%Y' }}</p>
                 <h3><a href="{{ post.url | relative_url }}">{{ post.title }}</a></h3>
                 <p>{{ post.excerpt | strip_html | truncatewords: 24 }}</p>
@@ -102,7 +107,7 @@ layout: default
     <div class="container">
       <div class="row">
         <div class="col-lg-10 mx-auto">
-          <div class="section-heading-row">
+          <div class="section-heading-row reveal">
             <div>
               <p class="section-kicker">Media</p>
               <h2 id="media-title">Selected appearances</h2>
@@ -112,7 +117,7 @@ layout: default
           {% assign home_media = site.media | where: "home_featured", true | sort: "date" | reverse %}
           <div class="media-list-compact">
             {% for item in home_media %}
-            <article class="media-row">
+            <article class="media-row reveal-left">
               <div class="media-date">{{ item.date | date: '%b %Y' }}</div>
               <div class="media-copy">
                 <h3>{% if item.external_url %}<a href="{{ item.external_url }}" target="_blank" rel="noopener noreferrer">{{ item.title }}</a>{% else %}<a href="{{ item.url | relative_url }}">{{ item.title }}</a>{% endif %}</h3>
