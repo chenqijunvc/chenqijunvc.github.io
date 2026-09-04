@@ -20,8 +20,8 @@ background: '/img/bg-about.jpg'
           <article class="media-row">
             <div class="media-date">{{ item.date | date: '%b %Y' }}</div>
             <div class="media-copy">
-              <h3>{% if item.external_url %}<a href="{{ item.external_url }}" target="_blank" rel="noopener noreferrer">{{ item.title }}</a>{% else %}<a href="{{ item.url | relative_url }}">{{ item.title }}</a>{% endif %}</h3>
-              <p><strong>{{ item.outlet }}</strong>{% if item.subtitle %} — {{ item.subtitle }}{% endif %}</p>
+              <h3><a href="{{ item.url | relative_url }}">{{ item.title }}</a></h3>
+              <p><strong>{{ item.outlet }}</strong>{% if item.subtitle %} — {{ item.subtitle }}{% endif %}{% if item.external_url %} &nbsp;<a href="{{ item.external_url }}" target="_blank" rel="noopener noreferrer" class="small text-muted">[External Link ↗]</a>{% endif %}</p>
             </div>
           </article>
           {% endif %}
@@ -37,8 +37,8 @@ background: '/img/bg-about.jpg'
           <article class="media-row">
             <div class="media-date">{{ item.date | date: '%b %Y' }}</div>
             <div class="media-copy">
-              <h3>{% if item.external_url %}<a href="{{ item.external_url }}" target="_blank" rel="noopener noreferrer">{{ item.title }}</a>{% else %}<a href="{{ item.url | relative_url }}">{{ item.title }}</a>{% endif %}</h3>
-              <p><strong>{{ item.outlet }}</strong>{% if item.subtitle %} — {{ item.subtitle }}{% endif %}</p>
+              <h3><a href="{{ item.url | relative_url }}">{{ item.title }}</a></h3>
+              <p><strong>{{ item.outlet }}</strong>{% if item.subtitle %} — {{ item.subtitle }}{% endif %}{% if item.external_url %} &nbsp;<a href="{{ item.external_url }}" target="_blank" rel="noopener noreferrer" class="small text-muted">[External Link ↗]</a>{% endif %}</p>
             </div>
           </article>
           {% endif %}

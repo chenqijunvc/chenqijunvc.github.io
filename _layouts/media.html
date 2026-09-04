@@ -30,7 +30,14 @@ layout: default
           </div>
           {% endif %}
 
-          {% if page.video_embed %}
+          {% if page.video_url %}
+          <div class="media-embed mb-4">
+            <video width="100%" controls preload="metadata" style="max-height: 480px; background: #000; border-radius: var(--r-md); display: block;">
+              <source src="{{ page.video_url | relative_url }}" type="video/mp4">
+              Your browser does not support the video tag.
+            </video>
+          </div>
+          {% elsif page.video_embed %}
           <div class="media-embed mb-4">
             <div class="embed-responsive embed-responsive-16by9">{{ page.video_embed }}</div>
           </div>
