@@ -10,7 +10,7 @@ background: '/img/bg-about.jpg'
 
 <p>I spent nearly a decade working across quantitative research, investment systems, and portfolio management. That experience shaped the problem I am now pursuing: before a portfolio can be built well, an investor needs to understand what each investment actually delivers, what can be explained or replicated, what differentiated value remains, and what alternatives may achieve a similar objective more efficiently.</p>
 
-<hr class="my-5">
+<hr>
 
 <h2>Building PortfolioFuture</h2>
 
@@ -20,7 +20,7 @@ background: '/img/bg-about.jpg'
 
 <p><a class="btn btn-primary btn-sm" href="{{ site.portfoliofuture_url }}" target="_blank" rel="noopener noreferrer">Visit PortfolioFuture <span aria-hidden="true">↗</span></a></p>
 
-<hr class="my-5">
+<hr>
 
 <h2>Before PortfolioFuture</h2>
 
@@ -33,7 +33,7 @@ background: '/img/bg-about.jpg'
   <a href="{{ '/writing/' | relative_url }}"><strong>Research &amp; Writing</strong><span>Published work on active management, free cash flow, and ETFs →</span></a>
 </div>
 
-<hr class="my-5">
+<hr>
 
 <h2>Technical foundation</h2>
 

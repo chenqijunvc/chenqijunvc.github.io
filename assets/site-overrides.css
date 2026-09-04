@@ -12,84 +12,159 @@
   --font-mono:    'SF Mono', 'Roboto Mono', 'Source Code Pro', monospace;
 }
 
+/* =============================================================================
+   DESIGN SYSTEM TYPOGRAPHY HIERARCHY:
+   1. DISPLAY (Montserrat): Headings (h1-h6), kickers, nav links, buttons, stat numbers
+   2. BODY (Inter): All body text, paragraphs, lead paragraphs, lists, links, blockquotes
+   3. MONO (SF Mono / monospace): Code blocks, inline tags
+   ============================================================================= */
+
+/* Universal font family assignment */
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
 body,
-body p,
-body li,
-body a,
-body .lead,
-body blockquote,
+p,
+li,
+a,
+span,
+blockquote,
+div,
 main,
 article {
-  font-family: var(--font-body) !important;
+  font-family: var(--font-body);
 }
 
-body {
-  font-size: 1.05rem !important;
-  line-height: 1.82 !important;
-  color: var(--text) !important;
-}
-
-body p {
-  line-height: 1.82 !important;
-  margin: 0 0 1.35rem 0 !important;
-  color: var(--text);
-}
-
-body p a {
-  text-decoration: none !important;
-}
-
-body p a:hover {
-  text-decoration: underline !important;
-}
-
+/* Headings & Interactive Display UI */
 h1, h2, h3, h4, h5, h6,
+.h1, .h2, .h3, .h4, .h5, .h6,
 .page-kicker,
 .post-kicker,
 .section-kicker,
+.hero-eyebrow,
+.hero-role,
 .navbar-brand,
 .nav-link,
-.btn {
+.btn,
+.btn-sm,
+.btn-lg,
+.proof-value,
+.writing-date,
+.media-date,
+.editorial-meta,
+.writing-tags,
+.contact-label,
+.footer-name,
+.scroll-cue,
+.card-link,
+.section-all-link,
+.text-link-strong {
   font-family: var(--font-display) !important;
 }
 
-main h1, main h2, main h3, main h4, main h5, main h6,
-article h1, article h2, article h3, article h4, article h5, article h6 {
-  font-family: var(--font-display) !important;
-  color: var(--ink) !important;
+/* Code & Monospace */
+code, kbd, samp, pre {
+  font-family: var(--font-mono) !important;
 }
 
-main h2, article h2 {
-  font-size: clamp(1.6rem, 2.8vw, 2.2rem) !important;
-  font-weight: 800 !important;
-  letter-spacing: -.035em !important;
-  line-height: 1.2 !important;
-  margin: 2.8rem 0 1.2rem 0 !important;
-}
-
-main h3, article h3 {
-  font-size: clamp(1.2rem, 2vw, 1.45rem) !important;
-  font-weight: 700 !important;
-  letter-spacing: -.02em !important;
-  line-height: 1.3 !important;
-  margin: 2.2rem 0 .9rem 0 !important;
-}
-
-main .lead, article .lead {
-  font-size: 1.22rem !important;
-  line-height: 1.78 !important;
-  color: var(--ink) !important;
+/* ── Base Text ───────────────────────────────────────────────────────────── */
+body {
+  font-family: var(--font-body) !important;
+  font-size: 1.05rem !important;
   font-weight: 400 !important;
-}
-
-main ul, main ol, article ul, article ol {
   line-height: 1.82 !important;
   color: var(--text) !important;
-  padding-left: 1.4rem !important;
-  margin-bottom: 1.5rem !important;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Standard Paragraphs (Uniform across all pages) */
+p, main p, article p {
+  font-family: var(--font-body) !important;
+  font-size: 1.05rem !important;
+  font-weight: 400 !important;
+  line-height: 1.82 !important;
+  margin: 0 0 1.35rem 0 !important;
+  color: var(--text) !important;
+}
+
+/* Lead Paragraphs (Introductory summary paragraph) */
+p.lead, main p.lead, article p.lead, .section-lead {
+  font-family: var(--font-body) !important;
+  font-size: 1.15rem !important;
+  font-weight: 400 !important;
+  line-height: 1.82 !important;
+  color: var(--ink) !important;
+  margin-bottom: 1.6rem !important;
+}
+
+/* Bold text inside body paragraphs */
+strong, b, main strong, article strong {
+  font-family: var(--font-body) !important;
+  font-weight: 700 !important;
+  color: var(--ink) !important;
+}
+
+/* Links inside paragraphs */
+p a, li a, main p a, article p a {
+  font-family: inherit;
+  color: var(--blue) !important;
+  text-decoration: none !important;
+  transition: color var(--t-fast);
+}
+
+p a:hover, li a:hover, main p a:hover, article p a:hover {
+  color: var(--blue-dark) !important;
+  text-decoration: underline !important;
+}
+
+/* ── Heading Hierarchy ───────────────────────────────────────────────────── */
+/* Level 1: Page Titles */
+main h1, article h1, .page-header-clean h1 {
+  font-family: var(--font-display) !important;
+  font-size: clamp(2.4rem, 5.5vw, 4rem) !important;
+  font-weight: 800 !important;
+  letter-spacing: -.055em !important;
+  line-height: 1.05 !important;
+  color: var(--ink) !important;
+  margin: 0 0 .5rem 0 !important;
+}
+
+/* Level 2: Major Section Headings */
+main h2, article h2, .home-section h2 {
+  font-family: var(--font-display) !important;
+  font-size: clamp(1.65rem, 3vw, 2.35rem) !important;
+  font-weight: 800 !important;
+  letter-spacing: -.04em !important;
+  line-height: 1.15 !important;
+  color: var(--ink) !important;
+  margin: 2.8rem 0 1rem 0 !important;
+}
+
+/* Level 3: Subsection / Card Headings */
+main h3, article h3, .editorial-card h3, .media-copy h3, .writing-copy h3 {
+  font-family: var(--font-display) !important;
+  font-size: clamp(1.15rem, 2vw, 1.4rem) !important;
+  font-weight: 700 !important;
+  letter-spacing: -.025em !important;
+  line-height: 1.3 !important;
+  color: var(--ink) !important;
+  margin: 2rem 0 .75rem 0 !important;
+}
+
+/* Lists */
+main ul, main ol, article ul, article ol {
+  font-family: var(--font-body) !important;
+  font-size: 1.05rem !important;
+  line-height: 1.82 !important;
+  color: var(--text) !important;
+  padding-left: 1.5rem !important;
+  margin-bottom: 1.6rem !important;
 }
 
 main li, article li {
+  font-family: var(--font-body) !important;
   margin-bottom: .45rem !important;
 }
 
