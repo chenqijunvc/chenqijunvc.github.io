@@ -1,35 +1,31 @@
 ---
 layout: page
 title: Writing by Topic
-description: "Browse Vince Chen's investment research and articles by topic."
+description: "Browse Vince (Qijun) Chen's investment research and articles by topic."
 background: '/img/bg-post.jpg'
 sitemap: false
 ---
 
-<div class="row">
-  <div class="col-lg-10 col-md-12 mx-auto">
-    <p class="lead">Browse the research archive by topic.</p>
-    {% for category_item in site.data.categories.categories %}
-      {% assign category_slug = category_item.slug %}
-      {% assign posts_in_category = site.posts | where_exp: "post", "post.categories contains category_slug" %}
-      {% if posts_in_category.size > 0 %}
-      <section class="my-5">
-        <h2>{{ category_item.name }}</h2>
-        {% if category_item.description %}<p class="text-muted">{{ category_item.description }}</p>{% endif %}
-        <div class="writing-list">
-          {% for post in posts_in_category %}
-          <article class="writing-row">
-            <div class="writing-date">{{ post.date | date: '%Y' }}</div>
-            <div class="writing-copy">
-              <h3><a href="{{ post.url | relative_url }}">{{ post.title }}</a></h3>
-              <p>{{ post.excerpt | strip_html | truncatewords: 28 }}</p>
-            </div>
-          </article>
-          {% endfor %}
+<p class="lead">Browse the research archive by topic.</p>
+{% for category_item in site.data.categories.categories %}
+  {% assign category_slug = category_item.slug %}
+  {% assign posts_in_category = site.posts | where_exp: "post", "post.categories contains category_slug" %}
+  {% if posts_in_category.size > 0 %}
+  <section class="my-5">
+    <h2>{{ category_item.name }}</h2>
+    {% if category_item.description %}<p class="text-muted">{{ category_item.description }}</p>{% endif %}
+    <div class="writing-list">
+      {% for post in posts_in_category %}
+      <article class="writing-row">
+        <div class="writing-date">{{ post.date | date: '%Y' }}</div>
+        <div class="writing-copy">
+          <h3><a href="{{ post.url | relative_url }}">{{ post.title }}</a></h3>
+          <p>{{ post.excerpt | strip_html | truncatewords: 28 }}</p>
         </div>
-      </section>
-      {% endif %}
-    {% endfor %}
-    <p><a href="{{ '/writing/' | relative_url }}">← All writing</a></p>
-  </div>
-</div>
+      </article>
+      {% endfor %}
+    </div>
+  </section>
+  {% endif %}
+{% endfor %}
+<p><a href="{{ '/writing/' | relative_url }}">← All writing</a></p>

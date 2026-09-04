@@ -1,15 +1,12 @@
 ---
 layout: page
-title: About Vince Chen
-seo_title: "About Vince Chen | Founder of PortfolioFuture"
+title: About Vince (Qijun) Chen
+seo_title: "About Vince (Qijun) Chen | Founder of PortfolioFuture"
 description: "Founder of PortfolioFuture, with a background in quantitative investment systems, research, and institutional portfolio management."
 background: '/img/bg-about.jpg'
 ---
 
-<div class="row">
-  <div class="col-lg-10 col-md-12 mx-auto">
-
-    <p class="lead">I’m the founder of <a href="{{ site.portfoliofuture_url }}" target="_blank" rel="noopener noreferrer"><strong>PortfolioFuture</strong></a> and a quantitative investor by background.</p>
+<p class="lead">I’m the founder of <a href="{{ site.portfoliofuture_url }}" target="_blank" rel="noopener noreferrer"><strong>PortfolioFuture</strong></a> and a quantitative investor by background.</p>
 
     <p>I spent nearly a decade working across quantitative research, investment systems, and portfolio management. That experience shaped the problem I am now pursuing: before a portfolio can be built well, an investor needs to understand what each investment actually delivers, what can be explained or replicated, what differentiated value remains, and what alternatives may achieve a similar objective more efficiently.</p>
 
@@ -51,6 +48,3 @@ background: '/img/bg-about.jpg'
     </ul>
 
     <p class="text-muted small mt-5">For professional inquiries, see <a href="{{ '/contact/' | relative_url }}">Contact</a>.</p>
-
-  </div>
-</div>

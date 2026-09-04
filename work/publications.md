@@ -1,8 +1,8 @@
 ---
 layout: page
 title: Publications
-seo_title: "Publications | Vince Chen"
-description: "Published investment research by Vince Chen."
+seo_title: "Publications | Vince (Qijun) Chen"
+description: "Published investment research by Vince (Qijun) Chen."
 background: '/img/bg-post.jpg'
 ---
 <meta http-equiv="refresh" content="0; url={{ '/writing/' | relative_url }}">

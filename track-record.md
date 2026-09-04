@@ -1,15 +1,12 @@
 ---
 layout: page
 title: Prior Investment Track Record
-seo_title: "Prior Investment Track Record | Vince Chen"
+seo_title: "Prior Investment Track Record | Vince (Qijun) Chen"
 description: "Quantitative investment systems, research, and portfolio management from 2017 through 2026."
 background: '/img/bg-post.jpg'
 ---
 
-<div class="row">
-  <div class="col-lg-10 col-md-12 mx-auto">
-
-    <p class="lead">From 2017 through 2026, I worked across quantitative research, investment-system development, and portfolio management at FCF Advisors / Abacus FCF Advisors. This page documents that prior institutional work.</p>
+<p class="lead">From 2017 through 2026, I worked across quantitative research, investment-system development, and portfolio management at FCF Advisors / Abacus FCF Advisors. This page documents that prior institutional work.</p>
 
     <div class="record-summary my-5">
       <div><strong>2017–2026</strong><span>Quantitative investing</span></div>
@@ -54,6 +51,3 @@ background: '/img/bg-post.jpg'
     </ul>
 
     <p class="small text-muted mt-4">This page describes prior professional responsibilities and published public records. It is not a presentation of current fund management responsibility or an offer of investment advisory services.</p>
-
-  </div>
-</div>

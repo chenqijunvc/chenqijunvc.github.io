@@ -1,14 +1,12 @@
 ---
 layout: page
 title: Media
-seo_title: "Media, Speaking & Press | Vince Chen"
-description: "Speaking engagements, interviews, market commentary, and industry recognition referencing Vince Chen's investment work."
+seo_title: "Media, Speaking & Press | Vince (Qijun) Chen"
+description: "Speaking engagements, interviews, market commentary, and industry recognition referencing Vince (Qijun) Chen's investment work."
 background: '/img/bg-about.jpg'
 ---
 
-<div class="row">
-  <div class="col-lg-10 col-md-12 mx-auto">
-    <p class="lead">Speaking engagements, interviews, market commentary, and external recognition from my prior investment-management work and ongoing research activity.</p>
+<p class="lead">Speaking engagements, interviews, market commentary, and external recognition from my prior investment-management work and ongoing research activity.</p>
 
     {% assign all_media = site.media | sort: 'date' | reverse %}
 
@@ -45,5 +43,3 @@ background: '/img/bg-about.jpg'
         {% endfor %}
       </div>
     </section>
-  </div>
-</div>
