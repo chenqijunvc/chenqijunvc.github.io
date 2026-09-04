@@ -42,6 +42,13 @@
   }
 
   /* ── Scroll-reveal (IntersectionObserver) ───────────────────────────────── */
+  // Automatically apply reveal class to inner page cards and sections if not already tagged
+  document.querySelectorAll('main section, .record-summary, .strategy-grid, .about-links-grid, .editorial-card, .media-row, .writing-row').forEach(function(el) {
+    if (!el.classList.contains('reveal') && !el.classList.contains('reveal-left')) {
+      el.classList.add('reveal');
+    }
+  });
+
   const revealTargets = document.querySelectorAll('.reveal, .reveal-left');
   if (revealTargets.length && 'IntersectionObserver' in window) {
     const observer = new IntersectionObserver(function (entries) {
@@ -52,8 +59,8 @@
         }
       });
     }, {
-      threshold: 0.12,
-      rootMargin: '0px 0px -40px 0px'
+      threshold: 0.08,
+      rootMargin: '0px 0px -30px 0px'
     });
 
     revealTargets.forEach(function (el) {

@@ -1,37 +1,5 @@
 // Responsive adjustments only — base styles live in custom-styles.scss
 
-@media only screen and (min-width: 768px) {
-  header.masthead {
-    .page-heading h1,
-    .site-heading h1 {
-      font-size: 4rem;
-    }
-    .page-heading,
-    .site-heading,
-    .post-heading {
-      padding: 200px 0;
-    }
-  }
-}
-
-@media (max-width: 768px) {
-  header.masthead {
-    min-height: 250px;
-    .page-heading,
-    .site-heading,
-    .post-heading {
-      padding: 120px 0 80px;
-    }
-    .page-heading h1,
-    .site-heading h1 {
-      font-size: 2rem !important;
-    }
-    .page-heading .subheading,
-    .site-heading .subheading {
-      font-size: 1.1rem !important;
-    }
-  }
-}
 
 @media (max-width: 576px) {
   .featured-post-card .row {

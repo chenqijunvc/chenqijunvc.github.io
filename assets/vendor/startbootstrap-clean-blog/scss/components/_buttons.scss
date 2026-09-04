@@ -1,11 +1,10 @@
-// Bootstrap overrides for this template
+// Bootstrap overrides aligned with site theme
 .btn {
-    font-size: 14px;
-    font-weight: 800;
-    padding: 15px 25px;
-    letter-spacing: 1px;
-    text-transform: uppercase;
-    border-radius: 0;
+    font-size: .82rem;
+    font-weight: 600;
+    padding: .7rem 1.6rem;
+    letter-spacing: .04em;
+    border-radius: 8px;
     font-family: $headings-font-family;
 }
 
@@ -17,12 +16,12 @@
     &:focus,
     &:active {
         color: $white;
-        background-color: darken($primary, 7.5) !important;
-        border-color: darken($primary, 7.5) !important;
+        background-color: darken($primary, 10%) !important;
+        border-color: darken($primary, 10%) !important;
     }
 }
 
 .btn-lg {
-    font-size: 16px;
-    padding: 25px 35px;
+    font-size: .95rem;
+    padding: .85rem 2rem;
 }
