@@ -44,8 +44,9 @@ og_image: '/img/posts/Risk.jpg'
 <section class="my-5" id="free-cash-flow" aria-labelledby="research-archive">
   <h2 id="research-archive">Investment research and white papers</h2>
   <div class="writing-list">
-    {% assign archive_posts = site.posts | where_exp: "post", "post.publication_group != 'current' and post.content_type != 'media'" | sort: 'date' | reverse %}
+    {% assign archive_posts = site.posts | sort: 'date' | reverse %}
     {% for post in archive_posts %}
+    {% if post.publication_group != 'current' and post.content_type != 'media' %}
     <article class="writing-row">
       <div class="writing-date">{{ post.date | date: '%Y' }}</div>
       <div class="writing-copy">
@@ -54,6 +55,7 @@ og_image: '/img/posts/Risk.jpg'
         <p class="writing-tags">{{ post.publication_type | default: 'Research article' }}{% if post.source_url %} · <a href="{{ post.source_url }}" target="_blank" rel="noopener noreferrer">Original source ↗</a>{% endif %}</p>
       </div>
     </article>
+    {% endif %}
     {% endfor %}
   </div>
 </section>

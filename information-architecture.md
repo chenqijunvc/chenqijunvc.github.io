@@ -1,3 +1,11 @@
+---
+layout: page
+title: Information Architecture Audit
+description: Internal information architecture audit for the Vince Chen personal site.
+robots: noindex, follow
+sitemap: false
+---
+
 # Information Architecture Audit — chenqijunvc.github.io
 
 ## Executive Summary
