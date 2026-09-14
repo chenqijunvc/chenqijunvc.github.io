@@ -6,7 +6,7 @@ description: "Vince (Qijun) Chen's 2017–2026 quantitative investment research,
 og_image: '/img/posts/Risk.jpg'
 ---
 
-<p class="lead">From 2017 through 2026, I worked across quantitative investment research, investment-system development, and ETF portfolio management. This page documents that historical work using public records and original research.</p>
+<p class="lead">I helped build the quantitative research and portfolio-management platform behind FCF Advisors, an asset manager reported at approximately $600 million in assets under management at the time of its 2024 acquisition by Abacus Life. This page documents the strategy scale, PSN recognition, and historical PM responsibilities behind that record.</p>
 
 <section id="career-chronology" aria-labelledby="chronology-title">
   <h2 id="chronology-title">Career chronology</h2>
@@ -28,7 +28,7 @@ og_image: '/img/posts/Risk.jpg'
 
 <section id="portfolio-management" aria-labelledby="pm-title">
   <h2 id="pm-title">Historical portfolio management</h2>
-  <p>Public records document portfolio-manager responsibilities beginning in 2021 and later named PM roles across the six-fund Abacus FCF ETF suite.</p>
+<p>Public records document portfolio-manager responsibilities beginning in 2021 and later named PM roles across the six-fund Abacus FCF ETF suite. The FCF Leaders Strategy subsequently received a PSN Top Guns Manager of the Decade designation for Q4 2025 while Chen was identified as its portfolio manager.</p>
   <div class="strategy-grid">
     <div><strong>ABFL</strong><span>U.S. Large Cap</span></div>
     <div><strong>ABLG</strong><span>International</span></div>
