@@ -5,11 +5,12 @@ Personal website and research archive for **Vince (Qijun) Chen, CFA**, founder o
 ## Site structure
 
 - `/` — current identity and PortfolioFuture
-- `/about/` — founder story and professional background
 - `/track-record/` — prior quantitative investment systems, research, and portfolio-management work
-- `/writing/` — investment research and articles
+- `/publications/` — authored research, working papers, and investment publications
 - `/media/` — speaking, interviews, press, and recognition
-- `/contact/` — direct contact links
+- `/contact/` — direct contact links (utility page, not indexed)
+
+`/about/` and `/writing/` are preserved as noindex consolidation pages that point to the canonical home and publications pages.
 
 `PortfolioFuture` in the primary navigation links to the company website and opens in a new tab.
 

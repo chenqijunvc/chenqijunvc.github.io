@@ -1,14 +1,13 @@
 title:              "Vince (Qijun) Chen, CFA"
 brand_name:         "Vince Chen"
 email:              chenqijunvc@gmail.com
-description:        "Founder of PortfolioFuture and quantitative investor with a background in investment systems, research, and institutional portfolio management."
+description:        "Founder & CEO of PortfolioFuture; quantitative investor and researcher with prior ETF portfolio-management experience."
 author:             "Vince (Qijun) Chen, CFA"
 baseurl:            ""
 url:                "https://chenqijunvc.github.io"
 portfoliofuture_url: "https://portfoliofuture.com"
 
 # SEO and social
-keywords:           "Vince Chen, Qijun Chen, PortfolioFuture, quantitative investing, portfolio management, investment research, investment systems, fund analysis, CFA, Georgia Tech"
 lang:               "en"
 locale:             "en_US"
 default_og_image:   "/img/bg-index.jpg"
@@ -20,7 +19,7 @@ linkedin_username:  vinceqijunchen
 author_info:
   name:             "Vince (Qijun) Chen, CFA"
   short_name:       "Vince Chen"
-  role:             "Founder, PortfolioFuture"
+  role:             "Founder & CEO, PortfolioFuture"
   location:         "New York, NY"
   bio:              "Founder of PortfolioFuture and quantitative investor with prior experience building investment systems, conducting research, and managing institutional ETF strategies."
   expertise:        ["Quantitative Investing", "Portfolio Management", "Investment Research", "Investment Systems", "Fund Analysis"]

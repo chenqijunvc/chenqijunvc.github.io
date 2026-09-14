@@ -3,8 +3,11 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
 
-  {% assign meta_description = page.description | default: page.excerpt | default: site.description | strip_html | normalize_whitespace | truncate: 170 %}
+  {% assign meta_description = page.description | default: page.subtitle | default: page.excerpt | default: site.description | strip_html | normalize_whitespace | truncate: 170 %}
   {% assign meta_title = page.seo_title | default: page.title %}
+  {% assign canonical_url = page.canonical_url | default: page.url | absolute_url %}
+  {% assign robots_directive = page.robots | default: 'index, follow' %}
+  {% if page.sitemap == false %}{% assign robots_directive = 'noindex, follow' %}{% endif %}
   {% if meta_title %}
     <title>{{ meta_title | escape }}{% unless page.seo_title %} | {{ site.brand_name | escape }}{% endunless %}</title>
   {% else %}
@@ -12,17 +15,20 @@
   {% endif %}
 
   <meta name="description" content="{{ meta_description | escape }}">
-  <meta name="keywords" content="{% if page.tags %}{{ page.tags | join: ', ' }}, {% endif %}{{ site.keywords }}">
   <meta name="author" content="{{ page.author | default: site.author | escape }}">
-  <meta name="robots" content="index, follow">
+  <meta name="robots" content="{{ robots_directive }}">
   <meta name="language" content="{{ site.lang | default: 'en' }}">
-  <link rel="canonical" href="{{ page.url | replace:'index.html','' | absolute_url }}">
+  <link rel="canonical" href="{{ canonical_url }}">
+
+  {% if page.layout == 'redirect' and page.redirect_to %}
+  <meta http-equiv="refresh" content="0; url={{ page.redirect_to | relative_url }}">
+  {% endif %}
 
   {% assign social_image = page.og_image | default: page.image | default: page.background | default: site.default_og_image %}
   <meta property="og:type" content="{% if page.layout == 'post' %}article{% else %}website{% endif %}">
   <meta property="og:title" content="{{ meta_title | default: site.title | escape }}">
   <meta property="og:description" content="{{ meta_description | escape }}">
-  <meta property="og:url" content="{{ page.url | absolute_url }}">
+  <meta property="og:url" content="{{ canonical_url }}">
   <meta property="og:site_name" content="{{ site.title | escape }}">
   <meta property="og:locale" content="{{ site.locale | default: 'en_US' }}">
   {% if social_image %}<meta property="og:image" content="{{ social_image | absolute_url }}">{% endif %}
@@ -32,43 +38,58 @@
   <meta name="twitter:description" content="{{ meta_description | escape }}">
   {% if social_image %}<meta name="twitter:image" content="{{ social_image | absolute_url }}">{% endif %}
 
+  {% if page.layout == 'home' %}
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
-    "@type": "Person",
-    "name": "Vince (Qijun) Chen",
-    "alternateName": "Vince Chen",
-    "honorificSuffix": "CFA",
-    "url": "{{ site.url }}",
-    "jobTitle": "Founder",
-    "worksFor": {
-      "@type": "Organization",
-      "name": "PortfolioFuture",
-      "url": "{{ site.portfoliofuture_url }}"
-    },
-    "sameAs": [
-      "https://www.linkedin.com/in/{{ site.linkedin_username }}",
-      "https://github.com/{{ site.github_username }}",
-      "{{ site.portfoliofuture_url }}"
-    ],
-    "knowsAbout": ["Quantitative investing", "Portfolio management", "Investment research", "Investment systems", "Fund analysis"]
-  }
-  </script>
-
-  {% if page.layout == 'post' %}
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "BlogPosting",
-    "headline": {{ page.title | jsonify }},
-    "description": {{ meta_description | jsonify }},
-    "url": "{{ page.url | absolute_url }}",
-    "datePublished": "{{ page.date | date_to_xmlschema }}",
-    "dateModified": "{{ page.last_modified_at | default: page.date | date_to_xmlschema }}",
-    "author": {
+    "@type": "ProfilePage",
+    "mainEntity": {
+      "@id": "{{ site.url }}/#person",
       "@type": "Person",
       "name": "Vince (Qijun) Chen",
-      "url": "{{ site.url }}/about/"
+      "alternateName": ["Vince Chen", "Qijun Chen", "Vince Qijun Chen"],
+      "honorificSuffix": "CFA",
+      "url": "{{ site.url }}/",
+      "jobTitle": "Founder & CEO",
+      "worksFor": {
+        "@type": "Organization",
+        "name": "PortfolioFuture",
+        "url": "{{ site.portfoliofuture_url }}/"
+      },
+      "sameAs": [
+        "https://portfoliofuture.com/about/vince-qijun-chen",
+        "https://www.linkedin.com/in/{{ site.linkedin_username }}",
+        "https://github.com/{{ site.github_username }}"
+      ],
+      "knowsAbout": ["Quantitative investing", "Portfolio management", "Investment research", "Investment systems", "Fund analysis"]
+    }
+  }
+  </script>
+  {% elsif page.schema_type == 'CollectionPage' %}
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "CollectionPage",
+    "name": {{ page.title | jsonify }},
+    "description": {{ meta_description | jsonify }},
+    "url": "{{ canonical_url }}",
+    "about": {"@id": "{{ site.url }}/#person"}
+  }
+  </script>
+  {% endif %}
+
+  {% if page.layout == 'post' or page.layout == 'publication' %}
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "{{ page.schema_type | default: 'BlogPosting' }}",
+    "headline": {{ page.title | jsonify }},
+    "description": {{ meta_description | jsonify }},
+    "url": "{{ canonical_url }}",
+    "datePublished": "{% if page.date_published %}{{ page.date_published }}{% else %}{{ page.date | date_to_xmlschema }}{% endif %}",
+    "dateModified": "{% if page.date_modified %}{{ page.date_modified }}{% elsif page.date_published %}{{ page.date_published }}{% else %}{{ page.date | date_to_xmlschema }}{% endif %}",
+    "author": {
+      "@id": "{{ site.url }}/#person"
     }{% if social_image %},
     "image": "{{ social_image | absolute_url }}"{% endif %}
   }

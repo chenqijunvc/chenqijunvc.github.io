@@ -6,9 +6,9 @@
     </button>
     <div class="collapse navbar-collapse" id="navbarResponsive">
       <ul class="navbar-nav ml-auto align-items-lg-center">
-        <li class="nav-item"><a class="nav-link{% if page.url == '/about/' %} active{% endif %}" href="{{ '/about/' | relative_url }}">About</a></li>
-        <li class="nav-item"><a class="nav-link{% if page.url == '/track-record/' or page.url contains '/work/' %} active{% endif %}" href="{{ '/track-record/' | relative_url }}">Track Record</a></li>
-        <li class="nav-item"><a class="nav-link{% if page.url == '/writing/' or page.layout == 'post' %} active{% endif %}" href="{{ '/writing/' | relative_url }}">Writing</a></li>
+        <li class="nav-item"><a class="nav-link{% if page.url == '/' %} active{% endif %}" href="{{ '/' | relative_url }}">Home</a></li>
+        <li class="nav-item"><a class="nav-link{% if page.url == '/track-record/' %} active{% endif %}" href="{{ '/track-record/' | relative_url }}">Track Record</a></li>
+        <li class="nav-item"><a class="nav-link{% if page.url == '/publications/' or page.layout == 'post' %} active{% endif %}" href="{{ '/publications/' | relative_url }}">Publications</a></li>
         <li class="nav-item"><a class="nav-link{% if page.url == '/media/' %} active{% endif %}" href="{{ '/media/' | relative_url }}">Media</a></li>
         <li class="nav-item nav-item-external">
           <a class="nav-link portfoliofuture-nav" href="{{ site.portfoliofuture_url }}" target="_blank" rel="noopener noreferrer">PortfolioFuture <span aria-hidden="true">↗</span></a>

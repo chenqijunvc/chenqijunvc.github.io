@@ -46,7 +46,7 @@ layout: default
           <div class="media-embed mb-4">{{ page.audio_embed }}</div>
           {% endif %}
 
-          {{ content }}
+          <article id="media-{{ page.slug }}">{{ content }}</article>
 
           {% if page.key_quotes %}
           <div class="key-quotes my-4">

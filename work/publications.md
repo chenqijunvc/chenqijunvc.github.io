@@ -1,10 +1,10 @@
 ---
-layout: page
+layout: redirect
 title: Publications
-seo_title: "Publications | Vince (Qijun) Chen"
-description: "Published investment research by Vince (Qijun) Chen."
-background: '/img/bg-post.jpg'
+description: "This archive has moved to the canonical publications page."
+canonical_url: /publications/
+redirect_to: /publications/
+redirect_label: Publications
+robots: noindex, follow
+sitemap: false
 ---
-<meta http-equiv="refresh" content="0; url={{ '/writing/' | relative_url }}">
-<link rel="canonical" href="{{ '/writing/' | absolute_url }}">
-<p>This page has moved to <a href="{{ '/writing/' | relative_url }}">Writing</a>.</p>

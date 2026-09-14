@@ -2,18 +2,16 @@
 layout: default
 ---
 
-<div class="reading-progress" id="readingProgress" role="progressbar" aria-label="Reading progress"></div>
-
 <a href="#main-content" class="skip-nav">Skip to content</a>
 
 <header class="post-header-clean">
   <div class="container">
     <div class="row">
       <div class="col-lg-9 col-md-11 mx-auto">
-        {% if page.tags %}<p class="post-kicker">{{ page.tags | first | upcase }}</p>{% endif %}
+        <p class="post-kicker">WORKING PAPER · {{ page.published_year }}</p>
         <h1>{{ page.title }}</h1>
         {% if page.subtitle %}<p class="post-subhead">{{ page.subtitle }}</p>{% endif %}
-        <p class="post-meta">By <a href="{{ '/' | relative_url }}">{{ page.author | default: site.author }}</a> · {{ page.date | date: '%B %d, %Y' }} · {% include read_time.html content=page.content %}</p>
+        <p class="post-meta">By <a href="{{ '/' | relative_url }}">Vince (Qijun) Chen, CFA</a> · PortfolioFuture research</p>
       </div>
     </div>
   </div>
@@ -25,10 +23,9 @@ layout: default
       <div class="row">
         <div class="col-lg-9 col-md-11 mx-auto">
           {{ content }}
-          <div class="post-footer-nav">
-            <a href="{{ '/publications/' | relative_url }}">← All publications</a>
-            <a href="{{ '/' | relative_url }}">About Vince →</a>
-          </div>
+          <p class="mt-5"><a href="{{ page.source_url }}" target="_blank" rel="noopener noreferrer">Read the original SSRN record ↗</a>{% if page.doi %} · <a href="{{ page.doi }}" target="_blank" rel="noopener noreferrer">DOI ↗</a>{% endif %}</p>
+          <hr>
+          <a href="{{ '/publications/' | relative_url }}">← All publications</a>
         </div>
       </div>
     </div>

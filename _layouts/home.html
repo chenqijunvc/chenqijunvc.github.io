@@ -9,20 +9,17 @@ layout: default
     <div class="container">
       <div class="row">
         <div class="col-lg-10 mx-auto">
-          <p class="hero-eyebrow">Founder, <a href="{{ site.portfoliofuture_url }}" target="_blank" rel="noopener noreferrer">PortfolioFuture</a></p>
+          <p class="hero-eyebrow">Founder &amp; CEO of <a href="{{ site.portfoliofuture_url }}" target="_blank" rel="noopener noreferrer">PortfolioFuture</a></p>
           <h1>Vince (Qijun) Chen, CFA</h1>
-          <p class="hero-role">Quantitative investor and investment-system builder.</p>
-          <p class="hero-summary">I spent nearly a decade building quantitative investment infrastructure, conducting research, and managing ETF strategies. I am now building PortfolioFuture to create better ways to understand investments and build portfolios.</p>
+          <p class="hero-role">Quantitative investor and researcher.</p>
+          <p class="hero-summary">I founded PortfolioFuture, an investment research platform focused on better fund alternatives, investable return decomposition, and evidence-based portfolio decisions. Before PortfolioFuture, I spent nearly a decade in quantitative research, investment systems, and ETF portfolio management.</p>
           <div class="hero-actions">
             <a class="btn btn-primary" href="{{ site.portfoliofuture_url }}" target="_blank" rel="noopener noreferrer">Visit PortfolioFuture <span aria-hidden="true">↗</span></a>
-            <a class="btn btn-outline-primary" href="{{ '/track-record/' | relative_url }}">Track Record</a>
+            <a class="btn btn-outline-primary" href="{{ '/publications/' | relative_url }}">Publications</a>
           </div>
         </div>
       </div>
     </div>
-    <a class="scroll-cue" href="#section-current" aria-label="Scroll down">
-      <svg viewBox="0 0 24 24" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg>
-    </a>
   </section>
 
   <section class="home-section home-current" id="section-current" aria-labelledby="building-portfoliofuture">
@@ -31,48 +28,21 @@ layout: default
         <div class="col-lg-10 mx-auto">
           <div class="row align-items-center">
             <div class="col-lg-6 mb-4 mb-lg-0 reveal">
-              <p class="section-kicker">Current</p>
+              <p class="section-kicker">Current work</p>
               <h2 id="building-portfoliofuture">Building PortfolioFuture</h2>
-              <p class="section-lead">PortfolioFuture is building an investment intelligence platform for better portfolio decisions. It starts with the first portfolio question: <strong>what should I invest in?</strong></p>
-              <p>The current product focuses on investment discovery: helping investors understand what a fund actually delivers and whether a better alternative may exist. That discovery layer is the first step toward a broader system for building, monitoring, and improving portfolios.</p>
+              <p class="section-lead">PortfolioFuture helps investors identify better fund alternatives and distinguish replicable exposure from fund-specific value.</p>
+              <p>The work is grounded in empirical, out-of-sample research and begins with a practical question: what should I invest in?</p>
               <p class="mb-0"><a class="text-link-strong" href="{{ site.portfoliofuture_url }}" target="_blank" rel="noopener noreferrer">Explore PortfolioFuture <span aria-hidden="true">↗</span></a></p>
             </div>
             <div class="col-lg-6 reveal" style="transition-delay:.1s">
               <a class="portfoliofuture-visual" href="{{ site.portfoliofuture_url }}" target="_blank" rel="noopener noreferrer" aria-label="Visit PortfolioFuture">
                 <picture>
                   <source media="(max-width: 767px)" srcset="{{ '/img/portfoliofuture-hero-mobile.webp' | relative_url }}" width="800" height="583">
-                  <img src="{{ '/img/portfoliofuture-hero.webp' | relative_url }}" alt="PortfolioFuture — Thousands of Investments. One Better Choice." width="1087" height="793" loading="eager">
+                  <img src="{{ '/img/portfoliofuture-hero.webp' | relative_url }}" alt="PortfolioFuture investment research platform" width="1087" height="793" loading="eager">
                 </picture>
               </a>
             </div>
           </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <section class="home-section home-foundation" aria-labelledby="foundation-title">
-    <div class="container">
-      <div class="row">
-        <div class="col-lg-10 mx-auto">
-          <p class="section-kicker reveal">Foundation</p>
-          <h2 id="foundation-title" class="reveal">Built from quantitative investing experience</h2>
-          <p class="section-lead max-copy reveal">Before PortfolioFuture, my work spanned the full investment stack—from research infrastructure and factor models to portfolio construction, ETF operations, and day-to-day portfolio management.</p>
-          <div class="proof-grid stagger-children">
-            <div class="proof-item reveal">
-              <div class="proof-value">2017–2026</div>
-              <div class="proof-label">Quantitative research &amp; portfolio management</div>
-            </div>
-            <div class="proof-item reveal">
-              <div class="proof-value">6 ETFs</div>
-              <div class="proof-label">Named PM roles documented in SEC filings</div>
-            </div>
-            <div class="proof-item reveal">
-              <div class="proof-value">CFA + CS/AI</div>
-              <div class="proof-label">CFA charterholder; Georgia Tech MSCS in progress</div>
-            </div>
-          </div>
-          <a class="btn btn-outline-primary reveal" href="{{ '/track-record/' | relative_url }}">View prior track record</a>
         </div>
       </div>
     </div>
@@ -85,23 +55,33 @@ layout: default
           <div class="section-heading-row reveal">
             <div>
               <p class="section-kicker">Research</p>
-              <h2 id="thinking-title">Selected research &amp; writing</h2>
+              <h2 id="thinking-title">Selected publications</h2>
             </div>
-            <a href="{{ '/writing/' | relative_url }}" class="section-all-link">All writing →</a>
+            <a href="{{ '/publications/' | relative_url }}" class="section-all-link">All publications →</a>
           </div>
           <div class="row stagger-children">
-            {% assign home_posts = site.posts | where: "home_featured", true | sort: "date" | reverse %}
-            {% for post in home_posts limit:3 %}
-            <div class="col-md-4 mb-4">
-              <article class="editorial-card h-100 reveal">
-                <p class="editorial-meta">{{ post.date | date: '%Y' }}</p>
-                <h3><a href="{{ post.url | relative_url }}">{{ post.title }}</a></h3>
-                <p>{{ post.excerpt | strip_html | truncatewords: 24 }}</p>
-                <a href="{{ post.url | relative_url }}" class="card-link">Read →</a>
-              </article>
-            </div>
-            {% endfor %}
+            <div class="col-md-4 mb-4"><article class="editorial-card h-100 reveal"><p class="editorial-meta">2026 · Working paper</p><h3><a href="{{ '/finding-better-fund-alternatives/' | relative_url }}">Finding Better Fund Alternatives</a></h3><p>Research on comparing fund exposures, residual value, and more efficient alternatives.</p><a href="{{ '/finding-better-fund-alternatives/' | relative_url }}" class="card-link">Read →</a></article></div>
+            <div class="col-md-4 mb-4"><article class="editorial-card h-100 reveal"><p class="editorial-meta">2026 · Working paper</p><h3><a href="{{ '/investable-return-decomposition-and-residual-persistence/' | relative_url }}">Investable Return Decomposition and Residual Persistence</a></h3><p>Research on explainable exposures, residual returns, and persistence over time.</p><a href="{{ '/investable-return-decomposition-and-residual-persistence/' | relative_url }}" class="card-link">Read →</a></article></div>
+            <div class="col-md-4 mb-4"><article class="editorial-card h-100 reveal"><p class="editorial-meta">2023 · Research paper</p><h3><a href="{{ '/pure-alpha-ii-framework-for-active-manager-evaluation/' | relative_url }}">Pure Alpha II: A Framework for Active Manager Evaluation</a></h3><p>A framework for separating active-management skill from static factor and style exposures.</p><a href="{{ '/pure-alpha-ii-framework-for-active-manager-evaluation/' | relative_url }}" class="card-link">Read →</a></article></div>
           </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="home-section home-foundation" aria-labelledby="foundation-title">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-10 mx-auto">
+          <p class="section-kicker reveal">Professional background</p>
+          <h2 id="foundation-title" class="reveal">Quantitative investing experience</h2>
+          <p class="section-lead max-copy reveal">From 2017 through 2026, my work spanned quantitative research, investment systems, and ETF portfolio management.</p>
+          <div class="proof-grid stagger-children">
+            <div class="proof-item reveal"><div class="proof-value">2017–2026</div><div class="proof-label">Quantitative research &amp; portfolio management</div></div>
+            <div class="proof-item reveal"><div class="proof-value">6 ETFs</div><div class="proof-label">Historical PM roles documented in SEC filings</div></div>
+            <div class="proof-item reveal"><div class="proof-value">CFA + CS/AI</div><div class="proof-label">CFA charterholder; Georgia Tech MSCS in progress</div></div>
+          </div>
+          <a class="btn btn-outline-primary reveal" href="{{ '/track-record/' | relative_url }}">View track record</a>
         </div>
       </div>
     </div>
@@ -111,24 +91,11 @@ layout: default
     <div class="container">
       <div class="row">
         <div class="col-lg-10 mx-auto">
-          <div class="section-heading-row reveal">
-            <div>
-              <p class="section-kicker">Media</p>
-              <h2 id="media-title">Selected appearances</h2>
-            </div>
-            <a href="{{ '/media/' | relative_url }}" class="section-all-link">All media →</a>
-          </div>
-          {% assign home_media = site.media | where: "home_featured", true | sort: "date" | reverse %}
+          <div class="section-heading-row reveal"><div><p class="section-kicker">External validation</p><h2 id="media-title">Selected media and appearances</h2></div><a href="{{ '/media/' | relative_url }}" class="section-all-link">All media →</a></div>
           <div class="media-list-compact">
-            {% for item in home_media %}
-            <article class="media-row reveal-left">
-              <div class="media-date">{{ item.date | date: '%b %Y' }}</div>
-              <div class="media-copy">
-                <h3><a href="{{ item.url | relative_url }}">{{ item.title }}</a></h3>
-                <p>{{ item.outlet }}{% if item.subtitle %} — {{ item.subtitle }}{% endif %}</p>
-              </div>
-            </article>
-            {% endfor %}
+            <article class="media-row reveal-left"><div class="media-date">2026</div><div class="media-copy"><h3><a href="{{ '/media/future-alpha-spotlight/' | relative_url }}">Future Alpha — Beyond the Backtest</a></h3><p>Dedicated interview on durable multi-factor portfolios.</p></div></article>
+            <article class="media-row reveal-left"><div class="media-date">2023</div><div class="media-copy"><h3><a href="{{ '/media/cnbc-buyback-tax/' | relative_url }}">CNBC — Stock buyback tax coverage</a></h3><p>Quoted analysis on operating results and cash flow.</p></div></article>
+            <article class="media-row reveal-left"><div class="media-date">2022</div><div class="media-copy"><h3><a href="{{ '/media/etf-trends-free-cash-flow-strategies/' | relative_url }}">ETF Trends — Free cash flow strategies</a></h3><p>Coverage of free-cash-flow profitability research.</p></div></article>
           </div>
         </div>
       </div>

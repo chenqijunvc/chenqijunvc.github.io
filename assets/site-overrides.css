@@ -161,11 +161,18 @@ main ul, main ol, article ul, article ol {
   color: var(--text) !important;
   padding-left: 1.5rem !important;
   margin-bottom: 1.6rem !important;
+  text-align: left !important;
 }
 
 main li, article li {
   font-family: var(--font-body) !important;
   margin-bottom: .45rem !important;
+  text-align: left !important;
+}
+
+/* Ensure all page content and headers default to clean left alignment */
+main, article, .page-header-clean, .page-header-clean .col-lg-10, main .col-lg-10 {
+  text-align: left !important;
 }
 
 

@@ -1,13 +1,17 @@
 ---
-layout: post
+layout: redirect
 title: "Why Free Cash Flow Better Determines Profitability Than Earnings — ETF Trends"
 date: 2022-09-20 10:00:00 -0500
 categories: [investment-strategy, quantitative-finance, media-appearances]
 tags: [free-cash-flow, etf-trends, profitability, earnings-quality, accounting-manipulation, cash-flow-analysis]
 author: Vince Chen, CFA
-excerpt: ETF Trends covers my white paper arguing that free cash flow provides a clearer picture of a company's profitability than earnings, quoting my research on management manipulation of reported earnings.
-featured: true
-image: /img/posts/Market.jpeg
+excerpt: This third-party ETF Trends coverage is now curated in the Media archive.
+canonical_url: /media/#media-etf-trends-free-cash-flow-strategies
+redirect_to: /media/#media-etf-trends-free-cash-flow-strategies
+redirect_label: Media — ETF Trends coverage
+content_type: media
+robots: noindex, follow
+sitemap: false
 ---
 
 In September 2022, James Comtois of ETF Trends covered my research paper on free cash flow versus earnings as measures of corporate profitability. The article highlighted the central argument of my white paper: that free cash flow provides a more reliable picture of a company's financial health than GAAP earnings.
