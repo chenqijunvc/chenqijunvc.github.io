@@ -6,7 +6,7 @@ description: "Vince (Qijun) Chen's 2017–2026 quantitative investment research,
 og_image: '/img/posts/Risk.jpg'
 ---
 
-<p class="lead">I helped build the quantitative research and portfolio-management platform behind FCF Advisors, an asset manager reported at approximately $600 million in assets under management at the time of its 2024 acquisition by Abacus Life. This page documents the strategy scale, PSN recognition, and historical PM responsibilities behind that record.</p>
+<p class="lead">Over more than nine years in quantitative investment management, I managed strategies across more than $1 billion in career AUM and AUA. This page documents the strategy scale, PSN recognition, and historical PM responsibilities behind that record.</p>
 
 <section id="career-chronology" aria-labelledby="chronology-title">
   <h2 id="chronology-title">Career chronology</h2>
