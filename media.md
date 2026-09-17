@@ -1,7 +1,7 @@
 ---
 layout: page
 title: Media
-seo_title: "Media, Interviews & Recognition | Vince (Qijun) Chen, CFA"
+seo_title: "Recognition, Speaking & Media | Vince (Qijun) Chen, CFA"
 description: "Independent coverage, interviews, speaking appearances, exchange videos, and industry recognition relating to Vince (Qijun) Chen's investment research and prior portfolio-management work."
 schema_type: CollectionPage
 og_image: '/img/bg-about.jpg'

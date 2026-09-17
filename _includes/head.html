@@ -3,7 +3,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
 
-  {% assign meta_description = page.description | default: page.subtitle | default: page.excerpt | default: site.description | strip_html | normalize_whitespace | truncate: 170 %}
+  {% assign meta_description = page.description | default: page.subtitle | default: page.excerpt | default: site.description | strip_html | normalize_whitespace %}
   {% assign meta_title = page.seo_title | default: page.title %}
   {% assign canonical_url = page.canonical_url | default: page.url | absolute_url %}
   {% assign robots_directive = page.robots | default: 'index, follow' %}
