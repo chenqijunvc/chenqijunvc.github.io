@@ -2,18 +2,18 @@
 layout: page
 title: About Vince Chen
 seo_title: "About Vince Chen, CFA | Quantitative Investor & Researcher"
-description: "Vince (Qijun) Chen, CFA is a quantitative investor, researcher, and founder of PortfolioFuture, focused on empirical investment research for better portfolio decisions."
+description: "Vince (Qijun) Chen, CFA is a quantitative investor, researcher, and founder of PortfolioFuture, an independent fund discovery and intelligence company using empirical research to evaluate and rank ETFs and mutual funds for portfolio allocations."
 og_image: '/img/bg-about.jpg'
 ---
 
-<p class="lead">I am a quantitative investor, researcher, and the founder of <a href="{{ site.portfoliofuture_url }}" target="_blank" rel="noopener noreferrer">PortfolioFuture ↗</a>, an investment research platform focused on better fund alternatives, investable return decomposition, and evidence-based portfolio decisions.</p>
+<p class="lead">I am a quantitative investor, researcher, and the founder of <a href="{{ site.portfoliofuture_url }}" target="_blank" rel="noopener noreferrer">PortfolioFuture ↗</a>, an independent fund discovery and intelligence company. We use empirical research to discover, evaluate, and rank ETFs and mutual funds, and identify where they can credibly compete for allocations in portfolios.</p>
 
 <p>My work sits at the intersection of quantitative research, portfolio construction, and investment technology. Over more than nine years in investment management, I have worked across financial-data infrastructure, factor research, systematic strategy development, portfolio management, and ETF implementation.</p>
 
 <section aria-labelledby="current-focus">
   <h2 id="current-focus">Current focus</h2>
-  <p>Today, I am focused on a practical investment question: <strong>what should an investor own instead?</strong></p>
-  <p>That question is the foundation of PortfolioFuture. The work examines how investors can compare familiar products with realistic alternatives, understand the exposures behind observed returns, and make portfolio decisions using evidence that can be explained and tested.</p>
+  <p>Today, I am focused on empirical fund discovery and evaluation: understanding exposures, return drivers, and portfolio roles.</p>
+  <p>PortfolioFuture researches fund discovery, ranking, fund substitution, and investable return decomposition, using evidence to identify where funds can credibly compete for allocations in portfolios.</p>
 </section>
 
 <section aria-labelledby="professional-path">
@@ -43,10 +43,10 @@ og_image: '/img/bg-about.jpg'
 <section aria-labelledby="why-portfoliofuture">
   <h2 id="why-portfoliofuture">Why PortfolioFuture</h2>
   <p>PortfolioFuture grew out of a limitation I repeatedly encountered in traditional fund research.</p>
-  <p>Most investment tools are good at describing a fund: its category, holdings, performance, fees, factor exposures, or historical risk. Investors ultimately face a different problem: <strong>given this fund, what are the better alternatives?</strong></p>
+  <p>Most investment tools are good at describing a fund: its category, holdings, performance, fees, factor exposures, or historical risk. Investors also need rigorous comparisons to understand where funds can credibly compete for portfolio allocations.</p>
   <p>Answering that requires more than screening funds against their peers. It requires understanding which parts of a fund's return are replicable, identifying investable portfolios that provide similar exposures, measuring what remains unexplained, and determining whether that residual value has historically persisted.</p>
-  <p>PortfolioFuture is being built around that framework.</p>
-  <p>The objective is to move investment research from description toward decision: <strong>understand what you own, identify what can replace it, and determine what is genuinely worth paying for.</strong></p>
+  <p>PortfolioFuture researches fund discovery, ranking, fund substitution, and investable return decomposition.</p>
+  <p>The objective is to move investment research from description toward decision: <strong>discover and evaluate funds with empirical evidence, and identify where they can credibly compete for allocations in portfolios.</strong></p>
   <p><a href="{{ site.portfoliofuture_url }}" target="_blank" rel="noopener noreferrer">Explore PortfolioFuture ↗</a></p>
 </section>
 
@@ -78,7 +78,7 @@ og_image: '/img/bg-about.jpg'
     <a href="{{ '/track-record/' | relative_url }}"><strong>Track Record</strong><span>Professional chronology and supporting public records.</span></a>
     <a href="{{ '/publications/' | relative_url }}"><strong>Publications</strong><span>Research papers and authored investment work.</span></a>
     <a href="{{ '/media/' | relative_url }}"><strong>Media</strong><span>Third-party coverage, interviews, and appearances.</span></a>
-    <a href="{{ site.portfoliofuture_url }}" target="_blank" rel="noopener noreferrer"><strong>PortfolioFuture ↗</strong><span>Current research platform and investment work.</span></a>
+    <a href="{{ site.portfoliofuture_url }}" target="_blank" rel="noopener noreferrer"><strong>PortfolioFuture ↗</strong><span>Research on fund discovery, ranking, fund substitution, and investable return decomposition.</span></a>
   </div>
 </section>
 
